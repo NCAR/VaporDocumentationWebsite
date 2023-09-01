@@ -43,7 +43,7 @@ A demonstration can be viewed below, and the sample data used in these examples 
 .. only:: html
 
   .. image:: /dataFormatRequirements/netCDF/examples/images/thumb/sphx_glr_cartesianGridExample_thumb.png
-    :alt:
+    :alt: cartesianGridExample.py
 
   :ref:`sphx_glr_dataFormatRequirements_netCDF_examples_cartesianGridExample.py`
 
@@ -60,7 +60,7 @@ A demonstration can be viewed below, and the sample data used in these examples 
 .. only:: html
 
   .. image:: /dataFormatRequirements/netCDF/examples/images/thumb/sphx_glr_rectilinearGridExample_thumb.png
-    :alt:
+    :alt: rectilinearGridExample.py
 
   :ref:`sphx_glr_dataFormatRequirements_netCDF_examples_rectilinearGridExample.py`
 

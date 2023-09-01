@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        :ref:`Go to the end <sphx_glr_download_dataFormatRequirements_netCDF_examples_cartesianGridExample.py>`
+        Click :ref:`here <sphx_glr_download_dataFormatRequirements_netCDF_examples_cartesianGridExample.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -167,8 +167,6 @@ Plot a 2D cross section of temperature
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
-
-
 
 
     .. container:: sphx-glr-download sphx-glr-download-python
