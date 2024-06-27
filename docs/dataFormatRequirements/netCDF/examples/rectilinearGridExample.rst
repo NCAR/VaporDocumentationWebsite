@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_dataFormatRequirements_netCDF_examples_rectilinearGridExample.py>`
-        to download the full example code.
+        to download the full example code
 
 .. rst-class:: sphx-glr-example-title
 

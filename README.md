@@ -12,10 +12,10 @@ To reproduce this documentation locally, we recommend setting up a conda environ
     $ conda activate VaporDocumentationWebsite
     $ pip install sphinxcontrib-googleanalytics
 
-Once this conda environment has been configured, the html can be generated with the following steps.
+Once this conda environtment has been configured, the html can be generated with the following steps.
 
 1) cd VaporDocumentationWebsite/docs
 2) make html
 3) cp -r html/* ../
 
-Note that step 3 moves the html files from VaporDocumentationWebsite/docs/html to the root directory, VaporDocumentationWebsite.  Without this step, github pages will not host the the html files.
+Note that step 4 moves the html files from VaporDocumentationWebsite/docs/html to the root directory, VaporDocumentationWebsite.  Without this step, github pages will not host the the html files.

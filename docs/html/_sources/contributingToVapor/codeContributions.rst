@@ -31,7 +31,7 @@ writing code for Vapor.
 Forking Vapor's code
 --------------------
 
-After installing Git and registering with GitHub, it's time to "Fork" Vapor's code base by clicking the Fork button on the upper right corner of `Vapor's GitHub repository <https://github.com/NCAR/VAPOR>`_.  This creates your own repository on GitHub that contains a copy of Vapor's current main branch.  
+After installing Git and registering with GitHub, it's time to "Fork" Vapor's code base by clicking the Fork button on the upper right corner of `Vapor's GitHub repository <https://github.com/NCAR/VAPOR>`_.  This creates your own repository on GitHub that contains a copy of Vapor's current master branch.  
 
 .. figure:: ../_images/forkVapor.png
      :align: center
@@ -44,11 +44,11 @@ After installing Git and registering with GitHub, it's time to "Fork" Vapor's co
      :align: center
      :figclass: align-center
 
-     The newly created fork, based off Vapor's main branch.  Note the new repository name (sgpearse/VAPOR).  This is the repository you will clone from.
+     The newly created fork, based off Vapor's master branch.  Note the new repository name (sgpearse/VAPOR).  This is the repository you will clone from.
 
-Clone your forked repository to a suitable location on your local work machine.  This new remote repository is what will be merged with Vapor's main branch once your changes have been made.
+Clone your forked repository to a suitable location on your local work machine.  This new remote repository is what will be merged with Vapor's master branch once your changes have been made.
 
-After completing your work, your changes can be submitted for review through a Pull Request from your Fork, into Vapor's main repository.  This is done under the Pull Requests tab in Vapor's github repository.  From this tab, create a new pull request that brings the changes from your forked repo into Vapor's main repo.  More details on this step are included in the :ref:`Submitting Your Changes <contributing.submitting>` section of this document.
+After completing your work, your changes can be submitted for review through a Pull Request from your Fork, into Vapor's master repository.  This is done under the Pull Requests tab in Vapor's github repository.  From this tab, create a new pull request that brings the changes from your forked repo into Vapor's master repo.  More details on this step are included in the :ref:`Submitting Your Changes <contributing.submitting>` section of this document.
 
 For more information on the Forking Workflow, please see `Atlassian has a tutorial <https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow>`_ on basics and best practices.
 
@@ -56,7 +56,7 @@ For more information on the Forking Workflow, please see `Atlassian has a tutori
      :align: center
      :figclass: align-center
 
-     Submitting a pull request to Vapor's main branch.
+     Submitting a pull request to Vapor's master branch.
 
 Third-Party Libraries
 ---------------------
@@ -260,7 +260,7 @@ After your implementation is complete, push your commits to your forked reposito
 Manual Review:
     If these tests pass, Vapor's team will review the Pull Request to make sure that Vapor's `Code Conventions <https://github.com/NCAR/VAPOR/wiki/Vapor-Coding-Convention>`_ were honored, and that the logic and structure of the code is sound.  
 
-After review, further changes may be requested.  If everything looks good, the Pull Request will be merged into Vapor's main repository.
+After review, further changes may be requested.  If everything looks good, the Pull Request will be merged into Vapor's master repository.
 
 
 `Vapor Coding Conventions <https://github.com/NCAR/VAPOR/wiki/Vapor-Coding-Convention>`_
@@ -372,9 +372,3 @@ Note: It may be necessary to re-run *conda config --add channels conda-forge* at
     import vapor
 
 Example python scripts and jupyter notebooks can be found in $CONDA_PREFIX/lib/python3.<version>/site-packages/vapor
-
-
-Python Open Source Utilities
-----------------------------
-
-Vapor Python supports a number of utility functions, found under apps/pythonapi/vapor/utils. If you write a function for your workflows that you believe would be useful to other users, we encourage you to add the function to Vapor utils.

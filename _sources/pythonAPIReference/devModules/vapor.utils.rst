@@ -1,17 +1,5 @@
-vapor.utils package
-===================
-
-Submodules
-----------
-
-.. toctree::
-   :maxdepth: 4
-
-   vapor.utils.histogram
-   vapor.utils.keyframing
-
-Module contents
----------------
+vapor.utils module
+==================
 
 .. automodule:: vapor.utils
    :members:
