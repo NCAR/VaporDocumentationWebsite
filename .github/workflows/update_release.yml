@@ -41,7 +41,7 @@ jobs:
           echo "Current Release" >> "$current_name"
           echo "---------------" >> "$current_name"
           echo "" >> "$current_name"
-          echo ".. include:: ${RELEASE_NAME}.rst" >> "$current_name"
+          echo ".. include:: announcements/${RELEASE_NAME}.rst" >> "$current_name"
         env:
           RELEASE_NAME: ${{ env.RELEASE_NAME }}
 
