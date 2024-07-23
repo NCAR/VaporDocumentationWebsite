@@ -3,4 +3,4 @@
 Current Release
 ---------------
 
-.. include:: 3.9.2.rst
+.. include:: announcements/3.9.2.rst
