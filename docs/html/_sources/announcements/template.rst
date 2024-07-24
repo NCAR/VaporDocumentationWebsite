@@ -45,5 +45,5 @@
     </table>
 
     <div style="text-align: center;">
-        <h5><br>For VAPOR's weekly build, source code, and previous versions checkout our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
+        <h5><br>For VAPOR's weekly build, source code, and previous versions visit our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
     </div>
