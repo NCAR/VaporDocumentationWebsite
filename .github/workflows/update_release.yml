@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - name: Checkout VaporDocumentationWebsite repo
         uses: actions/checkout@v4
@@ -33,7 +34,7 @@ jobs:
           echo "$release_notes" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: Update docs/announcements/current.rst
+      - name: Update docs/current.rst
         run: |
           current_name="docs/current.rst"
           echo ".. _current:" > "$current_name"
@@ -91,8 +92,9 @@ jobs:
           make html
           cp -r html/* ../
 
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
         with:
-          commit_message: "Release ${{ env.RELEASE_NAME }}"
-          branch: Actions
+          commit-message: "Release ${{ env.RELEASE_NAME }}"
+          branch: update-docs-${{ env.RELEASE_NAME }}
+          title: "Release ${{ env.RELEASE_NAME }}"
