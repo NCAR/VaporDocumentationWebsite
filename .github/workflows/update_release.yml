@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-        - Actions
+      - Actions
 
 jobs:
   update-docs:
@@ -29,10 +29,13 @@ jobs:
           latest_release=$(curl -H "Accept: application/vnd.github.v4+json" https://api.github.com/repos/NCAR/VAPOR/releases/latest)
           release_name=$(echo $latest_release | jq -r .tag_name | sed 's/^v//')
           release_notes=$(echo $latest_release | jq -r .body)
+          release_date=$(echo $latest_release | jq -r .published_at | cut -d'T' -f1)
+          formatted_date=$(date -d $release_date +"%B %d, %Y")
           echo "RELEASE_NAME=$release_name" >> $GITHUB_ENV
           echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
           echo "$release_notes" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+          echo "RELEASE_DATE=$formatted_date" >> $GITHUB_ENV
 
       - name: Update docs/current.rst
         run: |
@@ -63,7 +66,7 @@ jobs:
           cat "$template_name" >> "$file_name"
           echo "" >> "$file_name"
           sed -i "s/RELEASE_TAG/$RELEASE_NAME/g" "$file_name"
-          echo "Vapor has released a minor version, v${RELEASE_NAME}, on $(date +"%B %d, %Y")." >> "$file_name"
+          echo "Vapor has released a minor version, v${RELEASE_NAME}, on ${RELEASE_DATE}." >> "$file_name"
           echo "" >> "$file_name"
           echo "$RELEASE_NOTES" >> "$file_name"
           sed -i 's/^## \(.*\)/**\1**\n/g' "$file_name"
@@ -72,6 +75,7 @@ jobs:
         env:
           RELEASE_NAME: ${{ env.RELEASE_NAME }}
           RELEASE_NOTES: ${{ env.RELEASE_NOTES }}
+          RELEASE_DATE: ${{ env.RELEASE_DATE }}
 
       - name: Set up Conda
         uses: conda-incubator/setup-miniconda@v3
