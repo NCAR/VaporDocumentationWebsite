@@ -230,6 +230,7 @@
 </details></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Navigation Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalSettings.html">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Exporting Visualizations</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="otherTools.html">Other Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="otherTools/pythonEngine.html">Python Engine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otherTools/2dPlots.html">2D Plots</a></li>
@@ -522,7 +523,17 @@ document.write(`
 </section>
 <section id="animation">
 <h2>Animation<a class="headerlink" href="#animation" title="Permalink to this heading">#</a></h2>
-<p>Currently in development.</p>
+<p>The Animation tab provides tools to control and customize how animations are played using the animation controls at the top of the application.</p>
+<ul class="simple">
+<li><p><strong>Current Timestep</strong>: Select the current timestep being rendered.</p></li>
+<li><p><strong>Animation Start Timestep</strong> and <strong>Animation Last Timestep</strong>: Define the range of timesteps for the animation.</p></li>
+<li><p><strong>Loop Animation Playback</strong>: Check this option to have the animation loop back to the start once it reaches the end.</p></li>
+<li><p><strong>Animation Play Step Size</strong>: Set the increment in timesteps for each frame of the animation.</p></li>
+<li><p><strong>Max Animation Frames Per Second</strong>: Use this slider to cap the maximum speed of the animation. This is important if you have a visualization that renders quickly (such as a 2D renderer) and the animation progresses too quickly to be useful.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/animationTab.png"><img alt="../_images/animationTab.png" src="../_images/animationTab.png" style="width: 500px;" /></a>
+</figure>
 </section>
 <section id="viewpoint">
 <h2>Viewpoint<a class="headerlink" href="#viewpoint" title="Permalink to this heading">#</a></h2>
@@ -537,7 +548,7 @@ document.write(`
 </figure>
 <section id="off-screen-rendering">
 <h3>Off Screen Rendering<a class="headerlink" href="#off-screen-rendering" title="Permalink to this heading">#</a></h3>
-<p>Sometimes users will want to produce snapshots or animations at a higher resolution than their current display.  A rendering can be captured at 4k, or any user-defined resolution by modifying the <strong>Framebuffer Settings</strong> section of the Viewpoint tab.  Simply check the “User Custom Output Size” checkbox, and enter the width and height of the image sequence you would like to capture.</p>
+<p>Sometimes users will want to produce snapshots or animations at a higher resolution than their current display.  A rendering can be captured at 4k, or any user-defined resolution by modifying the <strong>Framebuffer Settings</strong> section of the Viewpoint tab.  Simply check the “Use Custom Output Size” checkbox, and enter the width and height of the image sequence you would like to capture.</p>
 </section>
 </section>
 </section>
