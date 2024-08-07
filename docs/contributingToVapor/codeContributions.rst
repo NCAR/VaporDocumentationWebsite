@@ -347,7 +347,13 @@ Once you've built a .tar.bz2 conda image for your customized version of Vapor, f
 
     conda index ~/channel
 
-4) Create a new conda environment to install Vapor onto, or select a pre-existing environment:
+4) If you have not done so already, ensure that you have added the conda-forge channel:
+
+.. code-block:: console
+
+    conda config --add channels conda-forge
+
+5) Create a new conda environment to install Vapor onto, or select a pre-existing environment:
 
 .. code-block:: console
 
@@ -356,7 +362,7 @@ Once you've built a .tar.bz2 conda image for your customized version of Vapor, f
     or
     conda activate myEnvironment
 
-5) Finally install the custon .tar.bz2 package:
+6) Finally install the custon .tar.bz2 package:
 
 .. code-block:: console
 
@@ -364,7 +370,7 @@ Once you've built a .tar.bz2 conda image for your customized version of Vapor, f
 
 Note: It may be necessary to re-run *conda config --add channels conda-forge* at this step.
 
-6) Verify that your new installation works:
+7) Verify that your new installation works:
 
 .. code-block:: console
 

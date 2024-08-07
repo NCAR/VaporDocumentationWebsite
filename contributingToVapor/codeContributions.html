@@ -270,6 +270,7 @@
 </details></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference external" href="https://projectpythia.org/vapor-python-cookbook/notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://projectpythia.org/vapor-python-cookbook/README.html">Examples</a></li>
 </ul>
 </details></li>
@@ -873,6 +874,12 @@ writing code for Vapor.</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
+<li><p>If you have not done so already, ensure that you have added the conda-forge channel:</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels conda-forge</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
 <li><p>Create a new conda environment to install Vapor onto, or select a pre-existing environment:</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda create --name vapor</span>
@@ -881,14 +888,14 @@ writing code for Vapor.</p>
 <span class="go">conda activate myEnvironment</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple" start="6">
 <li><p>Finally install the custon .tar.bz2 package:</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c file://&lt;pathToYourChannel&gt; vapor</span>
 </pre></div>
 </div>
 <p>Note: It may be necessary to re-run <em>conda config –add channels conda-forge</em> at this step.</p>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="7">
 <li><p>Verify that your new installation works:</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python</span>
