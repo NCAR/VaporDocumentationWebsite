@@ -23,4 +23,5 @@ If any feature in VAPOR is not sufficienty self describing in the application, t
     vaporApplicationReference/renderers.rst
     vaporApplicationReference/navigationSettings.rst
     vaporApplicationReference/globalSettings.rst
+    vaporApplicationReference/export.rst
     vaporApplicationReference/otherTools.rst

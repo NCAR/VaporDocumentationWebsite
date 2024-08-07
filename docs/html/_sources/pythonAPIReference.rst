@@ -12,4 +12,5 @@ Python API Reference
    pythonAPIReference/downloadAndInstallation.rst
    pythonAPIReference/wslInstructions.rst
    pythonAPIReference/classReference.rst
+   Quickstart <https://projectpythia.org/vapor-python-cookbook/notebooks/quickstart.html>
    Examples <https://projectpythia.org/vapor-python-cookbook/README.html>

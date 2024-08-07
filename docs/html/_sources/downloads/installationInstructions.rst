@@ -19,11 +19,8 @@ Double click on the downloaded .dmg file.  Once the Finder window pops up, drag 
 Linux
 _____
 
-For Ubuntu and CentOS installers, run the downloaded .sh script in a terminal window.  It will prompt you as to where the binaries will be installed. For example:
+For Ubuntu and CentOS installers, run the downloaded AppImage from your downloads folder.
 
-::
-
-    % sh VAPOR3-3.0.0.beta-RH7.sh
 
 Windows
 _______

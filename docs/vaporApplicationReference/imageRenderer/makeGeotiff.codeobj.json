@@ -1,0 +1,74 @@
+{
+ "ccrs.PlateCarree": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "cartopy.crs",
+   "module_short": "cartopy.crs",
+   "name": "PlateCarree"
+  }
+ ],
+ "cf.NaturalEarthFeature": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "cartopy.feature",
+   "module_short": "cartopy.feature",
+   "name": "NaturalEarthFeature"
+  }
+ ],
+ "gdal.GA_Update": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "osgeo.gdal",
+   "module_short": "osgeo.gdal",
+   "name": "GA_Update"
+  }
+ ],
+ "gdal.OpenShared": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "osgeo.gdal",
+   "module_short": "osgeo.gdal",
+   "name": "OpenShared"
+  }
+ ],
+ "gdal.Translate": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "osgeo.gdal",
+   "module_short": "osgeo.gdal",
+   "name": "Translate"
+  }
+ ],
+ "gdal.Warp": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "osgeo.gdal",
+   "module_short": "osgeo.gdal",
+   "name": "Warp"
+  }
+ ],
+ "os.remove": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os",
+   "module_short": "os",
+   "name": "remove"
+  }
+ ],
+ "plt.figure": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "figure"
+  }
+ ]
+}

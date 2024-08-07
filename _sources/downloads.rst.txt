@@ -9,7 +9,7 @@ Downloads
 .. toctree::
     :maxdepth: 1
 
-    announcements/current.rst
+    current.rst
     downloads/installationInstructions.rst
     downloads/sampleData.rst
     downloads/thirdPartyLibraries.rst

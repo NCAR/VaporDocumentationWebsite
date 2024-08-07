@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -39,7 +39,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -52,13 +52,16 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pythonAPIReference/userModules/vapor.renderer';</script>
-    <link rel="icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="vapor.session module" href="vapor.session.html" />
@@ -159,11 +162,22 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../downloads.html">Downloads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../announcements/current.html">Current Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../current.html">Current Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/installationInstructions.html">Installation Instructions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/vaporOnCasper.html">Running VAPOR on Casper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/sampleData.html">Sample Data</a></li>
@@ -216,6 +230,7 @@
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vaporApplicationReference/navigationSettings.html">Navigation Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vaporApplicationReference/globalSettings.html">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vaporApplicationReference/export.html">Exporting Visualizations</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../vaporApplicationReference/otherTools.html">Other Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../vaporApplicationReference/otherTools/pythonEngine.html">Python Engine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../vaporApplicationReference/otherTools/2dPlots.html">2D Plots</a></li>
@@ -255,6 +270,7 @@
 </details></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference external" href="https://projectpythia.org/vapor-python-cookbook/notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://projectpythia.org/vapor-python-cookbook/README.html">Examples</a></li>
 </ul>
 </details></li>
@@ -299,9 +315,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -459,9 +475,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -530,6 +546,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetGridNumOfSeeds"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetGridNumOfSeeds</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetIntegrationRegion"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetIntegrationRegion()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetIsSteady"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetIsSteady</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetNeedFlowlineOutput"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetNeedFlowlineOutput</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetPeriodic"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetPeriodic</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetPhongAmbient()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetPhongDiffuse()</span></code></a></li>
@@ -569,9 +586,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetFlowDirection"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetFlowDirection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetFlowOutputMoreVariables"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetFlowOutputMoreVariables</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetFlowlineOutputFilename"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetFlowlineOutputFilename</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetGridNumOfSeeds"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetGridNumOfSeeds</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetIsSteady"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetIsSteady</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetNeedFlowlineOutput"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetNeedFlowlineOutput</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetPeriodic"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetPeriodic</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetPhongAmbient()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetPhongDiffuse()</span></code></a></li>
@@ -622,6 +641,26 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ModelRenderer.VaporName"><code class="docutils literal notranslate"><span class="pre">ModelRenderer.VaporName</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetDirectionScale"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetDirectionScale()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongAmbient()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongDiffuse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongShininess"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongShininess()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongSpecular"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongSpecular()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetRenderRadiusScalar"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetRenderRadiusScalar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetShowDirection"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetShowDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetStride"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetStride()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetDirectionScale"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetDirectionScale()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongAmbient()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongDiffuse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongShininess"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongShininess()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongSpecular"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongSpecular()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetRenderRadiusScalar"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetRenderRadiusScalar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetShowDirection"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetShowDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetStride"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetStride()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.VaporName"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.VaporName</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.Renderer"><code class="docutils literal notranslate"><span class="pre">Renderer</span></code></a><ul class="nav section-nav flex-column">
@@ -879,7 +918,7 @@ Class that supports drawing Barbs based on 2D or 3D vector field.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="vapor.renderer.Class">
 <span class="sig-prename descclassname"><span class="pre">vapor.renderer.</span></span><span class="sig-name descname"><span class="pre">Class</span></span><a class="headerlink" href="#vapor.renderer.Class" title="Permalink to this definition">#</a></dt>
-<dd><p>alias of <a class="reference internal" href="#vapor.renderer.ContourRenderer" title="vapor.renderer.ContourRenderer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContourRenderer</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#vapor.renderer.BarbRenderer" title="vapor.renderer.BarbRenderer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BarbRenderer</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
@@ -1034,6 +1073,17 @@ Steady flow (streamlines) renders time-invariant trajectories that follow a vect
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.GetNeedFlowlineOutput">
+<span class="sig-name descname"><span class="pre">GetNeedFlowlineOutput</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.GetNeedFlowlineOutput" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>bool VAPoR::FlowParams::GetNeedFlowlineOutput()</dt><dd><p>Inquire whether the writing of flow renderer data values are being written to a text file.</p>
+</dd>
+<dt>Returns</dt><dd><p>bool - Enable (true) or disable (false) the writing of trajectory data values to a text file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.GetPeriodic">
 <span class="sig-name descname"><span class="pre">GetPeriodic</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.GetPeriodic" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
@@ -1060,7 +1110,7 @@ IE - Do pathlines or streamlines continue on the opposite side of the domain whe
 <dl class="py method">
 <dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.GetPhongShininess">
 <span class="sig-name descname"><span class="pre">GetPhongShininess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.GetPhongShininess" title="Permalink to this definition">#</a></dt>
-<dd><p>Specifies the Phong Shininess lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Applies data of type: double. Typical values: 0.0 to 1.0. Valid values: DBL_MIN to DBL_MAX.</p>
+<dd><p>Specifies the Phong Shininess lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Applies data of type: double. Typical values: 0.0 to 100.0. Valid values: DBL_MIN to DBL_MAX.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1213,7 +1263,7 @@ Negative bias will place seeds at locations where the bias value has low values.
 <span class="sig-name descname"><span class="pre">GetSeedInputFilename</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.GetSeedInputFilename" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>std::string VAPoR::FlowParams::GetSeedInputFilename()</dt><dd><p>Get the file name/path to a file containing a list of seed points to advect from.
-See <a class="reference external" href="https://vapor.readthedocs.io/en/readthedocs/usage/flowRenderer.html#seed-distribution-settings">https://vapor.readthedocs.io/en/readthedocs/usage/flowRenderer.html#seed-distribution-settings</a></p>
+See <a class="reference external" href="https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/flowRenderer.html#seed-distribution-settings">https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/flowRenderer.html#seed-distribution-settings</a></p>
 </dd>
 <dt>Returns</dt><dd><p>string - A file path containing a defined list of seed points to advect from</p>
 </dd>
@@ -1306,6 +1356,17 @@ RenderTypeDensity</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.SetFlowOutputMoreVariables">
+<span class="sig-name descname"><span class="pre">SetFlowOutputMoreVariables</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.SetFlowOutputMoreVariables" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>void VAPoR::FlowParams::SetFlowOutputMoreVariables(std::vector&lt; std::string &gt; vars)</dt><dd><p>One or more variable to be sampled along flowlines and written to an output file.</p>
+</dd>
+<dt>Parameters</dt><dd><p>std::vector&lt;std::string&gt; - A vector containing the variables being written to the specified output file name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.SetFlowlineOutputFilename">
 <span class="sig-name descname"><span class="pre">SetFlowlineOutputFilename</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.SetFlowlineOutputFilename" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
@@ -1340,6 +1401,17 @@ Steady flow (streamlines) renders time-invariant trajectories that follow a vect
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.SetNeedFlowlineOutput">
+<span class="sig-name descname"><span class="pre">SetNeedFlowlineOutput</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.SetNeedFlowlineOutput" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>void VAPoR::FlowParams::SetNeedFlowlineOutput(bool)</dt><dd><p>Enable or disable the writing of flow renderer data values to a text file.</p>
+</dd>
+<dt>Parameters</dt><dd><p>bool - Enable (true) or disable (false) the writing of trajectory data values to a text file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.SetPeriodic">
 <span class="sig-name descname"><span class="pre">SetPeriodic</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.SetPeriodic" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
@@ -1368,7 +1440,7 @@ IE - Do pathlines or streamlines continue on the opposite side of the domain whe
 <dl class="py method">
 <dt class="sig sig-object py" id="vapor.renderer.FlowRenderer.SetPhongShininess">
 <span class="sig-name descname"><span class="pre">SetPhongShininess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.FlowRenderer.SetPhongShininess" title="Permalink to this definition">#</a></dt>
-<dd><p>Specifies the Phong Shininess lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Applies data of type: double. Typical values: 0.0 to 1.0. Valid values: DBL_MIN to DBL_MAX.</p>
+<dd><p>Specifies the Phong Shininess lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Applies data of type: double. Typical values: 0.0 to 100.0. Valid values: DBL_MIN to DBL_MAX.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1515,7 +1587,7 @@ IE - Do pathlines or streamlines continue on the opposite side of the domain whe
 <span class="sig-name descname"><span class="pre">SetSeedInputFilename</span></span><a class="headerlink" href="#vapor.renderer.FlowRenderer.SetSeedInputFilename" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>void VAPoR::FlowParams::SetSeedInputFilename(const std::string &amp;)</dt><dd><p>Set the file name/path to a file containing a list of seed points to advect from. Get the file name/path to a file containing a list of seed points to advect from.
-See <a class="reference external" href="https://vapor.readthedocs.io/en/readthedocs/usage/flowRenderer.html#seed-distribution-settings">https://vapor.readthedocs.io/en/readthedocs/usage/flowRenderer.html#seed-distribution-settings</a></p>
+See <a class="reference external" href="https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/flowRenderer.html#seed-distribution-settings">https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/flowRenderer.html#seed-distribution-settings</a></p>
 </dd>
 <dt>Parameters</dt><dd><p>string - A file path containing a defined list of seed points to advect from</p>
 </dd>
@@ -1653,13 +1725,13 @@ If there happens to be a mismatch between the units of your data’s domain and 
 <dl class="py method">
 <dt class="sig sig-object py" id="vapor.renderer.ModelRenderer.GetFile">
 <span class="sig-name descname"><span class="pre">GetFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#vapor.renderer.ModelRenderer.GetFile" title="Permalink to this definition">#</a></dt>
-<dd><p>Path to a 3D model file or Vapor vms scene file. 3D models can be in formats supported by the ASSIMP library. A description of the Vapor vms scene format can be found at <a class="reference external" href="https://vapor.readthedocs.io/en/readthedocs/usage/modelRenderer.html">https://vapor.readthedocs.io/en/readthedocs/usage/modelRenderer.html</a> Applies to data of type: string</p>
+<dd><p>Path to a 3D model file or Vapor vms scene file. 3D models can be in formats supported by the ASSIMP library. A description of the Vapor vms scene format can be found at <a class="reference external" href="https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/modelRenderer.html">https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/modelRenderer.html</a> Applies to data of type: string</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="vapor.renderer.ModelRenderer.SetFile">
 <span class="sig-name descname"><span class="pre">SetFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ModelRenderer.SetFile" title="Permalink to this definition">#</a></dt>
-<dd><p>Path to a 3D model file or Vapor vms scene file. 3D models can be in formats supported by the ASSIMP library. A description of the Vapor vms scene format can be found at <a class="reference external" href="https://vapor.readthedocs.io/en/readthedocs/usage/modelRenderer.html">https://vapor.readthedocs.io/en/readthedocs/usage/modelRenderer.html</a> Applies to data of type: string</p>
+<dd><p>Path to a 3D model file or Vapor vms scene file. 3D models can be in formats supported by the ASSIMP library. A description of the Vapor vms scene format can be found at <a class="reference external" href="https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/modelRenderer.html">https://ncar.github.io/VaporDocumentationWebsite/vaporApplicationReference/modelRenderer.html</a> Applies to data of type: string</p>
 </dd></dl>
 
 <dl class="py class">
@@ -1681,6 +1753,114 @@ If there happens to be a mismatch between the units of your data’s domain and 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="vapor.renderer.ModelRenderer.VaporName">
 <span class="sig-name descname"><span class="pre">VaporName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">b'Model'</span></em><a class="headerlink" href="#vapor.renderer.ModelRenderer.VaporName" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.renderer.</span></span><span class="sig-name descname"><span class="pre">ParticleRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renderParams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RenderParams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Renderer</span></code></a></p>
+<p>Wraps VAPoR::ParticleParams</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetDirectionScale">
+<span class="sig-name descname"><span class="pre">GetDirectionScale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetDirectionScale" title="Permalink to this definition">#</a></dt>
+<dd><p>Scale the length of particles velocity vector.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetPhongAmbient">
+<span class="sig-name descname"><span class="pre">GetPhongAmbient</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetPhongAmbient" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Ambient lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetPhongDiffuse">
+<span class="sig-name descname"><span class="pre">GetPhongDiffuse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetPhongDiffuse" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Diffuse lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetPhongShininess">
+<span class="sig-name descname"><span class="pre">GetPhongShininess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetPhongShininess" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Shininess lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 100.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetPhongSpecular">
+<span class="sig-name descname"><span class="pre">GetPhongSpecular</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetPhongSpecular" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Specular lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetRenderRadiusScalar">
+<span class="sig-name descname"><span class="pre">GetRenderRadiusScalar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetRenderRadiusScalar" title="Permalink to this definition">#</a></dt>
+<dd><p>Scale the rendered particle size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetShowDirection">
+<span class="sig-name descname"><span class="pre">GetShowDirection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetShowDirection" title="Permalink to this definition">#</a></dt>
+<dd><p>Show direction/velocity of particles. The field variables must be set to the particles velocity vector components (this is likely done automatically if using DCP ).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.GetStride">
+<span class="sig-name descname"><span class="pre">GetStride</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.GetStride" title="Permalink to this definition">#</a></dt>
+<dd><p>Load every nth particle. Useful for improving performance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetDirectionScale">
+<span class="sig-name descname"><span class="pre">SetDirectionScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetDirectionScale" title="Permalink to this definition">#</a></dt>
+<dd><p>Scale the length of particles velocity vector.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetPhongAmbient">
+<span class="sig-name descname"><span class="pre">SetPhongAmbient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetPhongAmbient" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Ambient lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetPhongDiffuse">
+<span class="sig-name descname"><span class="pre">SetPhongDiffuse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetPhongDiffuse" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Diffuse lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetPhongShininess">
+<span class="sig-name descname"><span class="pre">SetPhongShininess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetPhongShininess" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Shininess lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 100.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetPhongSpecular">
+<span class="sig-name descname"><span class="pre">SetPhongSpecular</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetPhongSpecular" title="Permalink to this definition">#</a></dt>
+<dd><p>Specifies the Phong Specular lighting coefficient ( <a class="reference external" href="https://en.wikipedia.org/wiki/Phong_reflection_model">https://en.wikipedia.org/wiki/Phong_reflection_model</a> ). Typical values: 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetRenderRadiusScalar">
+<span class="sig-name descname"><span class="pre">SetRenderRadiusScalar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetRenderRadiusScalar" title="Permalink to this definition">#</a></dt>
+<dd><p>Scale the rendered particle size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetShowDirection">
+<span class="sig-name descname"><span class="pre">SetShowDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetShowDirection" title="Permalink to this definition">#</a></dt>
+<dd><p>Show direction/velocity of particles. The field variables must be set to the particles velocity vector components (this is likely done automatically if using DCP ).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.SetStride">
+<span class="sig-name descname"><span class="pre">SetStride</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.renderer.ParticleRenderer.SetStride" title="Permalink to this definition">#</a></dt>
+<dd><p>Load every nth particle. Useful for improving performance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.renderer.ParticleRenderer.VaporName">
+<span class="sig-name descname"><span class="pre">VaporName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">b'Particle'</span></em><a class="headerlink" href="#vapor.renderer.ParticleRenderer.VaporName" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2598,6 +2778,7 @@ Class that supports drawing Barbs based on 2D or 3D vector field.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetGridNumOfSeeds"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetGridNumOfSeeds</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetIntegrationRegion"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetIntegrationRegion()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetIsSteady"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetIsSteady</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetNeedFlowlineOutput"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetNeedFlowlineOutput</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetPeriodic"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetPeriodic</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetPhongAmbient()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.GetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.GetPhongDiffuse()</span></code></a></li>
@@ -2637,9 +2818,11 @@ Class that supports drawing Barbs based on 2D or 3D vector field.</p>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetFlowDirection"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetFlowDirection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetFlowOutputMoreVariables"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetFlowOutputMoreVariables</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetFlowlineOutputFilename"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetFlowlineOutputFilename</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetGridNumOfSeeds"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetGridNumOfSeeds</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetIsSteady"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetIsSteady</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetNeedFlowlineOutput"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetNeedFlowlineOutput</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetPeriodic"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetPeriodic</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetPhongAmbient()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.FlowRenderer.SetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">FlowRenderer.SetPhongDiffuse()</span></code></a></li>
@@ -2690,6 +2873,26 @@ Class that supports drawing Barbs based on 2D or 3D vector field.</p>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ModelRenderer.VaporName"><code class="docutils literal notranslate"><span class="pre">ModelRenderer.VaporName</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetDirectionScale"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetDirectionScale()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongAmbient()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongDiffuse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongShininess"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongShininess()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetPhongSpecular"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetPhongSpecular()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetRenderRadiusScalar"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetRenderRadiusScalar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetShowDirection"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetShowDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.GetStride"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.GetStride()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetDirectionScale"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetDirectionScale()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongAmbient"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongAmbient()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongDiffuse"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongDiffuse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongShininess"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongShininess()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetPhongSpecular"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetPhongSpecular()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetRenderRadiusScalar"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetRenderRadiusScalar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetShowDirection"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetShowDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.SetStride"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.SetStride()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.ParticleRenderer.VaporName"><code class="docutils literal notranslate"><span class="pre">ParticleRenderer.VaporName</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.renderer.Renderer"><code class="docutils literal notranslate"><span class="pre">Renderer</span></code></a><ul class="nav section-nav flex-column">

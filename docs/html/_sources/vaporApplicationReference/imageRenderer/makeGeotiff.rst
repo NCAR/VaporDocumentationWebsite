@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_vaporApplicationReference_imageRenderer_makeGeotiff.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -31,7 +31,7 @@ It performs the the following:
 
 .. GENERATED FROM PYTHON SOURCE LINES 15-25
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # sphinx_gallery_thumbnail_path = '_images/map.png'
@@ -54,7 +54,7 @@ variables.
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-34
 
-.. code-block:: default
+.. code-block:: Python
 
     width = 1920
     height = 1080
@@ -68,7 +68,7 @@ To find your DPI, see here: https://www.infobyip.com/detectmonitordpi.php
 
 .. GENERATED FROM PYTHON SOURCE LINES 38-40
 
-.. code-block:: default
+.. code-block:: Python
 
     dpi = 96
 
@@ -79,7 +79,7 @@ URL for NASA's EarthData/WorldView web map tile service
 
 .. GENERATED FROM PYTHON SOURCE LINES 42-44
 
-.. code-block:: default
+.. code-block:: Python
 
     url = 'https://map1c.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi'
 
@@ -98,7 +98,7 @@ To preview these layers, visit https://worldview.earthdata.nasa.gov/
 
 .. GENERATED FROM PYTHON SOURCE LINES 54-56
 
-.. code-block:: default
+.. code-block:: Python
 
     layer = 'Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual'
 
@@ -109,7 +109,7 @@ Generate our matplotlib figure with a subplot to draw our map upon
 
 .. GENERATED FROM PYTHON SOURCE LINES 58-71
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
     import cartopy.crs as ccrs
@@ -131,7 +131,7 @@ Add coastlines from Cartopy
 
 .. GENERATED FROM PYTHON SOURCE LINES 73-75
 
-.. code-block:: default
+.. code-block:: Python
 
     ax.coastlines(resolution='50m', color='yellow')
 
@@ -142,7 +142,7 @@ Add roads from NaturalEarth
 
 .. GENERATED FROM PYTHON SOURCE LINES 77-84
 
-.. code-block:: default
+.. code-block:: Python
 
     import cartopy.feature as cf
     ax.add_feature(
@@ -158,7 +158,7 @@ Generate our initial tiff file
 
 .. GENERATED FROM PYTHON SOURCE LINES 86-93
 
-.. code-block:: default
+.. code-block:: Python
 
     tiffFile = targetDir + fileName + ".tif"
     fig.savefig( tiffFile,
@@ -174,7 +174,7 @@ Write our tiff file with GeoTiff extent information
 
 .. GENERATED FROM PYTHON SOURCE LINES 95-105
 
-.. code-block:: default
+.. code-block:: Python
 
     from osgeo import gdal
     gdal.OpenShared( tiffFile, gdal.GA_Update)
@@ -194,7 +194,7 @@ Proj4: "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84"
 
 .. GENERATED FROM PYTHON SOURCE LINES 108-114
 
-.. code-block:: default
+.. code-block:: Python
 
     gdal.Warp(  destNameOrDestDS=tiffFile, 
                 srcDSOrSrcDSTab=translatedTiff, 
@@ -209,15 +209,10 @@ Clean up intermediate translated file
 
 .. GENERATED FROM PYTHON SOURCE LINES 116-118
 
-.. code-block:: default
+.. code-block:: Python
 
     import os
     os.remove(translatedTiff)
-
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_vaporApplicationReference_imageRenderer_makeGeotiff.py:
@@ -226,16 +221,17 @@ Clean up intermediate translated file
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: makeGeotiff.ipynb <makeGeotiff.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: makeGeotiff.py <makeGeotiff.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: makeGeotiff.ipynb <makeGeotiff.ipynb>`
+      :download:`Download zipped: makeGeotiff.zip <makeGeotiff.zip>`
 
 
 .. only:: html
