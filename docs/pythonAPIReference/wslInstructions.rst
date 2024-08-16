@@ -1,6 +1,7 @@
 Windows Instructions
 --------------------
 
+*Vapor-python is currently not supported for Windows machines. This guide provides a temporary workaround*
 
 To run VAPOR Python on Windows distributions, we recommend installing the Windows Subsystem for Linux (`WSL <https://docs.microsoft.com/en-us/windows/wsl/install>`_). This will allow you to run your workflows in a Linux-based environment on your Windows machine. To get started, follow these steps:
 

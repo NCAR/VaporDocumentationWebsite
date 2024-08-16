@@ -21,11 +21,7 @@ After following the :ref:`installation instructions <installationInstructions>`,
 
 :Linux:
 
-    From a BASH shell, navigate to the directory you installed Vapor3 into.  Then issue the following command:
-
-    ::
-
-        user@localhost:/vaporInstallDir$ bin/vapor
+    Run the downloaded AppImage from your downloads folder.
 
 Load Data
 ---------

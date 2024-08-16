@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -39,7 +39,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -52,13 +52,16 @@
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'announcements/3.6userSurvey';</script>
-    <link rel="icon" href="../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -159,11 +162,22 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../downloads.html">Downloads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="current.html">Current Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../current.html">Current Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/installationInstructions.html">Installation Instructions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/vaporOnCasper.html">Running VAPOR on Casper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/sampleData.html">Sample Data</a></li>
@@ -216,6 +230,7 @@
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../vaporApplicationReference/navigationSettings.html">Navigation Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../vaporApplicationReference/globalSettings.html">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vaporApplicationReference/export.html">Exporting Visualizations</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../vaporApplicationReference/otherTools.html">Other Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../vaporApplicationReference/otherTools/pythonEngine.html">Python Engine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../vaporApplicationReference/otherTools/2dPlots.html">2D Plots</a></li>
@@ -255,6 +270,7 @@
 </details></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference external" href="https://projectpythia.org/vapor-python-cookbook/notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://projectpythia.org/vapor-python-cookbook/README.html">Examples</a></li>
 </ul>
 </details></li>
@@ -299,9 +315,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   

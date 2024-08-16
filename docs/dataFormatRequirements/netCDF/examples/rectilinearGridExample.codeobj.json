@@ -1,0 +1,38 @@
+{
+ "Path.home": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pathlib.Path",
+   "module_short": "pathlib.Path",
+   "name": "home"
+  }
+ ],
+ "np.geomspace": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "geomspace"
+  }
+ ],
+ "np.linspace": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "linspace"
+  }
+ ],
+ "xr.open_dataset": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "xarray",
+   "module_short": "xarray",
+   "name": "open_dataset"
+  }
+ ]
+}
