@@ -1,0 +1,79 @@
+.. _3.9.3:
+.. raw:: html
+
+    <div style="text-align: center;">
+        <h2>Download VAPOR's Latest Release (v3.9.3)</h2>
+    </div>
+
+    <table style="width: 100%; text-align: center; table-layout: fixed;">
+        <tr>
+            <td>
+                <img src="_images/windowsIcon.png" alt="Windows" style="width: 98px; background: none;">
+            </td>
+            <td>
+                <img src="_images/macIcon.png" alt="Mac" style="width: 100px; background: none; filter: drop-shadow(0 0 5px white);">
+            </td>
+            <td>
+                <img src="_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="text-align: center;">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-win64.exe" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Windows_64' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Windows
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div style="text-align: center;">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-AppleSilicon.dmg" style="display: inline-block; width: 150px; height: 50px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 2px 2px 2px 2px; cursor: pointer; vertical-align: middle; line-height: 50px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'MacOS_M1' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Mac Silicon
+                    </a>
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-Darwinx86.dmg" style="display: inline-block; width: 150px; height: 50px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 2px 2px 2px 2px; cursor: pointer; vertical-align: middle; line-height: 50px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'MacOS_x86' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Mac Intel
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div style="text-align: center;">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR-3.9.3-Linux-x86_64.AppImage" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Linux_AppImage' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Linux
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center;">
+        <h5><br>For VAPOR's weekly build, source code, and previous versions visit our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
+    </div>
+
+Vapor has released a minor version, v3.9.3, on August 16, 2024.
+
+**What's Changed**
+
+* Fix weekly build by @sgpearse in https://github.com/NCAR/VAPOR/pull/3579
+* Use DataMgrUtils instead of CE by @sgpearse in https://github.com/NCAR/VAPOR/pull/3608
+* relax dimension requirements by @shaomeng in https://github.com/NCAR/VAPOR/pull/3617
+* Improve Python API data loading by @StasJ in https://github.com/NCAR/VAPOR/pull/3620
+* Error check and dump metadata function by @ifranda in https://github.com/NCAR/VAPOR/pull/3623
+* stabilize particle size by @StasJ in https://github.com/NCAR/VAPOR/pull/3613
+* Utils organization by @ifranda in https://github.com/NCAR/VAPOR/pull/3624
+* Third party libraries for Casper by @sgpearse in https://github.com/NCAR/VAPOR/pull/3606
+* Update LICENSE by @NihanthCW in https://github.com/NCAR/VAPOR/pull/3629
+* Auto check/enable VGL on casper by @StasJ in https://github.com/NCAR/VAPOR/pull/3630
+* Fix Crash on Linear HSV color interpolation #3544 by @StasJ in https://github.com/NCAR/VAPOR/pull/3636
+* Fix Vapor crashes when variable names have invalid XML characters #3633 by @StasJ in https://github.com/NCAR/VAPOR/pull/3635
+* raise a more informative message when the coordinate file is missed by @shaomeng in https://github.com/NCAR/VAPOR/pull/3634
+* Codesigning vapor on Apple Silicon by @sgpearse in https://github.com/NCAR/VAPOR/pull/3639
+* Fixes for windows installers by @ifranda in https://github.com/NCAR/VAPOR/pull/3642
+* Fix #3648 vglrun auto-launcher broken with current AppImage by @StasJ in https://github.com/NCAR/VAPOR/pull/3653
+* comment out raise error message by @shaomeng in https://github.com/NCAR/VAPOR/pull/3655
+
+**New Contributors**
+
+* @ifranda made their first contribution in https://github.com/NCAR/VAPOR/pull/3623
+* @NihanthCW made their first contribution in https://github.com/NCAR/VAPOR/pull/3629
+
+**Full Changelog**: https://github.com/NCAR/VAPOR/compare/v3.9.2...v3.9.3
