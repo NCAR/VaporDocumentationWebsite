@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -39,7 +39,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -52,16 +52,13 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'vaporApplicationReference/imageRenderer/makeGeotiff';</script>
-    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Volume Renderer" href="../volumeRenderer.html" />
@@ -162,18 +159,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../downloads.html">Downloads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -315,9 +301,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -503,7 +489,7 @@ document.write(`
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="#sphx-glr-download-vaporapplicationreference-imagerenderer-makegeotiff-py"><span class="std std-ref">Go to the end</span></a>
-to download the full example code.</p>
+to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="makegeotiff-py">
 <span id="sphx-glr-vaporapplicationreference-imagerenderer-makegeotiff-py"></span><h1>makeGeotiff.py<a class="headerlink" href="#makegeotiff-py" title="Permalink to this heading">#</a></h1>
@@ -518,7 +504,7 @@ a set of lat/lon coordinates.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_images/map.png&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_images/map.png&#39;</span>
 
 <span class="n">targetDir</span> <span class="o">=</span> <span class="s2">&quot;/Users/pearse/&quot;</span>
 <span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;landSat_test2&quot;</span>
@@ -533,18 +519,18 @@ Note: If your specified lat/lon extents have a different aspect ratio than
 your width and height, the geotiff will have either its dimensions scaled to
 match the aspect ratio of the specified extents of the west/north/east/south
 variables.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">1920</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">1920</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">1080</span>
 </pre></div>
 </div>
 <p>For the generated tiff to have the correct width and height, the “dpi”
 variable must be set according to that of your monitor.
 To find your DPI, see here: <a class="reference external" href="https://www.infobyip.com/detectmonitordpi.php">https://www.infobyip.com/detectmonitordpi.php</a></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">dpi</span> <span class="o">=</span> <span class="mi">96</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dpi</span> <span class="o">=</span> <span class="mi">96</span>
 </pre></div>
 </div>
 <p>URL for NASA’s EarthData/WorldView web map tile service</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://map1c.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://map1c.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi&#39;</span>
 </pre></div>
 </div>
 <p>Specify the layer from the EarthData WMTS to draw to our geotiff.
@@ -558,11 +544,11 @@ VIIRS_CityLights_2012
 GOES-West_ABI_Band2_Red_Visible_1km</p>
 </div></blockquote>
 <p>To preview these layers, visit <a class="reference external" href="https://worldview.earthdata.nasa.gov/">https://worldview.earthdata.nasa.gov/</a></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">layer</span> <span class="o">=</span> <span class="s1">&#39;Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layer</span> <span class="o">=</span> <span class="s1">&#39;Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&#39;</span>
 </pre></div>
 </div>
 <p>Generate our matplotlib figure with a subplot to draw our map upon</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="n">dpi</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="n">dpi</span><span class="p">),</span>
@@ -577,11 +563,11 @@ GOES-West_ABI_Band2_Red_Visible_1km</p>
 </pre></div>
 </div>
 <p>Add coastlines from Cartopy</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;50m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;50m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Add roads from NaturalEarth</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cf</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cf</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span>
     <span class="n">cf</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span><span class="s1">&#39;cultural&#39;</span><span class="p">,</span> <span class="s1">&#39;roads_north_america&#39;</span><span class="p">,</span> <span class="s1">&#39;10m&#39;</span><span class="p">),</span>
     <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span>
@@ -590,7 +576,7 @@ GOES-West_ABI_Band2_Red_Visible_1km</p>
 </pre></div>
 </div>
 <p>Generate our initial tiff file</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">tiffFile</span> <span class="o">=</span> <span class="n">targetDir</span> <span class="o">+</span> <span class="n">fileName</span> <span class="o">+</span> <span class="s2">&quot;.tif&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tiffFile</span> <span class="o">=</span> <span class="n">targetDir</span> <span class="o">+</span> <span class="n">fileName</span> <span class="o">+</span> <span class="s2">&quot;.tif&quot;</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span> <span class="n">tiffFile</span><span class="p">,</span>
              <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span>
              <span class="n">pad_inches</span><span class="o">=</span><span class="mi">0</span>
@@ -598,7 +584,7 @@ GOES-West_ABI_Band2_Red_Visible_1km</p>
 </pre></div>
 </div>
 <p>Write our tiff file with GeoTiff extent information</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
 <span class="n">gdal</span><span class="o">.</span><span class="n">OpenShared</span><span class="p">(</span> <span class="n">tiffFile</span><span class="p">,</span> <span class="n">gdal</span><span class="o">.</span><span class="n">GA_Update</span><span class="p">)</span>
 <span class="n">translatedTiff</span> <span class="o">=</span> <span class="n">targetDir</span> <span class="o">+</span> <span class="n">fileName</span> <span class="o">+</span> <span class="s2">&quot;Translated.tif&quot;</span>
 <span class="n">gdal</span><span class="o">.</span><span class="n">Translate</span><span class="p">(</span> <span class="n">srcDS</span><span class="o">=</span><span class="n">tiffFile</span><span class="p">,</span>
@@ -611,7 +597,7 @@ GOES-West_ABI_Band2_Red_Visible_1km</p>
 </div>
 <p>Give our GeoTiff file a projected coordinate system, equivalent to the following proj4 string:
 Proj4: “+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84”</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">gdal</span><span class="o">.</span><span class="n">Warp</span><span class="p">(</span>  <span class="n">destNameOrDestDS</span><span class="o">=</span><span class="n">tiffFile</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdal</span><span class="o">.</span><span class="n">Warp</span><span class="p">(</span>  <span class="n">destNameOrDestDS</span><span class="o">=</span><span class="n">tiffFile</span><span class="p">,</span>
             <span class="n">srcDSOrSrcDSTab</span><span class="o">=</span><span class="n">translatedTiff</span><span class="p">,</span>
             <span class="n">srcSRS</span> <span class="o">=</span> <span class="s1">&#39;EPSG:4326&#39;</span><span class="p">,</span>
             <span class="n">dstSRS</span><span class="o">=</span><span class="s1">&#39;EPSG:32662&#39;</span>
@@ -619,19 +605,17 @@ Proj4: “+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84”</p
 </pre></div>
 </div>
 <p>Clean up intermediate translated file</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">translatedTiff</span><span class="p">)</span>
 </pre></div>
 </div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-vaporapplicationreference-imagerenderer-makegeotiff-py">
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/1be3163478b795c3779d85c9bd2201a7/makeGeotiff.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">makeGeotiff.ipynb</span></code></a></p>
-</div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ba7dc8ec496d57bb596d6240440f5c8e/makeGeotiff.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">makeGeotiff.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-zip docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/20982dd0a937dc0382913faef2fa7b1a/makeGeotiff.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">makeGeotiff.zip</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/1be3163478b795c3779d85c9bd2201a7/makeGeotiff.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">makeGeotiff.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>

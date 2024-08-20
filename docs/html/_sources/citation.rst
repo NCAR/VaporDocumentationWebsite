@@ -13,8 +13,8 @@ we request:
 
 Link to zenodo DOI:
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7779648.svg
-   :target: https://doi.org/10.5281/zenodo.7779648
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.13332956.svg
+  :target: https://doi.org/10.5281/zenodo.13332956
 
 |
 
