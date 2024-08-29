@@ -18,7 +18,7 @@
         gtag('config', 'G-VY29EEZ393');
     </script>
     
-    <title>vapor.utils package &#8212;   3.9.3 documentation</title>
+    <title>vapor.utils module &#8212;   3.9.3 documentation</title>
   
   
   
@@ -64,8 +64,8 @@
     <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="vapor.utils.histogram module" href="vapor.utils.histogram.html" />
-    <link rel="prev" title="Developer Modules" href="vapor.html" />
+    <link rel="next" title="Contributing to Vapor" href="../../contributingToVapor.html" />
+    <link rel="prev" title="vapor.smartwrapper module" href="vapor.smartwrapper.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -246,7 +246,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../wslInstructions.html">Windows Instructions</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../classReference.html">Class Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="../userModules/vapor.html">User Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.utils.html">vapor.utils package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.animation.html">vapor.animation module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.annotations.html">vapor.annotations module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.camera.html">vapor.camera module</a></li>
@@ -255,10 +254,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.transform.html">vapor.transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../userModules/vapor.utils.html">vapor.utils module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="vapor.html">Developer Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l4 current active"><a class="current reference internal" href="#">vapor.utils package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.cmake.html">vapor.cmake module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.common.html">vapor.common module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.config.html">vapor.config module</a></li>
@@ -266,6 +265,7 @@
 <li class="toctree-l4"><a class="reference internal" href="vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">vapor.utils module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -488,7 +488,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>vapor.utils package</h1>
+    <h1>vapor.utils module</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -498,8 +498,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-vapor.utils">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.GetMatPlotLibHistogram"><code class="docutils literal notranslate"><span class="pre">GetMatPlotLibHistogram()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.GetSamples"><code class="docutils literal notranslate"><span class="pre">GetSamples()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.ShowMatPlotLibHistogram"><code class="docutils literal notranslate"><span class="pre">ShowMatPlotLibHistogram()</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -511,28 +512,25 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="vapor-utils-package">
-<h1>vapor.utils package<a class="headerlink" href="#vapor-utils-package" title="Permalink to this heading">#</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="vapor.utils.histogram.html">vapor.utils.histogram module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vapor.utils.histogram.html#vapor.utils.histogram.GetMatPlotLibHistogram"><code class="docutils literal notranslate"><span class="pre">GetMatPlotLibHistogram()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="vapor.utils.histogram.html#vapor.utils.histogram.GetSamples"><code class="docutils literal notranslate"><span class="pre">GetSamples()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="vapor.utils.histogram.html#vapor.utils.histogram.ShowMatPlotLibHistogram"><code class="docutils literal notranslate"><span class="pre">ShowMatPlotLibHistogram()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="vapor.utils.keyframing.html">vapor.utils.keyframing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes"><code class="docutils literal notranslate"><span class="pre">animate_camera_keyframes()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
-<section id="module-vapor.utils">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-vapor.utils" title="Permalink to this heading">#</a></h2>
-</section>
+  <section id="module-vapor.utils">
+<span id="vapor-utils-module"></span><h1>vapor.utils module<a class="headerlink" href="#module-vapor.utils" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="vapor.utils.GetMatPlotLibHistogram">
+<span class="sig-prename descclassname"><span class="pre">vapor.utils.</span></span><span class="sig-name descname"><span class="pre">GetMatPlotLibHistogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../userModules/vapor.session.html#vapor.session.Session" title="vapor.session.Session"><span class="pre">Session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../userModules/vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">Renderer</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.utils.GetMatPlotLibHistogram" title="Permalink to this definition">#</a></dt>
+<dd><p>Shows a histogram for a given renderer.
+Wraps matplotlib.pyplot.hist(GetSamples(…))</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vapor.utils.GetSamples">
+<span class="sig-prename descclassname"><span class="pre">vapor.utils.</span></span><span class="sig-name descname"><span class="pre">GetSamples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../userModules/vapor.session.html#vapor.session.Session" title="vapor.session.Session"><span class="pre">Session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../userModules/vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">Renderer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">varName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.utils.GetSamples" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vapor.utils.ShowMatPlotLibHistogram">
+<span class="sig-prename descclassname"><span class="pre">vapor.utils.</span></span><span class="sig-name descname"><span class="pre">ShowMatPlotLibHistogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../userModules/vapor.session.html#vapor.session.Session" title="vapor.session.Session"><span class="pre">Session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../userModules/vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">Renderer</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.utils.ShowMatPlotLibHistogram" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </section>
 
 
@@ -547,20 +545,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="vapor.html"
+       href="vapor.smartwrapper.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Developer Modules</p>
+        <p class="prev-next-title">vapor.smartwrapper module</p>
       </div>
     </a>
     <a class="right-next"
-       href="vapor.utils.histogram.html"
+       href="../../contributingToVapor.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">vapor.utils.histogram module</p>
+        <p class="prev-next-title">Contributing to Vapor</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -580,8 +578,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-vapor.utils">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.GetMatPlotLibHistogram"><code class="docutils literal notranslate"><span class="pre">GetMatPlotLibHistogram()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.GetSamples"><code class="docutils literal notranslate"><span class="pre">GetSamples()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.ShowMatPlotLibHistogram"><code class="docutils literal notranslate"><span class="pre">ShowMatPlotLibHistogram()</span></code></a></li>
 </ul>
   </nav></div>
 

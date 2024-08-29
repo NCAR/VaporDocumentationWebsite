@@ -36,7 +36,7 @@
             </td>
             <td>
                 <div style="text-align: center;">
-                    <a href="https://github.com/NCAR/VAPOR/releases/download/vRELEASE_TAG/VAPOR-RELEASE_TAG-Linux-x86_64.AppImage" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Linux_AppImage' });">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/vRELEASE_TAG/VAPOR-RELEASE_TAG-x86_64.AppImage" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Linux_AppImage' });">
                         <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Linux
                     </a>
                 </div>

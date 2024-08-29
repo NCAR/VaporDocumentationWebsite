@@ -1,14 +1,6 @@
 User Modules
 ============
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   vapor.utils
-
 Submodules
 ----------
 
@@ -23,6 +15,7 @@ Submodules
    vapor.session
    vapor.transferfunction
    vapor.transform
+   vapor.utils
 
 Module contents
 ---------------
