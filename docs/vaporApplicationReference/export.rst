@@ -11,7 +11,12 @@ Saving a Single Image
 3. Choose the desired file format (TIFF or PNG).
 4. Specify the location for the file and click **Save**.
 
-How to Save an Image Sequence
+.. figure:: ../_images/animationTab.png
+    :align: center
+    :width: 500
+    :figclass: align-center
+
+Saving an Image Sequence
 -----------------------------
 1. Go to the **Capture** menu at the top of the application.
 2. Select **Image Sequence**.
