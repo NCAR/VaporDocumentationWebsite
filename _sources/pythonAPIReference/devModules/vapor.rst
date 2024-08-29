@@ -1,14 +1,6 @@
 Developer Modules
 =================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   vapor.utils
-
 Submodules
 ----------
 
@@ -22,6 +14,7 @@ Submodules
    vapor.link
    vapor.params
    vapor.smartwrapper
+   vapor.utils
 
 Module contents
 ---------------
