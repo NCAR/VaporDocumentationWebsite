@@ -57,7 +57,7 @@ Running VAPOR on your Remote Desktop
 
 Once you've connected to your remote desktop, follow these steps to run VAPOR:
 
-1. Before launching VAPOR, it is recommended to change the desktop's settings for clicking files and folders. This will make it easier to open multi-file datasets. Navigate to "System Settings", then under "Clicking files or folders" select "Selects them" and click "Apply". Capser will save your preferences between sessions, so this only needs to be done once.
+1. Before launching VAPOR for the first time, it is recommended to change the desktop's settings for clicking files and folders. This will make it easier to open multi-file datasets. Navigate to "System Settings", then under "Clicking files or folders" select "Selects them" and click "Apply". Capser will save your preferences between sessions, so this only needs to be done once.
 
 .. figure:: ../_images/casperSettings.png
     :align: center
