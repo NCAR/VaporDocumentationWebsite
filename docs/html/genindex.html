@@ -245,6 +245,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pythonAPIReference/wslInstructions.html">Windows Instructions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="pythonAPIReference/classReference.html">Class Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="pythonAPIReference/userModules/vapor.html">User Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.utils.html">vapor.utils package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.animation.html">vapor.animation module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.annotations.html">vapor.annotations module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.camera.html">vapor.camera module</a></li>
@@ -253,10 +254,10 @@
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.transform.html">vapor.transform module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.utils.html">vapor.utils module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="pythonAPIReference/devModules/vapor.html">Developer Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.utils.html">vapor.utils package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.cmake.html">vapor.cmake module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.common.html">vapor.common module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.config.html">vapor.config module</a></li>
@@ -264,7 +265,6 @@
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.utils.html">vapor.utils module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -471,6 +471,8 @@ document.write(`
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes">animate_camera_keyframes() (in module vapor.utils.keyframing)</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.animation.html#vapor.animation.Animation">Animation (class in vapor.animation)</a>
 </li>
       <li><a href="pythonAPIReference/devModules/vapor.smartwrapper.html#vapor.smartwrapper.SmartWrapperMeta.AutoWrap">AutoWrap() (vapor.smartwrapper.SmartWrapperMeta class method)</a>
@@ -759,7 +761,7 @@ document.write(`
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction.GetMatPlotLibColormap">GetMatPlotLibColormap() (vapor.transferfunction.TransferFunction method)</a>
 </li>
-      <li><a href="pythonAPIReference/devModules/vapor.utils.html#vapor.utils.GetMatPlotLibHistogram">GetMatPlotLibHistogram() (in module vapor.utils)</a>, <a href="pythonAPIReference/userModules/vapor.utils.html#vapor.utils.GetMatPlotLibHistogram">[1]</a>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.histogram.html#vapor.utils.histogram.GetMatPlotLibHistogram">GetMatPlotLibHistogram() (in module vapor.utils.histogram)</a>, <a href="pythonAPIReference/userModules/vapor.utils.histogram.html#vapor.utils.histogram.GetMatPlotLibHistogram">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction.GetMaxMapValue">GetMaxMapValue (vapor.transferfunction.TransferFunction attribute)</a>
 </li>
@@ -889,7 +891,7 @@ document.write(`
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.SliceRenderer.GetSampleRate">GetSampleRate() (vapor.renderer.SliceRenderer method)</a>
 </li>
-      <li><a href="pythonAPIReference/devModules/vapor.utils.html#vapor.utils.GetSamples">GetSamples() (in module vapor.utils)</a>, <a href="pythonAPIReference/userModules/vapor.utils.html#vapor.utils.GetSamples">[1]</a>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.histogram.html#vapor.utils.histogram.GetSamples">GetSamples() (in module vapor.utils.histogram)</a>, <a href="pythonAPIReference/userModules/vapor.utils.histogram.html#vapor.utils.histogram.GetSamples">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.VolumeRenderer.GetSamplingMultiplier">GetSamplingMultiplier (vapor.renderer.VolumeRenderer attribute)</a>
 </li>
@@ -1134,6 +1136,10 @@ document.write(`
         <li><a href="pythonAPIReference/userModules/vapor.transform.html#module-vapor.transform">vapor.transform</a>
 </li>
         <li><a href="pythonAPIReference/devModules/vapor.utils.html#module-vapor.utils">vapor.utils</a>, <a href="pythonAPIReference/userModules/vapor.utils.html#module-vapor.utils">[1]</a>
+</li>
+        <li><a href="pythonAPIReference/devModules/vapor.utils.histogram.html#module-vapor.utils.histogram">vapor.utils.histogram</a>, <a href="pythonAPIReference/userModules/vapor.utils.histogram.html#module-vapor.utils.histogram">[1]</a>
+</li>
+        <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#module-vapor.utils.keyframing">vapor.utils.keyframing</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#module-vapor.utils.keyframing">[1]</a>
 </li>
         <li><a href="vaporApplicationReference/otherTools/vaporUtilsModule.html#module-vapor_utils">vapor_utils</a>
 </li>
@@ -1580,7 +1586,7 @@ document.write(`
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction.ShowMatPlotLibColorbar">ShowMatPlotLibColorbar() (vapor.transferfunction.TransferFunction method)</a>
 </li>
-      <li><a href="pythonAPIReference/devModules/vapor.utils.html#vapor.utils.ShowMatPlotLibHistogram">ShowMatPlotLibHistogram() (in module vapor.utils)</a>, <a href="pythonAPIReference/userModules/vapor.utils.html#vapor.utils.ShowMatPlotLibHistogram">[1]</a>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.histogram.html#vapor.utils.histogram.ShowMatPlotLibHistogram">ShowMatPlotLibHistogram() (in module vapor.utils.histogram)</a>, <a href="pythonAPIReference/userModules/vapor.utils.histogram.html#vapor.utils.histogram.ShowMatPlotLibHistogram">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.SliceRenderer">SliceRenderer (class in vapor.renderer)</a>
 </li>
@@ -1736,8 +1742,6 @@ document.write(`
         <li><a href="pythonAPIReference/devModules/vapor.smartwrapper.html#module-vapor.smartwrapper">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     vapor.transferfunction
 
@@ -1745,6 +1749,8 @@ document.write(`
         <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#module-vapor.transferfunction">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     vapor.transform
 
@@ -1757,6 +1763,20 @@ document.write(`
 
       <ul>
         <li><a href="pythonAPIReference/devModules/vapor.utils.html#module-vapor.utils">module</a>, <a href="pythonAPIReference/userModules/vapor.utils.html#module-vapor.utils">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    vapor.utils.histogram
+
+      <ul>
+        <li><a href="pythonAPIReference/devModules/vapor.utils.histogram.html#module-vapor.utils.histogram">module</a>, <a href="pythonAPIReference/userModules/vapor.utils.histogram.html#module-vapor.utils.histogram">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    vapor.utils.keyframing
+
+      <ul>
+        <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#module-vapor.utils.keyframing">module</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#module-vapor.utils.keyframing">[1]</a>
 </li>
       </ul></li>
       <li>
