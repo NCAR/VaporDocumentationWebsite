@@ -246,6 +246,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../wslInstructions.html">Windows Instructions</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../classReference.html">Class Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="vapor.html">User Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vapor.utils.html">vapor.utils package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.animation.html">vapor.animation module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.annotations.html">vapor.annotations module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.camera.html">vapor.camera module</a></li>
@@ -254,10 +255,10 @@
 <li class="toctree-l4"><a class="reference internal" href="vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.transform.html">vapor.transform module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.utils.html">vapor.utils module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../devModules/vapor.html">Developer Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.utils.html">vapor.utils package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.cmake.html">vapor.cmake module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.common.html">vapor.common module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.config.html">vapor.config module</a></li>
@@ -265,7 +266,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.utils.html">vapor.utils module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -745,8 +745,9 @@ You can swap your axes with np.swapaxes(data, 0, -1).</p>
 <dt class="sig sig-object py" id="vapor.dataset.PythonDataset.AddXArrayData">
 <span class="sig-name descname"><span class="pre">AddXArrayData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataArray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.dataset.PythonDataset.AddXArrayData" title="Permalink to this definition">#</a></dt>
 <dd><p>Vapor supports grids commonly used in earth science data.
-Vapor expects data to be in order=’C’ with X as the fastest varying dimension.
-You can swap your axes with np.swapaxes(data, 0, -1).</p>
+It is recommended to import more complex datasets directly using Session.OpenDataset() as this will ensure coordinates and time varying data are handled automatically.
+Since xarray does not distinguish temporal dimensions your data will be interpeded as len(n.dims) space-dimensional, therefore arr must only contain spacial dimensions.
+Vapor expects data to be in order=’C’ with X as the fastest varying dimension.</p>
 </dd></dl>
 
 </dd></dl>
