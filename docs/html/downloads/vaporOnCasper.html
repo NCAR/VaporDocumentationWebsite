@@ -528,13 +528,12 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Start a VNC session on Casper by running the following command in a terminal on your local machine. Replace <code class="docutils literal notranslate"><span class="pre">YOUR_USERNAME</span></code> with your Casper login and <code class="docutils literal notranslate"><span class="pre">PROJECT_CODE</span></code> with the code associated with your project.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00 --gl-desktop</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">--gl-desktop</span></code> flag allows the server to use GPU resources, which is important for running VAPOR.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">4:00:00</span></code> flag specifies the time the server will run for in HH:MM:SS format. The default is 4 hours and the maximum is 24 hours.</p></li>
 <li><p>For additional options, you can run <code class="docutils literal notranslate"><span class="pre">vncmgr</span> <span class="pre">--help</span></code> when signed into Casper.</p></li>
 </ul>
