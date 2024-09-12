@@ -14,11 +14,10 @@ Connecting to a Remote Desktop
 
 .. code-block:: console
 
-    ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00 --gl-desktop
+    ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00
 
 .. note::
 
-    * The ``--gl-desktop`` flag allows the server to use GPU resources, which is important for running VAPOR.
     * The ``-t 4:00:00`` flag specifies the time the server will run for in HH:MM:SS format. The default is 4 hours and the maximum is 24 hours.
     * For additional options, you can run ``vncmgr --help`` when signed into Casper.
 
