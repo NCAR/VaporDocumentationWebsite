@@ -35,11 +35,10 @@ A demonstration can be viewed below, and the sample data used in these examples 
 
     <div class="sphx-glr-thumbnails">
 
-.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The sample data for this script can be downloaded here:     https://github.com/NCAR/VAPOR-Data/blob/main/netCDF/simple.nc">
+    <div class="sphx-glr-thumbcontainer" tooltip="The sample data for this script can be downloaded here:     https://github.com/NCAR/VAPOR-Data/...">
 
 .. only:: html
 
@@ -56,7 +55,7 @@ A demonstration can be viewed below, and the sample data used in these examples 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The sample data for this script can be downloaded here:     https://github.com/NCAR/VAPOR-Data/blob/main/netCDF/simple.nc">
+    <div class="sphx-glr-thumbcontainer" tooltip="The sample data for this script can be downloaded here:     https://github.com/NCAR/VAPOR-Data/...">
 
 .. only:: html
 
@@ -70,8 +69,6 @@ A demonstration can be viewed below, and the sample data used in these examples 
       <div class="sphx-glr-thumbnail-title">rectilinearGridExample.py</div>
     </div>
 
-
-.. thumbnail-parent-div-close
 
 .. raw:: html
 

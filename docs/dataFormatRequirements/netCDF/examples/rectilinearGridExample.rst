@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_dataFormatRequirements_netCDF_examples_rectilinearGridExample.py>`
-        to download the full example code.
+        to download the full example code
 
 .. rst-class:: sphx-glr-example-title
 
@@ -35,7 +35,7 @@ Import packages:
 
 .. GENERATED FROM PYTHON SOURCE LINES 18-24
 
-.. code-block:: Python
+.. code-block:: default
 
 
     import xarray as xr
@@ -51,7 +51,7 @@ Modify the 'home' variable to point to the directory containing sample data
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-33
 
-.. code-block:: Python
+.. code-block:: default
 
     home = str(Path.home())
     simpleNC = home + "/simple.nc"
@@ -66,7 +66,7 @@ Create a Coordinate Variable for our 'time' dimension and assign a value to it
 
 .. GENERATED FROM PYTHON SOURCE LINES 35-37
 
-.. code-block:: Python
+.. code-block:: default
 
     ds['time'] = np.linspace(start=0, stop=0, num=1);
 
@@ -80,7 +80,7 @@ https://numpy.org/doc/stable/reference/generated/numpy.geomspace.html
 
 .. GENERATED FROM PYTHON SOURCE LINES 42-49
 
-.. code-block:: Python
+.. code-block:: default
 
   
     ds['y'] = np.geomspace(start=1, stop=100, num=48)
@@ -97,7 +97,7 @@ apply to
 
 .. GENERATED FROM PYTHON SOURCE LINES 52-58
 
-.. code-block:: Python
+.. code-block:: default
 
 
     ds.time.attrs['axis']      = 'T'
@@ -112,7 +112,7 @@ Give our Coordinate Variables 'units' attributes
 
 .. GENERATED FROM PYTHON SOURCE LINES 60-67
 
-.. code-block:: Python
+.. code-block:: default
 
 
     ds.time.attrs['units']     = 'seconds since 2000-0101'
@@ -128,7 +128,7 @@ It's optional but advisable to give our scalar variables a 'units' attribute
 
 .. GENERATED FROM PYTHON SOURCE LINES 69-73
 
-.. code-block:: Python
+.. code-block:: default
 
     ds.temperature.attrs['units'] = 'K'
 
@@ -141,7 +141,7 @@ Save our file for reading into Vapor
 
 .. GENERATED FROM PYTHON SOURCE LINES 75-77
 
-.. code-block:: Python
+.. code-block:: default
 
     ds.to_netcdf( home + "/regularCompliant.nc")
 
@@ -152,9 +152,14 @@ Plot a 2D cross section of temperature
 
 .. GENERATED FROM PYTHON SOURCE LINES 79-80
 
-.. code-block:: Python
+.. code-block:: default
 
     ds.isel(time=0, z=0).temperature.plot(size=6, robust=True);
+
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_dataFormatRequirements_netCDF_examples_rectilinearGridExample.py:
@@ -163,17 +168,16 @@ Plot a 2D cross section of temperature
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-      :download:`Download Jupyter notebook: rectilinearGridExample.ipynb <rectilinearGridExample.ipynb>`
+
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: rectilinearGridExample.py <rectilinearGridExample.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-zip
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-      :download:`Download zipped: rectilinearGridExample.zip <rectilinearGridExample.zip>`
+      :download:`Download Jupyter notebook: rectilinearGridExample.ipynb <rectilinearGridExample.ipynb>`
 
 
 .. only:: html
