@@ -68,11 +68,11 @@ This is the recommended approach for acquiring the third-party libraries that Va
 
 After forking your new Vapor repository and cloning from it, you can download pre-built third-party libraries from the links below.  Be sure to select the correct libraries for the operating system you're building on.
 
+    :ref:`Download third party libraries here <Third Party Libraries>`
+
 *Windows*
 
-Unzip the following file linked below into the root of your C:\\ directory.
-
-    `Windows third party libraries <https://drive.google.com/file/d/1fzZ-mbY4Cek1TRsaKm79a08Od5gNCogk/view?usp=sharing>`_
+Unzip the third-party libraries for Windows into the root of your C:\\ directory.
 
 *Linux and OSX*
 
@@ -81,12 +81,6 @@ If building on Linux or OSX, the third party libraries must be placed in /usr/lo
 .. code-block:: console
 
    $ ln -s /usr/local/VAPOR-Deps/2023-Jun /usr/local/VAPOR-Deps/current
-
-* `MacOS x86 third-party libraries <https://drive.google.com/file/d/17w6wUS5NIqUz8_s9zV98jeAjM-muWSfn/view?usp=drive_link>`_
-* `MacOS arm64 third-party libraries <https://drive.google.com/file/d/1QEyOZWinJmLVnbCnEq43QtskDirmP_9d/view?usp=drive_link>`_
-* `Ubuntu 20 third-party libraries <https://drive.google.com/file/d/16xcR2NFWRg6bROQg8JL1-Ezni14p4mQ6/view?usp=drive_link>`_
-* `Ubuntu 22 third-party libraries <https://drive.google.com/file/d/1gqUxxJJA4iGnAPvI1EDaFFnrlbALnkeO/view?usp=drive_link>`_
-* `CentOS third-party libraries <https://drive.google.com/file/d/1S9DwySMnQrBuUUZGKolD__WQrjTmLgyn/view?usp=sharing>`_
 
 .. note:: On MacOS, a "quarantine" flag will be added to the binaries and libraries you build from source.  This will prevent them from being run.  To remove the flag, run *sudo xattr -dr com.apple.quarantine /usr/local/VAPOR-Deps/current/* after building the libraries.
 
