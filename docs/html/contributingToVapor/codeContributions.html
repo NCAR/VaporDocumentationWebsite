@@ -60,8 +60,8 @@
     <link rel="icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributing to Vapor’s Documentation" href="contributingToVaporsDocumentation.html" />
-    <link rel="prev" title="Bug Reports and Feature Requests" href="bugReportsAndFeatureRequests.html" />
+    <link rel="next" title="Citation and License" href="../citationAndLicense.html" />
+    <link rel="prev" title="Contributing to Vapor" href="../contributingToVapor.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -246,12 +246,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://www.youtube.com/channel/UCpf-d1GDO1sotzjJ2t_QkDw">YouTube Channel</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://vapor.discourse.group">Get Help on Our Forum</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../contributingToVapor.html">Contributing to Vapor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="whereToStart.html">Where to start?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bugReportsAndFeatureRequests.html">Bug Reports and Feature Requests</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Code Contributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributingToVaporsDocumentation.html">Contributing to Vapor’s Documentation</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="contributingToVaporsGallery.html">Contributing to Vapor’s Gallery</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../citationAndLicense.html">Citation and License</a></li>
@@ -538,7 +533,7 @@ writing code for Vapor.</p>
 </figcaption>
 </figure>
 <p>Clone your forked repository to a suitable location on your local work machine.  This new remote repository is what will be merged with Vapor’s main branch once your changes have been made.</p>
-<p>After completing your work, your changes can be submitted for review through a Pull Request from your Fork, into Vapor’s main repository.  This is done under the Pull Requests tab in Vapor’s github repository.  From this tab, create a new pull request that brings the changes from your forked repo into Vapor’s main repo.  More details on this step are included in the <a class="reference internal" href="#contributing-submitting"><span class="std std-ref">Submitting Your Changes</span></a> section of this document.</p>
+<p>After completing your work, your changes can be submitted for review through a Pull Request from your Fork, into Vapor’s main repository.  This is done under the Pull Requests tab in Vapor’s github repository.  From this tab, create a new pull request that brings the changes from your forked repo into Vapor’s main repo.  More details on this step are included in the <a class="reference internal" href="codeContributions/submittingChanges.html#contributing-submitting"><span class="std std-ref">Submitting Your Changes</span></a> section of this document.</p>
 <p>For more information on the Forking Workflow, please see <a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow">Atlassian has a tutorial</a> on basics and best practices.</p>
 <figure class="align-center" id="id5">
 <img alt="../_images/mergeFork.png" src="../_images/mergeFork.png" />
@@ -551,7 +546,7 @@ writing code for Vapor.</p>
 <h2>Third-Party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this heading">#</a></h2>
 <section id="download-pre-built-third-party-libraries-recommended">
 <h3>Download pre-built Third-Party Libraries (Recommended)<a class="headerlink" href="#download-pre-built-third-party-libraries-recommended" title="Permalink to this heading">#</a></h3>
-<p>This is the recommended approach for acquiring the third-party libraries that Vapor depends on.  If you require additional libraries, or custom settings to the libraries currently used by vapor, see the <a class="reference internal" href="#contributing-build3rdparty"><span class="std std-ref">Building Third-Party Libraries section</span></a>.</p>
+<p>This is the recommended approach for acquiring the third-party libraries that Vapor depends on.  If you require additional libraries, or custom settings to the libraries currently used by vapor, see the <a class="reference internal" href="codeContributions/thirdPartyLibraries.html#contributing-build3rdparty"><span class="std std-ref">Building Third-Party Libraries section</span></a>.</p>
 <p>After forking your new Vapor repository and cloning from it, you can download pre-built third-party libraries from the links below.  Be sure to select the correct libraries for the operating system you’re building on.</p>
 <blockquote>
 <div><p><a class="reference internal" href="../downloads/thirdPartyLibraries.html#third-party-libraries"><span class="std std-ref">Download third party libraries here</span></a></p>
@@ -739,7 +734,7 @@ writing code for Vapor.</p>
 </section>
 <section id="building-vapor-s-python-api-from-source">
 <h2>Building Vapor’s Python API from source<a class="headerlink" href="#building-vapor-s-python-api-from-source" title="Permalink to this heading">#</a></h2>
-<p>To build Vapor’s Python API from source, you will need to install either Anaconda or Miniconda onto your system.  <a class="reference external" href="https://www.anaconda.com/products/distribution">Download here</a>.  Once installed, <a class="reference internal" href="#contributing-environment"><span class="std std-ref">fork Vapor’s github repository</span></a> then build and install the .tar.bz2 package by following the steps below.</p>
+<p>To build Vapor’s Python API from source, you will need to install either Anaconda or Miniconda onto your system.  <a class="reference external" href="https://www.anaconda.com/products/distribution">Download here</a>.  Once installed, <a class="reference internal" href="codeContributions/acquireVapor.html#contributing-environment"><span class="std std-ref">fork Vapor’s github repository</span></a> then build and install the .tar.bz2 package by following the steps below.</p>
 <section id="building-the-conda-image">
 <h3>Building the conda image<a class="headerlink" href="#building-the-conda-image" title="Permalink to this heading">#</a></h3>
 <p>These steps generate a .tar.bz2 bundle that you can locally install with conda, instead of fetching a package from a remote repository like conda-forge.</p>
@@ -857,20 +852,20 @@ writing code for Vapor.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bugReportsAndFeatureRequests.html"
+       href="../contributingToVapor.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Bug Reports and Feature Requests</p>
+        <p class="prev-next-title">Contributing to Vapor</p>
       </div>
     </a>
     <a class="right-next"
-       href="contributingToVaporsDocumentation.html"
+       href="../citationAndLicense.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Contributing to Vapor’s Documentation</p>
+        <p class="prev-next-title">Citation and License</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
