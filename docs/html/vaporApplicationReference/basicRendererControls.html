@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'vaporApplicationReference/basicRendererControls';</script>
-    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Contours" href="contourRenderer.html" />
@@ -486,7 +485,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="basic-renderer-controls">
-<span id="basicrenderercontrols"></span><h1>Basic Renderer Controls<a class="headerlink" href="#basic-renderer-controls" title="Permalink to this headline">#</a></h1>
+<span id="basicrenderercontrols"></span><h1>Basic Renderer Controls<a class="headerlink" href="#basic-renderer-controls" title="Permalink to this heading">#</a></h1>
 <p>Each of Vapor’s renderers has a common set of controls that will create imagery of your variables according to color, opacity, and region of interest.</p>
 <p>While each renderer is unique, controlling their parameters is mostly the same.  All renderers are controlled by four tabs:</p>
 <blockquote>
@@ -505,12 +504,12 @@ document.write(`
 </figcaption>
 </figure>
 <section id="variables-tab">
-<span id="variablestab"></span><h2>Variables Tab<a class="headerlink" href="#variables-tab" title="Permalink to this headline">#</a></h2>
+<span id="variablestab"></span><h2>Variables Tab<a class="headerlink" href="#variables-tab" title="Permalink to this heading">#</a></h2>
 <p>The Variables Tab allows the user to define what variables are used as input to a renderer.  The options presented to the user in this tab depend on the renderer currently being used.</p>
 <p>Users that have converted their data into <a class="reference internal" href="../dataFormatRequirements/vdc.html#vdc"><span class="std std-ref">VDC</span></a> will have a fidelity controller, which allows them to view compressed data to speed up their rendering time.  Making a visualization interactive lets you change parameters faster, so you can crank up the fidelity of your data for a final visualization after exploring first.</p>
 </section>
 <section id="appearance-tab">
-<span id="appearancetab"></span><h2>Appearance Tab<a class="headerlink" href="#appearance-tab" title="Permalink to this headline">#</a></h2>
+<span id="appearancetab"></span><h2>Appearance Tab<a class="headerlink" href="#appearance-tab" title="Permalink to this heading">#</a></h2>
 <p>The appearance tab controls the color, opacity, and any renderer-specific parameters of your renderer.  Color and opacity are controlled by the Transfer Function.  Renderer-specific parameters will be grouped together within the Appearance Tab.  See the <a class="reference internal" href="renderers.html#renderers"><span class="std std-ref">Renderers</span></a> section for more info on renderer-specific parameters.</p>
 <p>The Transfer Function consists of a <a class="reference external" href="https://en.wikipedia.org/wiki/Probability_density_function">Probability Density Function (PDF)</a> of your currently selected variable.  Underneath the PDF is a color bar that shows the colors that get applied to the values located directly above it.</p>
 <figure class="align-center" id="id2">
@@ -528,7 +527,7 @@ document.write(`
 </figcaption>
 </figure>
 <section id="controlling-color">
-<span id="controllingcolor"></span><h3>Controlling Color<a class="headerlink" href="#controlling-color" title="Permalink to this headline">#</a></h3>
+<span id="controllingcolor"></span><h3>Controlling Color<a class="headerlink" href="#controlling-color" title="Permalink to this heading">#</a></h3>
 <p>Vapor’s default color map is called CoolWarm.  This is arbitrary, and may not suit your needs.  Vapor bundles several other color maps that can be found by pressing the “Load TF” button at the top of the Appearance tab.</p>
 <p>The colors in the color map be moved by creating a color-control-point, and dragging it.  To create a new color-control-point, right click on the Colorbar, and then click “New Color Control Point.”  The color at this control point may now be dragged to suit your needs.</p>
 <figure class="align-center" id="id4">
@@ -540,7 +539,7 @@ document.write(`
 <p>These control points may also be given direct color values by either double clicking them, or right-clicking and selecting “Edit color control point”.  After a color has been changed, Vapor will interpolate between control points to give a smooth color transition.</p>
 </section>
 <section id="controlling-opacity">
-<h3>Controlling Opacity<a class="headerlink" href="#controlling-opacity" title="Permalink to this headline">#</a></h3>
+<h3>Controlling Opacity<a class="headerlink" href="#controlling-opacity" title="Permalink to this heading">#</a></h3>
 <p>Opacity is controlled by the green line on top of the PDF.  The higher this green line is on the PDF’s Y axis, the more opaque the colors will be at that point.  For example, the green bar is set to Y=0 over the blue values in the image below.  All of these values will be masked out.  The green bar then ramps up, and the values become more opaque, until we reach full opacity in the red region.</p>
 <figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../_images/opacityMap.png"><img alt="../_images/opacityMap.png" src="../_images/opacityMap.png" style="width: 500px;" /></a>
@@ -551,7 +550,7 @@ document.write(`
 </section>
 </section>
 <section id="geometry-tab">
-<span id="geometrytab"></span><h2>Geometry Tab<a class="headerlink" href="#geometry-tab" title="Permalink to this headline">#</a></h2>
+<span id="geometrytab"></span><h2>Geometry Tab<a class="headerlink" href="#geometry-tab" title="Permalink to this heading">#</a></h2>
 <p>The Geometry tab controls where your renderer is drawing, within the space of your simulation.  By excluding regions of data from being drawn, occluded features may be seen more clearly. Compute time will also be reduced, as well as the memory needed for a given renderer.</p>
 <figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../_images/geometryWidget.png"><img alt="../_images/geometryWidget.png" src="../_images/geometryWidget.png" style="width: 500px;" /></a>
@@ -588,7 +587,7 @@ document.write(`
 </figure>
 </section>
 <section id="annotation-tab">
-<span id="annotationtab"></span><h2>Annotation Tab<a class="headerlink" href="#annotation-tab" title="Permalink to this headline">#</a></h2>
+<span id="annotationtab"></span><h2>Annotation Tab<a class="headerlink" href="#annotation-tab" title="Permalink to this heading">#</a></h2>
 <p>Quantifying the colors to your viewers can be done by adding a colorbar in the Annotation tab.</p>
 <figure class="align-center" id="id11">
 <a class="reference internal image-reference" href="../_images/colorbarTab.png"><img alt="../_images/colorbarTab.png" src="../_images/colorbarTab.png" style="width: 500px;" /></a>

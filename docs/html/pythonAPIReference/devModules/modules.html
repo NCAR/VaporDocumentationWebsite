@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pythonAPIReference/devModules/modules';</script>
-    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -467,7 +466,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="vapor">
-<h1>vapor<a class="headerlink" href="#vapor" title="Permalink to this headline">#</a></h1>
+<h1>vapor<a class="headerlink" href="#vapor" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="vapor.html">Developer Modules</a><ul>
@@ -482,11 +481,50 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="vapor.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="vapor.cmake.html">vapor.cmake module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vapor.common.html">vapor.common module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.config.html">vapor.config module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.cppyyDoxygenWrapper.html">vapor.cppyyDoxygenWrapper module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.link.html">vapor.link module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.params.html">vapor.params module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.config.html">vapor.config module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetAllResources"><code class="docutils literal notranslate"><span class="pre">GetAllResources()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetCompileDefinitions"><code class="docutils literal notranslate"><span class="pre">GetCompileDefinitions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetDoxygenRoot"><code class="docutils literal notranslate"><span class="pre">GetDoxygenRoot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetIncludeDirs"><code class="docutils literal notranslate"><span class="pre">GetIncludeDirs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetLibraryDirs"><code class="docutils literal notranslate"><span class="pre">GetLibraryDirs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetResource"><code class="docutils literal notranslate"><span class="pre">GetResource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.GetResourceSafe"><code class="docutils literal notranslate"><span class="pre">GetResourceSafe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.IsRunningFromIPython"><code class="docutils literal notranslate"><span class="pre">IsRunningFromIPython()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.PathExists"><code class="docutils literal notranslate"><span class="pre">PathExists()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.cppyyDoxygenWrapper.html">vapor.cppyyDoxygenWrapper module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vapor.cppyyDoxygenWrapper.html#vapor.cppyyDoxygenWrapper.CPPYYDoxygenWrapperMeta"><code class="docutils literal notranslate"><span class="pre">CPPYYDoxygenWrapperMeta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.link.html">vapor.link module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vapor.link.html#vapor.link.FixModuleOwnership"><code class="docutils literal notranslate"><span class="pre">FixModuleOwnership()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.link.html#vapor.link.include"><code class="docutils literal notranslate"><span class="pre">include()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.params.html">vapor.params module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperBool"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperBool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperDouble"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperDouble</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperList"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperLong"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperLong</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperString"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperString</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsWrapper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.smartwrapper.html">vapor.smartwrapper module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.EnumWrapper"><code class="docutils literal notranslate"><span class="pre">EnumWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.EnumWrapperMeta"><code class="docutils literal notranslate"><span class="pre">EnumWrapperMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapper"><code class="docutils literal notranslate"><span class="pre">FuncWrapper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperRegex"><code class="docutils literal notranslate"><span class="pre">FuncWrapperRegex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperRename"><code class="docutils literal notranslate"><span class="pre">FuncWrapperRename</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperStrList"><code class="docutils literal notranslate"><span class="pre">FuncWrapperStrList</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperWrapAll"><code class="docutils literal notranslate"><span class="pre">FuncWrapperWrapAll</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrappers"><code class="docutils literal notranslate"><span class="pre">FuncWrappers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.SmartWrapper"><code class="docutils literal notranslate"><span class="pre">SmartWrapper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.SmartWrapperMeta"><code class="docutils literal notranslate"><span class="pre">SmartWrapperMeta</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vapor.html#module-vapor">Module contents</a></li>
