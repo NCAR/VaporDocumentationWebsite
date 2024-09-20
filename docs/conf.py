@@ -12,6 +12,11 @@ import sys
 import subprocess
 import pkgutil
 
+# Ensure sphinxcontrib.googleanalytics and sphinx_copybutton are installed
+subprocess.check_call([sys.executable, "-m", "pip", "install", "sphinxcontrib.googleanalytics"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "sphinx_copybutton"])
+
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,

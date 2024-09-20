@@ -1,4 +1,4 @@
-name: readTheDocs
+name: VaporDocumentationWebsite
 channels:
   - conda-forge
   - ncar-vapor
