@@ -1,5 +1,5 @@
-Bug Reports and Feature Requests
-________________________________
+Bug Reports
+___________
 
 To submit a new bug report or feature request, you can click the "New issue" button in the upper right of our `GitHub issue tracker <https://github.com/ncar/vapor/issues>`_, or by `clicking on this link <https://github.com/NCAR/VAPOR/issues/new/choose>`_.
 

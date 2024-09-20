@@ -1,5 +1,5 @@
-Contributing to Vapor's Documentation
-=====================================
+Docs Contributions
+==================
 
 Vapor's documentation website is managed in its own `GitHub Repo <https://github.com/NCAR/VaporDocumentationWebsite>`_ and uses the `Sphinx <https://www.sphinx-doc.org/en/master/>`_ documentation generator. The documentation is generated from the .rst files within the docs directory. (Generating documentation for the `Python Class Reference <https://ncar.github.io/VaporDocumentationWebsite/pythonAPIReference/classReference.html>`_ has some extra steps, and is explained later.)
 

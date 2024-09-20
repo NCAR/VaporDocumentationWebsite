@@ -1,5 +1,5 @@
-Contributing to Vapor's Gallery
-_______________________________
+Gallery Contributions
+_____________________
 
 Contributing to `Vapor's visualiation gallery <https://visgallery.ucar.edu/category/visualization-software/vapor/>`_ helps us understand how the application is being used, and can drive future requirements.  If you'd like to share your visualizations with us, you can submit them to our gallery by filling out the following form:
 

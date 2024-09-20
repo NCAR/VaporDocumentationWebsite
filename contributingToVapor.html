@@ -60,7 +60,7 @@
     <link rel="icon" href="_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Code Contributions" href="contributingToVapor/codeContributions.html" />
+    <link rel="next" title="Bug Reports" href="contributingToVapor/bugReports.html" />
     <link rel="prev" title="vapor.smartwrapper module" href="pythonAPIReference/devModules/vapor.smartwrapper.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -246,7 +246,21 @@
 <li class="toctree-l1"><a class="reference external" href="https://www.youtube.com/channel/UCpf-d1GDO1sotzjJ2t_QkDw">YouTube Channel</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://vapor.discourse.group">Get Help on Our Forum</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Contributing to Vapor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributingToVapor/bugReports.html">Bug Reports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributingToVapor/codeContributions.html">Code Contributions</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="contributingToVapor/docsContributions.html">Docs Contributions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="contributingToVapor/galleryContributions.html">Gallery Contributions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="citationAndLicense.html">Citation and License</a></li>
@@ -466,7 +480,24 @@ document.write(`
 <span id="contributing"></span><h1>Contributing to Vapor<a class="headerlink" href="#contributing-to-vapor" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/bugReports.html">Bug Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html">Code Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#acquire-vapor">Acquire VAPOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#forking-vapor-s-code">Forking Vapor’s code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#third-party-libraries">Third-Party Libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributingToVapor/codeContributions.html#building-third-party-libraries-not-recommended">Building Third-Party Libraries (Not recommended)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#install-system-libraries">Install System Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#cmake-and-make">CMake and make</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#submitting-changes">Submitting Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#build-and-test-an-installer">Build and Test an Installer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#pull-request">Pull Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/codeContributions.html#codesigning-macos">Codesigning MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/docsContributions.html">Docs Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/docsContributions.html#contributing-to-python-class-reference">Contributing to Python Class Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributingToVapor/galleryContributions.html">Gallery Contributions</a></li>
 </ul>
 </div>
 </section>
@@ -493,11 +524,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="contributingToVapor/codeContributions.html"
+       href="contributingToVapor/bugReports.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Code Contributions</p>
+        <p class="prev-next-title">Bug Reports</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
