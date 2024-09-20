@@ -42,6 +42,8 @@ To load data, do one of the following from the ``File`` menu:
 | .. image :: /_images/loadData.png               | or | .. image :: /_images/importData.png              |
 +-------------------------------------------------+----+--------------------------------------------------+
 
+.. note:: If you have multiple datasets, you must load or import each one individually.
+
 Create a Renderer
 -----------------
 
