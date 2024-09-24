@@ -11,7 +11,8 @@ Downloads
 
     current.rst
     downloads/installationInstructions.rst
-    downloads/vaporOnCasper.rst
+    downloads/runningVaporOnCasper.rst
     downloads/sampleData.rst
     downloads/thirdPartyLibraries.rst
+    downloads/buildingVaporWithSpack.rst
     downloads/vapor2.rst
