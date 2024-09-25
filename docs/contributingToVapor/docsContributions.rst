@@ -33,6 +33,22 @@ Once this conda environment has been configured, the html can be generated with 
 
 The third line moves the html files from VaporDocumentationWebsite/docs/html to the root directory, VaporDocumentationWebsite. Without this step, github pages will not host the html files.
 
+VAPOR's Class Reference (Doxygen)
+=================================
+
+To make changes to :ref:`VAPOR's Class Reference <classReference>` you will need to first compile the Doxygen html documentation from VAPOR's main repository and apply copy it to the directory VaporDocumentationWebsite/vaporApplicationReference/vaporClassReference.
+
+.. code-block:: console
+
+    conda install doxygen
+
+Now acquire and configure VAPOR's main repository :ref:`as described here<acquireVapor>`.  Once you've issued the cmake command, the console should indicate that Doxygen was found along with the path it presides at.  Now compile the documentation from your build directory with the following command, and copy it to the aforementioned documentation directory.
+
+.. code-block:: console
+
+    make doc
+    cp -r doc/html/* ~/VaporDocumentationWebsite/docs/vaporApplicationReference/vaporClassReference
+
 Contributing to Python Class Reference
 ======================================
 
@@ -80,6 +96,7 @@ If you want to make changes to the python class reference, there are a couple of
     cd VaporDocumentationWebsite/docs
     make html
     cp -r html/* ../
+
 6. Preview the html to make sure everything displays as intended
 7. Push all changes you made in the VAPOR repository (.py and .h files) and in the VaporDocumentationWebsite repository (.rst and .html files).
 8. Open a pull request in both repositories to merge the changes.

@@ -1,3 +1,5 @@
+.. _classReference:
+
 ===============
 Class Reference
 ===============

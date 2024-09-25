@@ -1,3 +1,5 @@
+.. _acquireVapor:
+
 Acquire VAPOR
 -------------
 
