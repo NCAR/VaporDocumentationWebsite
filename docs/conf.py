@@ -39,8 +39,16 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = '3.9.3'
 
-#breathe_projects = { "myproject": "/Users/pearse/vapor2/targets/common/doc/library/xml" }
-#breathe_default_project = "myproject"
+from pathlib import Path
+home = str(Path.home())
+
+# Breathe was last tried on 9/25/2024.  It was problematic because it would ingest Doxygen's XML output
+# as one single file that was thousands of lines long and hard to comprehend on a website.  Doxygen's
+# html generator automatically categorizes VAPOR's modules, classes, and namespaces.  Rather than write
+# a new script that does this for XML, I've chosen to just re-use the html that is automatically organized
+# by Doxygen. -Scott
+#breathe_projects = { "VAPOR": home+"/VAPOR/build/doc/xml" }
+#breathe_default_project = "VAPOR"
 
 extensions = [
     'sphinx.ext.imgmath', 
@@ -50,8 +58,8 @@ extensions = [
     'sphinx_gallery.gen_gallery',
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton'
-    #'jupyter_sphinx.execute'
     #'breathe'
+    #'jupyter_sphinx.execute'
     #'wheel'
 ]
 
@@ -151,8 +159,6 @@ epub_title = project
 
 # Download example data 
 import requests
-from pathlib import Path
-home = str(Path.home())
 simpleNC = home + "/simple.nc"
 dataFile = "https://github.com/NCAR/VAPOR-Data/raw/main/netCDF/simple.nc"
 response = requests.get(dataFile, stream=True)
