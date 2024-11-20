@@ -24,8 +24,8 @@ MacOS:
 
 .. _contributing.build3rdParty:
 
-Building Third-Party Libraries (Not recommended)
-************************************************
+Building Third-Party Libraries
+______________________________
 
 :ref:`Download source files here <Third Party Libraries>`.
 

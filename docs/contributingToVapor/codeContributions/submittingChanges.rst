@@ -12,7 +12,7 @@ After successfully compiling Vapor, you can make changes to the code base.  Make
 ..    createRenderer
 
 Build and Test an Installer
----------------------------
+___________________________
 
 Before submitting your changes for review, it's worth the time to build an installer to see if libraries are properly linked, and optimized code works correctly.
 
@@ -27,7 +27,7 @@ On Linux, run  *cmake <vapor-source-dir> && make linuxpreinstall && make install
 .. _contributing.submitting:
 
 Pull Request
-------------
+____________
 
 After your implementation is complete, push your commits to your forked repository on GitHub.  Then issue a pull request to Vapor's main branch.
 

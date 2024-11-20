@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,13 +51,14 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'vaporApplicationReference/isosurfaceRenderer';</script>
-    <link rel="icon" href="../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow" href="flowRenderer.html" />
@@ -497,31 +498,31 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="isosurfaces">
-<span id="isosurfacerenderer"></span><h1>Isosurfaces<a class="headerlink" href="#isosurfaces" title="Permalink to this heading">#</a></h1>
+<span id="isosurfacerenderer"></span><h1>Isosurfaces<a class="headerlink" href="#isosurfaces" title="Permalink to this headline">#</a></h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bhkmRjAHOpo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
 <p>The Isosurface Renderer displays surfaces that follow a single value of their selected variable.  This is similar to a 2D contour, but in 3D space.  Each instance of the Isosurface renderer can display up to four surfaces.  Initially, only one will be displayed.  Additional isosurfaces can be created by double-clicking on the Transfer Function historgram, in the Appearance tab.</p>
 </section>
 <section id="basic-controls">
-<h2>Basic Controls<a class="headerlink" href="#basic-controls" title="Permalink to this heading">#</a></h2>
+<h2>Basic Controls<a class="headerlink" href="#basic-controls" title="Permalink to this headline">#</a></h2>
 <p>This renderer contains all of Vapor’s standard renderer controls: the <a class="reference internal" href="basicRendererControls.html#variablestab"><span class="std std-ref">Variables</span></a>, <a class="reference internal" href="basicRendererControls.html#appearancetab"><span class="std std-ref">Appearance</span></a>, <a class="reference internal" href="basicRendererControls.html#geometrytab"><span class="std std-ref">Geometry</span></a>, and <a class="reference internal" href="basicRendererControls.html#annotationtab"><span class="std std-ref">Annotation</span></a> tabs.</p>
 </section>
 <section id="specialized-controls">
-<h2>Specialized Controls<a class="headerlink" href="#specialized-controls" title="Permalink to this heading">#</a></h2>
+<h2>Specialized Controls<a class="headerlink" href="#specialized-controls" title="Permalink to this headline">#</a></h2>
 <p>The Isosurface Renderer’s Variables tab allows users to color the volume by a secondary variable.  This mans that the opacity of the volume can be controlled by a primary variable, and the color can bee attributed to a secondary variable.</p>
 <p>Under the Appearance tab, the Isosurface Renderer also allows users to modify its Raytracing and Lighting parameters.</p>
 <section id="raytracing-parameters">
-<span id="raytracingparameters"></span><h3>Raytracing Parameters<a class="headerlink" href="#raytracing-parameters" title="Permalink to this heading">#</a></h3>
+<span id="raytracingparameters"></span><h3>Raytracing Parameters<a class="headerlink" href="#raytracing-parameters" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p><em>Rendering Algorithm</em> - Defaults to either Curvilinear or Regular, depending on the topology of the current variable’s grid.  If using an older graphics card, the Isosurface Renderer may default to Rectilinear due to the increased complexity of the Curvilinear raytracer.</p>
 <p><em>Sampling Rate Multiplier</em> - The volume renderer takes samples along the projected camera rays to determine the volume density at a point and the multiplier increases the number of samples which can give a more accurate visualization in certain cases.</p>
 </div></blockquote>
 </section>
 <section id="lighting-parameters">
-<h3>Lighting Parameters<a class="headerlink" href="#lighting-parameters" title="Permalink to this heading">#</a></h3>
+<h3>Lighting Parameters<a class="headerlink" href="#lighting-parameters" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p><em>Apply Lighting</em> - Controls whether Vapor’s default light sources are emitted onto the volume during rendering.  The default lights are directional.</p>
 <p><em>Ambient</em> - Controls the amount of ambient light that is absorbed by the volume.  Ambient lights do not have a single directed source, and controls the overall brightness of the scene.</p>
