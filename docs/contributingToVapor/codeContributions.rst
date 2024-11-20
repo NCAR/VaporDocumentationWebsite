@@ -1,9 +1,9 @@
 Code Contributions
-------------------
+==================
 
-.. include:: codeContributions/prerequisites.rst
+.. include:: codeContributions/prerequisiteSoftware.rst
 
-.. include:: codeContributions/acquireVapor.rst
+.. include:: codeContributions/acquireSourceCode.rst
 
 .. include:: codeContributions/thirdPartyLibraries.rst
 
@@ -13,3 +13,4 @@ Code Contributions
 
 .. include:: codeContributions/codesigningMacOS.rst
 
+.. include:: codeContributions/buildingPythonAPI.rst

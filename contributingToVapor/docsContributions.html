@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,13 +51,14 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contributingToVapor/docsContributions';</script>
-    <link rel="icon" href="../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Code Contributions" href="codeContributions.html" />
@@ -251,19 +252,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../contributingToVapor.html">Contributing to Vapor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bugReports.html">Bug Reports</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Docs Contributions</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="codeContributions.html">Code Contributions</a></li>
-
-
-
-
-
-
-
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="galleryContributions.html">Gallery Contributions</a></li>
 </ul>
 </li>
@@ -478,11 +467,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Docs Contributions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor-s-class-reference-doxygen">VAPOR’s Class Reference (Doxygen)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-to-python-class-reference">Contributing to Python Class Reference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor-s-class-reference-doxygen">VAPOR’s Class Reference (Doxygen)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-to-python-class-reference">Contributing to Python Class Reference</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -494,7 +481,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="docs-contributions">
-<h1>Docs Contributions<a class="headerlink" href="#docs-contributions" title="Permalink to this heading">#</a></h1>
+<h1>Docs Contributions<a class="headerlink" href="#docs-contributions" title="Permalink to this headline">#</a></h1>
 <p>Vapor’s documentation website is managed in its own <a class="reference external" href="https://github.com/NCAR/VaporDocumentationWebsite">GitHub Repo</a> and uses the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> documentation generator. The documentation is generated from the .rst files within the docs directory. (Generating documentation for the <a class="reference external" href="https://ncar.github.io/VaporDocumentationWebsite/pythonAPIReference/classReference.html">Python Class Reference</a> has some extra steps, and is explained later.)</p>
 <p>To make changes to the documentation, follow these steps:</p>
 <ol class="arabic simple">
@@ -520,21 +507,20 @@ document.write(`
 </pre></div>
 </div>
 <p>The third line moves the html files from VaporDocumentationWebsite/docs/html to the root directory, VaporDocumentationWebsite. Without this step, github pages will not host the html files.</p>
-</section>
 <section id="vapor-s-class-reference-doxygen">
-<h1>VAPOR’s Class Reference (Doxygen)<a class="headerlink" href="#vapor-s-class-reference-doxygen" title="Permalink to this heading">#</a></h1>
+<h2>VAPOR’s Class Reference (Doxygen)<a class="headerlink" href="#vapor-s-class-reference-doxygen" title="Permalink to this headline">#</a></h2>
 <p>To make changes to <a class="reference internal" href="../vaporApplicationReference/vaporClassReference.html#classreference"><span class="std std-ref">VAPOR’s Class Reference</span></a> you will need to first compile the Doxygen html documentation from VAPOR’s main repository and apply copy it to the directory VaporDocumentationWebsite/vaporApplicationReference/vaporClassReference.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install doxygen</span>
 </pre></div>
 </div>
-<p>Now acquire and configure VAPOR’s main repository <a class="reference internal" href="codeContributions/acquireVapor.html#acquirevapor"><span class="std std-ref">as described here</span></a>.  Once you’ve issued the cmake command, the console should indicate that Doxygen was found along with the path it presides at.  Now compile the documentation from your build directory with the following command, and copy it to the aforementioned documentation directory.</p>
+<p>Now acquire and configure VAPOR’s main repository <span class="xref std std-ref">as described here</span>.  Once you’ve issued the cmake command, the console should indicate that Doxygen was found along with the path it presides at.  Now compile the documentation from your build directory with the following command, and copy it to the aforementioned documentation directory.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make doc</span>
 <span class="go">cp -r doc/html/* ~/VaporDocumentationWebsite/docs/vaporApplicationReference/vaporClassReference</span>
 </pre></div>
 </div>
 </section>
 <section id="contributing-to-python-class-reference">
-<h1>Contributing to Python Class Reference<a class="headerlink" href="#contributing-to-python-class-reference" title="Permalink to this heading">#</a></h1>
+<h2>Contributing to Python Class Reference<a class="headerlink" href="#contributing-to-python-class-reference" title="Permalink to this headline">#</a></h2>
 <p>If you want to make changes to the python class reference, there are a couple of additional steps. Sphinx builds the class reference from the version of Vapor Python installed in your current conda environment using comments within the code. To make changes to the function descriptions, you’ll need to edit the comments for the function in the code, which will either be in a Python file or a C++ header file. Here is a step by step guide:</p>
 <ol class="arabic">
 <li><p>Fork both VAPOR’s <a class="reference external" href="https://github.com/NCAR/VAPOR">main repository</a> and Vapor’s <a class="reference external" href="https://github.com/NCAR/VaporDocumentationWebsite">documentation repository</a>. You’ll need to submit changes to both of these repositories. Clone each of these forks to your local machine.</p></li>
@@ -582,6 +568,7 @@ document.write(`
 <li><p>Push all changes you made in the VAPOR repository (.py and .h files) and in the VaporDocumentationWebsite repository (.rst and .html files).</p></li>
 <li><p>Open a pull request in both repositories to merge the changes.</p></li>
 </ol>
+</section>
 </section>
 
 
@@ -632,11 +619,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Docs Contributions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor-s-class-reference-doxygen">VAPOR’s Class Reference (Doxygen)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-to-python-class-reference">Contributing to Python Class Reference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor-s-class-reference-doxygen">VAPOR’s Class Reference (Doxygen)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-to-python-class-reference">Contributing to Python Class Reference</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

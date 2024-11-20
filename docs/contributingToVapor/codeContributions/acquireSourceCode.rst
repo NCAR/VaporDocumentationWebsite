@@ -1,19 +1,5 @@
-.. _acquireVapor:
-
-Acquire VAPOR
--------------
-
-Any questions can be answered `on our forum <https://vapor.discourse.group>`_.
-
-Vapor's code is hosted on `GitHub <https://www.github.com/NCAR/vapor>`_. To contribute you will need to sign up for a `free GitHub account <https://github.com/signup/free>`_. We use `Git <http://git-scm.com/>`_ for version control to allow many people to work together on the project.  Git can also be acquired by package managers like apt-get (Ubuntu), yum (RedHat), and choco (Windows).
-
-`Follow these instructions <http://help.github.com/set-up-git-redirect>`__ for installing and configuring git, and
-setting up your SSH key.
-
-.. _contributing.environment:
-     
-Forking Vapor's code
---------------------
+Acquire Source Code
+------------------
 
 After installing Git and registering with GitHub, it's time to "Fork" Vapor's code base by clicking the Fork button on the upper right corner of `Vapor's GitHub repository <https://github.com/NCAR/VAPOR>`_.  This creates your own repository on GitHub that contains a copy of Vapor's current main branch.
      

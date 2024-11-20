@@ -24,12 +24,12 @@ UNIX:
 If compilation is successful, you can find Vapor's executable in the *bin* directory within your *build* directory.
 
 Changing CMake Variables
-========================
+________________________
 
 Some users may want their build to target a different library than what is distributed with Vapor's 3rd party library bundle.  Different libraries can be targetted in two ways, 1) through the *ccmake* tool, and 2) by editing the file located in <source-directory>/site_files/site.NCAR.
 
 ccmake
-======
+______
 
 Cmake provides an interface to set build variables called *ccmake*.  From your build directory, you can issue the ccmake command, followed by the path to Vapor's source code.  If your build directory is in <source_directory>/build, issuing ccmake from this directory would look like this:
 

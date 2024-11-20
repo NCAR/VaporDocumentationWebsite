@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,13 +51,14 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dataFormatRequirements/dataCollectionParticles';</script>
-    <link rel="icon" href="../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Big Data with VDC" href="vdc.html" />
@@ -508,28 +509,28 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="data-collection-particles-dcp">
-<span id="dcp"></span><h1>Data Collection Particles (DCP)<a class="headerlink" href="#data-collection-particles-dcp" title="Permalink to this heading">#</a></h1>
+<span id="dcp"></span><h1>Data Collection Particles (DCP)<a class="headerlink" href="#data-collection-particles-dcp" title="Permalink to this headline">#</a></h1>
 <p>Data Collection Particles is a simple data format built upon NetCDF for importing particle data into VAPoR.</p>
 <section id="dimensions">
-<h2>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this heading">#</a></h2>
+<h2>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">#</a></h2>
 <section id="p">
-<h3>P<a class="headerlink" href="#p" title="Permalink to this heading">#</a></h3>
+<h3>P<a class="headerlink" href="#p" title="Permalink to this headline">#</a></h3>
 <p>P is on only required dimension. The size of the dimension P represents the number of particles at this timestep. If the number of particles varies between timesteps, every timestep must be in its own file since each NetCDF file can only define a single length for a dimension.</p>
 </section>
 <section id="t">
-<h3>T<a class="headerlink" href="#t" title="Permalink to this heading">#</a></h3>
+<h3>T<a class="headerlink" href="#t" title="Permalink to this headline">#</a></h3>
 <p>T is the time dimension and it is required for time-varying data. It should be set to <em>unlimited</em>.</p>
 </section>
 <section id="axis">
-<h3>axis<a class="headerlink" href="#axis" title="Permalink to this heading">#</a></h3>
+<h3>axis<a class="headerlink" href="#axis" title="Permalink to this headline">#</a></h3>
 <p>This optional dimension is must have a length of 3 and it is used to pack 3 component values such as position or velocity into a single variable for convenience.</p>
 </section>
 </section>
 <section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
 <p>The only required variable is Position. Non-time-varying data should have a single dimension of <cite>P</cite>. If the data is time-varying, it should have the dimensions <cite>(T, P)</cite>. 3D particles will often have 3-component data associated with them, for example their velocity would have 3 components, one for each dimension. Since this is a common use case, variables can have 3 components per particle and this is done by setting the fastest-varying dimension to <cite>axis</cite> which as a size of 3. For an example, look at the position variable description below.</p>
 <section id="position">
-<h3>Position<a class="headerlink" href="#position" title="Permalink to this heading">#</a></h3>
+<h3>Position<a class="headerlink" href="#position" title="Permalink to this headline">#</a></h3>
 <p>This variable contains the position data for the particles. The data can be stored in either of the below methods:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="nf">Position</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </pre></div>
@@ -543,13 +544,13 @@ document.write(`
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
 <section id="python-script">
-<h3>Python Script<a class="headerlink" href="#python-script" title="Permalink to this heading">#</a></h3>
+<h3>Python Script<a class="headerlink" href="#python-script" title="Permalink to this headline">#</a></h3>
 <p><cite>vapor/share/examples/generateExampleDCP.py</cite> shows how to generate a DCP dataset from a particle simulation.</p>
 </section>
 <section id="basic-netcdf-file">
-<h3>Basic NetCDF File<a class="headerlink" href="#basic-netcdf-file" title="Permalink to this heading">#</a></h3>
+<h3>Basic NetCDF File<a class="headerlink" href="#basic-netcdf-file" title="Permalink to this headline">#</a></h3>
 <p>This is an example of a NetCDF file containing 2 particles with time-varying position and particle speed data.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">netcdf</span><span class="w"> </span><span class="n">particles_000</span><span class="w"> </span><span class="p">{</span>
 <span class="nl">dimensions</span><span class="p">:</span>
@@ -575,7 +576,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="importing-data">
-<h4>Importing Data<a class="headerlink" href="#importing-data" title="Permalink to this heading">#</a></h4>
+<h4>Importing Data<a class="headerlink" href="#importing-data" title="Permalink to this headline">#</a></h4>
 <p>This data format can be imported through Vapor’s <code class="docutils literal notranslate"><span class="pre">File</span></code> menu.</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/importData.png"><img alt="../_images/importData.png" src="../_images/importData.png" style="width: 400px;" /></a>

@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,13 +51,14 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dataFormatRequirements/netCDF/cfRequirements';</script>
-    <link rel="icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Examples" href="examples/index.html" />
@@ -493,9 +494,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="netcdf-cf-requirements">
-<span id="cfrequirements"></span><h1>NetCDF-CF Requirements<a class="headerlink" href="#netcdf-cf-requirements" title="Permalink to this heading">#</a></h1>
+<span id="cfrequirements"></span><h1>NetCDF-CF Requirements<a class="headerlink" href="#netcdf-cf-requirements" title="Permalink to this headline">#</a></h1>
 <section id="coordinate-variables">
-<span id="coordinatevariables"></span><h2>Coordinate variables<a class="headerlink" href="#coordinate-variables" title="Permalink to this heading">#</a></h2>
+<span id="coordinatevariables"></span><h2>Coordinate variables<a class="headerlink" href="#coordinate-variables" title="Permalink to this headline">#</a></h2>
 <p>Vapor requires variables that describe the physical coordinates of netCDF data.</p>
 <p>If your data is on a rectilinear grid, these variables should be 1D arrays that specify monotonically increasing grid points along an axis.  These variables are referred to as <code class="docutils literal notranslate"><span class="pre">coordinate</span> <span class="pre">variables</span></code> if their names match the dimension they refer to.</p>
 <figure class="align-center" id="id1">
@@ -513,7 +514,7 @@ document.write(`
 </figure>
 </section>
 <section id="the-axis-attribute">
-<span id="theaxisattribute"></span><h2>The axis attribute<a class="headerlink" href="#the-axis-attribute" title="Permalink to this heading">#</a></h2>
+<span id="theaxisattribute"></span><h2>The axis attribute<a class="headerlink" href="#the-axis-attribute" title="Permalink to this headline">#</a></h2>
 <p>We strongly recommend that each coordinate variable have <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute as follows:</p>
 <blockquote>
 <div><ul class="simple">
@@ -529,7 +530,7 @@ document.write(`
 </div>
 </section>
 <section id="the-units-attribute">
-<span id="theunitsattribute"></span><h2>The units attribute<a class="headerlink" href="#the-units-attribute" title="Permalink to this heading">#</a></h2>
+<span id="theunitsattribute"></span><h2>The units attribute<a class="headerlink" href="#the-units-attribute" title="Permalink to this headline">#</a></h2>
 <p>The Time coordinate variable <strong>must</strong> have a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute which can be identifiable by the Udunits library.  Suitable <code class="docutils literal notranslate"><span class="pre">units</span></code> attributes include:</p>
 <blockquote>
 <div><ul class="simple">

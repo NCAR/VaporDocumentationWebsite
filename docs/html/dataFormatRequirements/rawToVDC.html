@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,13 +51,14 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dataFormatRequirements/rawToVDC';</script>
-    <link rel="icon" href="../_static/vaporVLogo.png"/>
+    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data Collection Particles (DCP)" href="dataCollectionParticles.html" />
@@ -492,10 +493,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="converting-raw-binary-data-into-vdc">
-<span id="rawtovdc"></span><h1>Converting raw binary data into VDC<a class="headerlink" href="#converting-raw-binary-data-into-vdc" title="Permalink to this heading">#</a></h1>
+<span id="rawtovdc"></span><h1>Converting raw binary data into VDC<a class="headerlink" href="#converting-raw-binary-data-into-vdc" title="Permalink to this headline">#</a></h1>
 <p>The two tools for converting raw binary data into VDC are <code class="docutils literal notranslate"><span class="pre">vdccreate</span></code> and <code class="docutils literal notranslate"><span class="pre">raw2vdc</span></code>.  Advanced options can be seen here, or by issuing the commands without any arguments.</p>
 <section id="create-vdc-metadata-file">
-<h2>Create .vdc metadata file<a class="headerlink" href="#create-vdc-metadata-file" title="Permalink to this heading">#</a></h2>
+<h2>Create .vdc metadata file<a class="headerlink" href="#create-vdc-metadata-file" title="Permalink to this headline">#</a></h2>
 <p>In the directory where Vapor 3 is installed, there is a command line utility called <code class="docutils literal notranslate"><span class="pre">vdccreate</span></code>.  Issue this command in a terminal (Unix) or command prompt (Windows) with necessary arguments, followed by the name of the .vdc file to be written.  You must at least include the variable names in your dataset as well as your grid size.  Advanced options can be seen below.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">vdccreate</span><span class="w"> </span><span class="o">-</span><span class="n">dimension</span><span class="w"> </span><span class="mi">512</span><span class="n">x512x512</span><span class="w"> </span><span class="o">-</span><span class="n">vars3d</span><span class="w"> </span><span class="n">U</span><span class="o">:</span><span class="n">V</span><span class="o">:</span><span class="n">W</span><span class="w"> </span><span class="n">myVDCFile</span><span class="p">.</span><span class="n">vdc</span>
 </pre></div>
@@ -561,7 +562,7 @@ document.write(`
 </div>
 </section>
 <section id="generate-vdc-data">
-<h2>Generate VDC Data<a class="headerlink" href="#generate-vdc-data" title="Permalink to this heading">#</a></h2>
+<h2>Generate VDC Data<a class="headerlink" href="#generate-vdc-data" title="Permalink to this headline">#</a></h2>
 <p>Once we have a .vdc file, the metadata has been recorded and we can transform the data into the VDC format.  From Vapor 3’s installation directory, issue the command <code class="docutils literal notranslate"><span class="pre">raw2vdc</span></code>, followed by the arguments for your target variable and target timestep.  The last argument will be the .vdc file that was made in Step 1.  <code class="docutils literal notranslate"><span class="pre">raw2vdc</span></code> must be run on each data file that contains values for a single variable, at a single timestep.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">raw2vdc</span><span class="w"> </span><span class="o">-</span><span class="n">ts</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="n">varname</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="n">myVDCFile</span><span class="p">.</span><span class="n">vdc</span><span class="w"> </span><span class="n">binaryFile</span><span class="p">.</span><span class="n">bin</span>
 <span class="n">raw2vdc</span><span class="w"> </span><span class="o">-</span><span class="n">ts</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="n">varname</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="n">myVDCFile</span><span class="p">.</span><span class="n">vdc</span><span class="w"> </span><span class="n">binaryFile</span><span class="p">.</span><span class="n">bin</span>

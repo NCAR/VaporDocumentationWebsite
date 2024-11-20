@@ -1,6 +1,8 @@
 Submitting Changes
 ------------------
 
+All submissions must follow the `Vapor Coding Conventions <https://github.com/NCAR/VAPOR/wiki/Vapor-Coding-Convention>`_
+
 After successfully compiling Vapor, you can make changes to the code base.  Make sure to follow Vapor's `Code Conventions <https://github.com/NCAR/VAPOR/wiki/Vapor-Coding-Convention>`_.  If building on a UNIX system, eliminate all compiler warnings.
 
 .. What pieces of code you add or modify will depend on the issue you're trying to fix.  Most often, contributors will be doing one of two things:
@@ -12,7 +14,7 @@ After successfully compiling Vapor, you can make changes to the code base.  Make
 ..    createRenderer
 
 Build and Test an Installer
----------------------------
+___________________________
 
 Before submitting your changes for review, it's worth the time to build an installer to see if libraries are properly linked, and optimized code works correctly.
 
@@ -27,7 +29,7 @@ On Linux, run  *cmake <vapor-source-dir> && make linuxpreinstall && make install
 .. _contributing.submitting:
 
 Pull Request
-------------
+____________
 
 After your implementation is complete, push your commits to your forked repository on GitHub.  Then issue a pull request to Vapor's main branch.
 

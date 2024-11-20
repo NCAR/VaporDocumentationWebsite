@@ -34,7 +34,7 @@ Once this conda environment has been configured, the html can be generated with 
 The third line moves the html files from VaporDocumentationWebsite/docs/html to the root directory, VaporDocumentationWebsite. Without this step, github pages will not host the html files.
 
 VAPOR's Class Reference (Doxygen)
-=================================
+---------------------------------
 
 To make changes to :ref:`VAPOR's Class Reference <classReference>` you will need to first compile the Doxygen html documentation from VAPOR's main repository and apply copy it to the directory VaporDocumentationWebsite/vaporApplicationReference/vaporClassReference.
 
@@ -50,7 +50,7 @@ Now acquire and configure VAPOR's main repository :ref:`as described here<acquir
     cp -r doc/html/* ~/VaporDocumentationWebsite/docs/vaporApplicationReference/vaporClassReference
 
 Contributing to Python Class Reference
-======================================
+--------------------------------------
 
 If you want to make changes to the python class reference, there are a couple of additional steps. Sphinx builds the class reference from the version of Vapor Python installed in your current conda environment using comments within the code. To make changes to the function descriptions, you'll need to edit the comments for the function in the code, which will either be in a Python file or a C++ header file. Here is a step by step guide:
 
