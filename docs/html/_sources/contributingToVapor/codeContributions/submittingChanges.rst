@@ -1,8 +1,6 @@
 Submitting Changes
 ------------------
 
-All submissions must follow the `Vapor Coding Conventions <https://github.com/NCAR/VAPOR/wiki/Vapor-Coding-Convention>`_
-
 After successfully compiling Vapor, you can make changes to the code base.  Make sure to follow Vapor's `Code Conventions <https://github.com/NCAR/VAPOR/wiki/Vapor-Coding-Convention>`_.  If building on a UNIX system, eliminate all compiler warnings.
 
 .. What pieces of code you add or modify will depend on the issue you're trying to fix.  Most often, contributors will be doing one of two things:
