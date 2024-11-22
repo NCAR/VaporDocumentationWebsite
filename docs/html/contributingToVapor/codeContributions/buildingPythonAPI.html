@@ -465,11 +465,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-conda-image">Building the conda image</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-conda-image">Installing the conda image</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-open-source-utilities">Python Open Source Utilities</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-local-conda-bundle">Building a local conda bundle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-local-conda-image">Installing a local conda image</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-open-source-utilities">Python Open Source Utilities</a></li>
 </ul>
             </nav>
         </div>
@@ -483,107 +481,114 @@ document.write(`
                   
   <section id="building-vapor-s-python-api-from-source">
 <h1>Building Vapor’s Python API from source<a class="headerlink" href="#building-vapor-s-python-api-from-source" title="Permalink to this headline">#</a></h1>
-<p>To build Vapor’s Python API from source, you will need to install either Anaconda or Miniconda onto your system.  <a class="reference external" href="https://www.anaconda.com/products/distribution">Download here</a>.  Once installed, <span class="xref std std-ref">fork Vapor’s github repository</span> then build and install the .tar.bz2 package by following the steps below.</p>
-<section id="building-the-conda-image">
-<h2>Building the conda image<a class="headerlink" href="#building-the-conda-image" title="Permalink to this headline">#</a></h2>
-<p>These steps generate a .tar.bz2 bundle that you can locally install with conda, instead of fetching a package from a remote repository like conda-forge.</p>
+<p>For generating a tar.bz2 installer bundle for testing or hosting on a remote server such as the one we use on <a class="reference external" href="https://anaconda.org/Ncar-vapor/repo">Anaconda.org</a>, you will need to install <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a> or something similar.  Once installed, <span class="xref std std-ref">fork Vapor’s github repository</span>, then build and install the generated tar.bz2 bundle by following the steps below.</p>
+<section id="building-a-local-conda-bundle">
+<h2>Building a local conda bundle<a class="headerlink" href="#building-a-local-conda-bundle" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>After cloning Vapor, installing Anaconda/Miniconda, and modifying source code if needed, cd into the /conda directory:</p></li>
+<li><p>After forking Vapor and installing Anaconda, open a new console that will be in the (base) environment.  Add access to the conda-forge channel, create a new environment with the packages conda-build and python=3.9, and activate it.</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels conda-forge</span>
+<span class="go">conda create -n myEnvironment python=3.9 conda-build</span>
+<span class="go">conda activate myEnvironment</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>After making necessary changes to the source code, cd into VAPOR’s /conda directory.</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/VAPOR/conda</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Install the conda-build package on your current Anaconda/Miniconda installation:</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install conda-build</span>
-</pre></div>
-</div>
 <ol class="arabic simple" start="3">
-<li><p>Install the conda-forge channel, which Anaconda/Miniconda will use to gather libraries for your build:</p></li>
+<li><p>Execute the conda build command with default parameters or optional ones.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels conda-forge</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>Execute the conda build command on your current code base:</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda build .</span>
-</pre></div>
-</div>
-<p>Note: If you get a build error referencing CMakeLists.txt at this point, delete everything in your VAPOR/build directory and try re-running the above command.</p>
-<p>Alternatively, add cmake build flags to your conda build such as the following:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">DEBUG_BUILD=false MAP_IMAGES_PATH=&quot;&lt;path_to_images&gt;&quot; conda build .</span>
-</pre></div>
-</div>
-<p>If the build is successful a conda package file will be created. The path to the file will be created at the end of the “conda build” step, and will look something like:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>CONDA_PREFIX/conda-bld/osx-64/vapor-3.6.0-ha5a8b8e_0.tar.bz2
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda build . (default)</span>
+<span class="go">DEBUG_BUILD=false MAP_IMAGES_PATH=&quot;&lt;path_to_images&gt;&quot; conda build . (extra options)</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>$CONDA_PREFIX is an environment variable that points to your conda installation path.</p>
+<p>If you get a build error referencing CMakeLists.txt at this point, delete everything in your VAPOR/build directory and try re-running the above command.</p>
 </div>
+<p>If the build is successful a tar.xz bundle will be created in a directory shown below, where &lt;OS&gt; represents the operating system the bundle was built for.  $CONDA_PREFIX is a variable in your current conda environment.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>CONDA_PREFIX/conda-bld/&lt;OS&gt;/vapor-3.6.0-ha5a8b8e_0.tar.bz2
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operating System</p></th>
+<th class="head"><p>Directory</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MacOS x86</p></td>
+<td><p>osx-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>MacOS ARM</p></td>
+<td><p>osx-arm64</p></td>
+</tr>
+<tr class="row-even"><td><p>Linux x86</p></td>
+<td><p>linux-64</p></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="installing-the-conda-image">
-<h2>Installing the conda image<a class="headerlink" href="#installing-the-conda-image" title="Permalink to this headline">#</a></h2>
-<p>Once you’ve built a .tar.bz2 conda image for your customized version of Vapor, follow these steps to install it:</p>
+<section id="installing-a-local-conda-image">
+<h2>Installing a local conda image<a class="headerlink" href="#installing-a-local-conda-image" title="Permalink to this headline">#</a></h2>
+<p>Once you’ve built a tar.bz2 image or downloaded one from another source, you can install it as follows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you downloaded your .tar.bz2 file from another source, you will need to create a new environment with access to the conda-forge channel, and the conda-build and python=3.9 packages.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels conda-forge</span>
+<span class="go">conda create -n myEnvironment python=3.9 conda-build</span>
+<span class="go">conda activate myEnvironment</span>
+</pre></div>
+</div>
+</div>
 <ol class="arabic simple">
-<li><p>Create a local conda channel on your computer that will host your new .tar.bz file for installation.  Note - If you’re on OSX, name your directory osx-64, or if you’re on linux, name it linux-64.</p></li>
+<li><p>Within your conda environment, create a directory that will contain your installation.  Our team typically uses ~/channel.  Also create a subdirectory according to your operating system, shown below.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/channel/osx-64</span>
-<span class="go">or</span>
-<span class="go">mkdir -p ~/channel/linux-64</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/channel/osx-64 (MacOS x86)</span>
+<span class="go">mkdir -p ~/channel/osx-arm64 (MacOS ARM)</span>
+<span class="go">mkdir -p ~/channel/linux-64 (Linux x86)</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Move your created .tar.bz2 package from its initial directory into your channel</p></li>
+<li><p>Move your created .tar.bz2 package from its build or download directory into your channel.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mv ~/tmp/miniconda/envs/xarray/conda-bld/osx-64/vapor-3.6.0-ha5a8b8e_0.tar.bz2 ~/channel/osx-64</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mv $CONDA_PREFIX/conda-bld/&lt;OS&gt;/vapor-3.6.0-ha5a8b8e_0.tar.bz2 ~/channel/osx-64</span>
 <span class="go">or</span>
-<span class="go">mv ~/tmp/miniconda/envs/xarray/conda-bld/linux-64/vapor-3.6.0-ha5a8b8e_0.tar.bz2 ~/channel/linux-64</span>
+<span class="go">mv ~/Downloads/vapor-3.6.0-ha5a8b8e_0.tar.bz2 ~/channel/osx-64</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Index your new channel, so conda knows about it:</p></li>
+<li><p>Index your new local channel, so conda knows about it.</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda index ~/channel</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>If you have not done so already, ensure that you have added the conda-forge channel:</p></li>
+<li><p>Install your .tar.bz2 package.  You must use a full file path to your channel.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels conda-forge</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c file://Users/myUserName/channel vapor</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
-<li><p>Create a new conda environment to install Vapor onto, or select a pre-existing environment:</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda create --name vapor</span>
-<span class="go">conda activate vapor</span>
-<span class="go">or</span>
-<span class="go">conda activate myEnvironment</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="6">
-<li><p>Finally install the custon .tar.bz2 package:</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c file://&lt;pathToYourChannel&gt; vapor</span>
-</pre></div>
-</div>
-<p>Note: It may be necessary to re-run <em>conda config –add channels conda-forge</em> at this step.</p>
-<ol class="arabic simple" start="7">
-<li><p>Verify that your new installation works:</p></li>
-</ol>
+<p>The installation can be ferified with the following commands in your console:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python</span>
 <span class="go">import vapor</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Example python scripts and jupyter notebooks can be found in $CONDA_PREFIX/lib/python3.&lt;version&gt;/site-packages/vapor</p>
-<section id="python-open-source-utilities">
-<h3>Python Open Source Utilities<a class="headerlink" href="#python-open-source-utilities" title="Permalink to this headline">#</a></h3>
-<p>Vapor Python supports a number of utility functions, found under apps/pythonapi/vapor/utils. If you write a function for your workflows that you believe would be useful to other users, we encourage you to add the function to Vapor utils.</p>
+</div>
 </section>
+<section id="python-open-source-utilities">
+<h2>Python Open Source Utilities<a class="headerlink" href="#python-open-source-utilities" title="Permalink to this headline">#</a></h2>
+<p>Vapor Python supports a number of utility functions, found under apps/pythonapi/vapor/utils. If you write a function for your workflows that you believe would be useful to other users, we encourage you to add the function to Vapor utils.</p>
 </section>
 </section>
 
@@ -617,11 +622,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-conda-image">Building the conda image</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-conda-image">Installing the conda image</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-open-source-utilities">Python Open Source Utilities</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-local-conda-bundle">Building a local conda bundle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-local-conda-image">Installing a local conda image</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-open-source-utilities">Python Open Source Utilities</a></li>
 </ul>
   </nav></div>
 
