@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pythonAPIReference/devModules/vapor.params';</script>
-    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="vapor.smartwrapper module" href="vapor.smartwrapper.html" />
@@ -444,7 +443,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -460,6 +461,27 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapper.GetFunctionsToWrap"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapper.GetFunctionsToWrap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperBool"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperBool</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperDouble"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperDouble</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperList"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperList.GetFunctionsToWrap"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList.GetFunctionsToWrap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperList.MakeList"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList.MakeList()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperLong"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperLong</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperString"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperString</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsWrapper</span></code></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -469,8 +491,71 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="vapor-params-module">
-<h1>vapor.params module<a class="headerlink" href="#vapor-params-module" title="Permalink to this headline">#</a></h1>
+  <section id="module-vapor.params">
+<span id="vapor-params-module"></span><h1>vapor.params module<a class="headerlink" href="#module-vapor.params" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsTagWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapper" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapper" title="vapor.smartwrapper.FuncWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">FuncWrapper</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapper.GetFunctionsToWrap">
+<span class="sig-name descname"><span class="pre">GetFunctionsToWrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapper.GetFunctionsToWrap" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperBool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsTagWrapperBool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperBool" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vapor.params.ParamsTagWrapper" title="vapor.params.ParamsTagWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperDouble">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsTagWrapperDouble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperDouble" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vapor.params.ParamsTagWrapper" title="vapor.params.ParamsTagWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsTagWrapperList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperList" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapper" title="vapor.smartwrapper.FuncWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">FuncWrapper</span></code></a></p>
+<dl class="simple">
+<dt>Takes following format:</dt><dd><p>long FirstTag
+long SecondTag
+string ThirdTag</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperList.GetFunctionsToWrap">
+<span class="sig-name descname"><span class="pre">GetFunctionsToWrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperList.GetFunctionsToWrap" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperList.MakeList">
+<span class="sig-name descname"><span class="pre">MakeList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperList.MakeList" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperLong">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsTagWrapperLong</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperLong" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vapor.params.ParamsTagWrapper" title="vapor.params.ParamsTagWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsTagWrapperString">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsTagWrapperString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsTagWrapperString" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vapor.params.ParamsTagWrapper" title="vapor.params.ParamsTagWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.params.ParamsWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.params.</span></span><span class="sig-name descname"><span class="pre">ParamsWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ParamsBase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.params.ParamsWrapper" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.SmartWrapper" title="vapor.smartwrapper.SmartWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">SmartWrapper</span></code></a></p>
+</dd></dl>
+
 </section>
 
 
@@ -512,6 +597,33 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapper.GetFunctionsToWrap"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapper.GetFunctionsToWrap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperBool"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperBool</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperDouble"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperDouble</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperList"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperList.GetFunctionsToWrap"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList.GetFunctionsToWrap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperList.MakeList"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList.MakeList()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperLong"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperLong</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsTagWrapperString"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperString</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.params.ParamsWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsWrapper</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

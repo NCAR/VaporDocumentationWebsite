@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'vaporApplicationReference/navigationSettings';</script>
-    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Global Settings" href="globalSettings.html" />
@@ -252,19 +251,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contributingToVapor.html">Contributing to Vapor</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/bugReports.html">Bug Reports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/docsContributions.html">Docs Contributions</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/codeContributions.html">Code Contributions</a></li>
-
-
-
-
-
-
-
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/galleryContributions.html">Gallery Contributions</a></li>
 </ul>
 </li>
@@ -497,14 +484,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="navigation-settings">
-<span id="navigation"></span><h1>Navigation Settings<a class="headerlink" href="#navigation-settings" title="Permalink to this headline">#</a></h1>
+<span id="navigation"></span><h1>Navigation Settings<a class="headerlink" href="#navigation-settings" title="Permalink to this heading">#</a></h1>
 <p>At the top level of Vapor’s control menu, there is a top-level tab called Navigation, which contains settings that help users identify and visualize where they are in the scene.  The Navigation tab is composed of an Annotation tab, and a Viewpoint tab.</p>
 <section id="annotations">
-<h2>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">#</a></h2>
+<h2>Annotations<a class="headerlink" href="#annotations" title="Permalink to this heading">#</a></h2>
 <p>In the Annotaitons tab, users can add Axis Annotations, Time Annotations, and 3D arrows that indicate which direction the X, Y, and Z axes are oriented in.  Users can also control whether they want to render bounding boxes that indicate the extents of their domain.</p>
 </section>
 <section id="animation">
-<h2>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">#</a></h2>
+<h2>Animation<a class="headerlink" href="#animation" title="Permalink to this heading">#</a></h2>
 <p>The Animation tab provides tools to control and customize how animations are played using the animation controls at the top of the application.</p>
 <ul class="simple">
 <li><p><strong>Current Timestep</strong>: Select the current timestep being rendered.</p></li>
@@ -518,7 +505,7 @@ document.write(`
 </figure>
 </section>
 <section id="viewpoint">
-<h2>Viewpoint<a class="headerlink" href="#viewpoint" title="Permalink to this headline">#</a></h2>
+<h2>Viewpoint<a class="headerlink" href="#viewpoint" title="Permalink to this heading">#</a></h2>
 <p>The Viewpoint tab contains tools that let the user apply global transforms to datasets that they have loaded.  This is similar to how individual renderers can be transformed, but in this case the transform applies to all renderers in a dataset.</p>
 <p>Projection strings can also be modified if a dataset is georeferenced.</p>
 <p>Finally, camera position and direction values are displayed here and may be changed numerically for convenience.</p>
@@ -529,7 +516,7 @@ document.write(`
 </figcaption>
 </figure>
 <section id="off-screen-rendering">
-<h3>Off Screen Rendering<a class="headerlink" href="#off-screen-rendering" title="Permalink to this headline">#</a></h3>
+<h3>Off Screen Rendering<a class="headerlink" href="#off-screen-rendering" title="Permalink to this heading">#</a></h3>
 <p>Sometimes users will want to produce snapshots or animations at a higher resolution than their current display.  A rendering can be captured at 4k, or any user-defined resolution by modifying the <strong>Framebuffer Settings</strong> section of the Viewpoint tab.  Simply check the “Use Custom Output Size” checkbox, and enter the width and height of the image sequence you would like to capture.</p>
 </section>
 </section>

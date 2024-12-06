@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dataFormatRequirements/convertWRFtoVDC';</script>
-    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -250,19 +249,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contributingToVapor.html">Contributing to Vapor</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/bugReports.html">Bug Reports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/docsContributions.html">Docs Contributions</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/codeContributions.html">Code Contributions</a></li>
-
-
-
-
-
-
-
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/galleryContributions.html">Gallery Contributions</a></li>
 </ul>
 </li>
@@ -491,10 +478,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="converting-wrf-data-into-vdc">
-<span id="convertwrftovdc"></span><h1>Converting WRF data into VDC<a class="headerlink" href="#converting-wrf-data-into-vdc" title="Permalink to this headline">#</a></h1>
+<span id="convertwrftovdc"></span><h1>Converting WRF data into VDC<a class="headerlink" href="#converting-wrf-data-into-vdc" title="Permalink to this heading">#</a></h1>
 <p>The two tools for converting WRF-ARW into VDC are <code class="docutils literal notranslate"><span class="pre">wrfvdccreate</span></code> and <code class="docutils literal notranslate"><span class="pre">wrf2vdc</span></code>.  If either of these commands are issued by themselves, advanced options will be listed to the terminal.  These advanced options are usually not necessary.</p>
 <section id="create-vdc-metadata-file">
-<h2>Create .vdc metadata file<a class="headerlink" href="#create-vdc-metadata-file" title="Permalink to this headline">#</a></h2>
+<h2>Create .vdc metadata file<a class="headerlink" href="#create-vdc-metadata-file" title="Permalink to this heading">#</a></h2>
 <p>In the directory where Vapor 3 is installed, there is a command line utility called <code class="docutils literal notranslate"><span class="pre">wrfvdccreate</span></code>.  Issue this command in a terminal (Unix) or command prompt (Windows), followed by your WRF-ARW files, and finally the name of the .vdc file to be written.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">wrfvdccreate</span><span class="w"> </span><span class="n">wrfout_d02_2005</span><span class="mi">-08-29</span><span class="n">_02</span><span class="w"> </span><span class="n">katrina</span><span class="p">.</span><span class="n">vdc</span>
 </pre></div>
@@ -507,7 +494,7 @@ document.write(`
 </figure>
 </section>
 <section id="generate-vdc-data">
-<h2>Generate VDC Data<a class="headerlink" href="#generate-vdc-data" title="Permalink to this headline">#</a></h2>
+<h2>Generate VDC Data<a class="headerlink" href="#generate-vdc-data" title="Permalink to this heading">#</a></h2>
 <p>Once we have a .vdc file, the metadata has been recorded and we can transform the data into the VDC format.  From Vapor 3’s installation directory, issue the command <code class="docutils literal notranslate"><span class="pre">wrf2vdc</span></code>, followed by your WRF-ARW files, and finally followed by the .vdc file that was made in Step 1.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">wrf2vdce</span><span class="w"> </span><span class="n">wrfout_d02_2005</span><span class="mi">-08-29</span><span class="n">_02</span><span class="w"> </span><span class="n">katrina</span><span class="p">.</span><span class="n">vdc</span>
 </pre></div>

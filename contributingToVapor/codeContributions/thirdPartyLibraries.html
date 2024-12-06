@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contributingToVapor/codeContributions/thirdPartyLibraries';</script>
-    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -483,7 +482,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="third-party-libraries">
-<h1>Third-Party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this headline">#</a></h1>
+<h1>Third-Party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this heading">#</a></h1>
 <p><a class="reference internal" href="../../downloads/thirdPartyLibraries.html#third-party-libraries"><span class="std std-ref">Download third party libraries here</span></a></p>
 <dl class="simple">
 <dt>Windows:</dt><dd><p>Unzip the third-party libraries for Windows into the root of your C:\ directory.</p>
@@ -502,7 +501,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="building-third-party-libraries">
-<span id="contributing-build3rdparty"></span><h2>Building Third-Party Libraries<a class="headerlink" href="#building-third-party-libraries" title="Permalink to this headline">#</a></h2>
+<span id="contributing-build3rdparty"></span><h2>Building Third-Party Libraries<a class="headerlink" href="#building-third-party-libraries" title="Permalink to this heading">#</a></h2>
 <p><a class="reference internal" href="../../downloads/thirdPartyLibraries.html#third-party-libraries"><span class="std std-ref">Download source files here</span></a>.</p>
 <p>See ~/VAPOR/scripts/build3rdParty.sh to compile the libraries and see specifics on how they are configured for maxOSx86, appleSilicon, and Ubuntu.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">~/VAPOR/scripts/build3rdParty.sh -o macOSx86</span>
@@ -516,10 +515,6 @@ document.write(`
 <p>The file &lt;vapor-source&gt;/site_files/site.NCAR may be used to specifiy the location of the libraries.  To do this, build your version of the libraries in /usr/local/VAPOR-Deps/current, or change the THIRD_PARTY_LIB_DIR path in site.NCAR.</p>
 </div>
 <table class="table">
-<colgroup>
-<col style="width: 61%" />
-<col style="width: 39%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Vapor</p></th>
 <th class="head"><p>3.9.3</p></th>
@@ -585,7 +580,7 @@ document.write(`
 </section>
 </section>
 <section id="install-system-libraries">
-<h1>Install System Libraries<a class="headerlink" href="#install-system-libraries" title="Permalink to this headline">#</a></h1>
+<h1>Install System Libraries<a class="headerlink" href="#install-system-libraries" title="Permalink to this heading">#</a></h1>
 <p>Building Vapor from source requires system libraries that are not natively available on all UNIX platforms.  The following commands can be used to acquire these libraries.</p>
 <dl class="simple">
 <dt>Ubuntu:</dt><dd><p>sudo apt-get install git freeglut3-dev libexpat1-dev libglib2.0-0 libdbus1-3</p>
