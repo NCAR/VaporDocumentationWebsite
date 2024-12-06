@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dataFormatRequirements/binary';</script>
-    <link rel="shortcut icon" href="../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -250,19 +249,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contributingToVapor.html">Contributing to Vapor</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/bugReports.html">Bug Reports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/docsContributions.html">Docs Contributions</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/codeContributions.html">Code Contributions</a></li>
-
-
-
-
-
-
-
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="../contributingToVapor/galleryContributions.html">Gallery Contributions</a></li>
 </ul>
 </li>
@@ -491,10 +478,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="raw-binary-data">
-<span id="binary"></span><h1>Raw Binary Data<a class="headerlink" href="#raw-binary-data" title="Permalink to this headline">#</a></h1>
+<span id="binary"></span><h1>Raw Binary Data<a class="headerlink" href="#raw-binary-data" title="Permalink to this heading">#</a></h1>
 <p>Converting raw binary data to VDC is a complex process for converting data in Vapor 3.  With WRF-ARW and NetCDF-CF data, Vapor can read the files an extract metadata that describes the grid that the data exists within.  With raw binary data, we need to define that metadata ourselves in step 1.</p>
 <section id="step-1-create-vdc-metadata-file">
-<h2>Step 1: Create .vdc metadata file<a class="headerlink" href="#step-1-create-vdc-metadata-file" title="Permalink to this headline">#</a></h2>
+<h2>Step 1: Create .vdc metadata file<a class="headerlink" href="#step-1-create-vdc-metadata-file" title="Permalink to this heading">#</a></h2>
 <p>To make a VDC from scratch, users need to carefully read all options in the <code class="docutils literal notranslate"><span class="pre">vdccreate</span></code> utility, and define their .vdc metadata file accordingly.</p>
 <p>In this <a class="reference external" href="https://drive.google.com/open?id=1wJtPX0DPgovZSulAC8kntDKVcDkTw1Y7">sample dataset of a sphere</a>, we have a 64x64x64 rectilinear grid with one timestep, and one 3D variable.  For this example, we can create a .vdc metadata file with the following flags from vdccreate.  Note that we are not using the raw data file yet, just defining the grid, time dimension, and variables.</p>
 <blockquote>
@@ -508,7 +495,7 @@ document.write(`
 </figure>
 </section>
 <section id="step-2-the-wavelet-transform">
-<h2>Step 2: The wavelet transform<a class="headerlink" href="#step-2-the-wavelet-transform" title="Permalink to this headline">#</a></h2>
+<h2>Step 2: The wavelet transform<a class="headerlink" href="#step-2-the-wavelet-transform" title="Permalink to this heading">#</a></h2>
 <p>Now that a .vdc metadata file has been created, the VDC transform can take place.  Each variable must be converted individually with <code class="docutils literal notranslate"><span class="pre">raw2vdc</span></code>, and this must be done one timestep at a time.</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">raw2vdc</span> <span class="pre">-ts</span> <span class="pre">0</span> <span class="pre">-varname</span> <span class="pre">exampleVar</span> <span class="pre">sphere64.vdc</span> <span class="pre">sphere64.raw</span></code></p>

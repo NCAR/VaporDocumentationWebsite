@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY29EEZ393"></script>
@@ -51,14 +51,13 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pythonAPIReference/userModules/vapor.session';</script>
-    <link rel="shortcut icon" href="../../_static/vaporVLogo.png"/>
+    <link rel="icon" href="../../_static/vaporVLogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="vapor.transferfunction module" href="vapor.transferfunction.html" />
@@ -444,7 +443,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -460,6 +461,36 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session"><code class="docutils literal notranslate"><span class="pre">Session</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.CreatePythonDataset"><code class="docutils literal notranslate"><span class="pre">Session.CreatePythonDataset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.DeleteRenderer"><code class="docutils literal notranslate"><span class="pre">Session.DeleteRenderer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetAxisAnnotations"><code class="docutils literal notranslate"><span class="pre">Session.GetAxisAnnotations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetCamera"><code class="docutils literal notranslate"><span class="pre">Session.GetCamera()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetDataset"><code class="docutils literal notranslate"><span class="pre">Session.GetDataset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetDatasets"><code class="docutils literal notranslate"><span class="pre">Session.GetDatasets()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetRenderer"><code class="docutils literal notranslate"><span class="pre">Session.GetRenderer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetRenderers"><code class="docutils literal notranslate"><span class="pre">Session.GetRenderers()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetSceneAnnotations"><code class="docutils literal notranslate"><span class="pre">Session.GetSceneAnnotations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.NewRenderer"><code class="docutils literal notranslate"><span class="pre">Session.NewRenderer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.OpenDataset"><code class="docutils literal notranslate"><span class="pre">Session.OpenDataset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.RenderToImage"><code class="docutils literal notranslate"><span class="pre">Session.RenderToImage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.SetResolution"><code class="docutils literal notranslate"><span class="pre">Session.SetResolution()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.Show"><code class="docutils literal notranslate"><span class="pre">Session.Show()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getAnimationParams"><code class="docutils literal notranslate"><span class="pre">Session.getAnimationParams</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getGUIStateParams"><code class="docutils literal notranslate"><span class="pre">Session.getGUIStateParams</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getParamsDatasetInfo"><code class="docutils literal notranslate"><span class="pre">Session.getParamsDatasetInfo</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getSettingsParams"><code class="docutils literal notranslate"><span class="pre">Session.getSettingsParams</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getWinName"><code class="docutils literal notranslate"><span class="pre">Session.getWinName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.loadAllParamsDatasets"><code class="docutils literal notranslate"><span class="pre">Session.loadAllParamsDatasets</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -469,8 +500,125 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="vapor-session-module">
-<h1>vapor.session module<a class="headerlink" href="#vapor-session-module" title="Permalink to this headline">#</a></h1>
+  <section id="module-vapor.session">
+<span id="vapor-session-module"></span><h1>vapor.session module<a class="headerlink" href="#module-vapor.session" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="vapor.session.Session">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">vapor.session.</span></span><span class="sig-name descname"><span class="pre">Session</span></span><a class="headerlink" href="#vapor.session.Session" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.CreatePythonDataset">
+<span class="sig-name descname"><span class="pre">CreatePythonDataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.CreatePythonDataset" title="Permalink to this definition">#</a></dt>
+<dd><p>Creates a python dataset or returns one if it already exists for the current session.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.DeleteRenderer">
+<span class="sig-name descname"><span class="pre">DeleteRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">Renderer</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.DeleteRenderer" title="Permalink to this definition">#</a></dt>
+<dd><p>void Session::DeleteRenderer(String name)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetAxisAnnotations">
+<span class="sig-name descname"><span class="pre">GetAxisAnnotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="vapor.annotations.html#vapor.annotations.AxisAnnotation" title="vapor.annotations.AxisAnnotation"><span class="pre">AxisAnnotation</span></a></span></span><a class="headerlink" href="#vapor.session.Session.GetAxisAnnotations" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetCamera">
+<span class="sig-name descname"><span class="pre">GetCamera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.GetCamera" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetDataset">
+<span class="sig-name descname"><span class="pre">GetDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="vapor.dataset.html#vapor.dataset.Dataset" title="vapor.dataset.Dataset"><span class="pre">Dataset</span></a></span></span><a class="headerlink" href="#vapor.session.Session.GetDataset" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetDatasets">
+<span class="sig-name descname"><span class="pre">GetDatasets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.GetDatasets" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetRenderer">
+<span class="sig-name descname"><span class="pre">GetRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.GetRenderer" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetRenderers">
+<span class="sig-name descname"><span class="pre">GetRenderers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">vapor.renderer.Renderer</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vapor.session.Session.GetRenderers" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.GetSceneAnnotations">
+<span class="sig-name descname"><span class="pre">GetSceneAnnotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="vapor.annotations.html#vapor.annotations.SceneAnnotation" title="vapor.annotations.SceneAnnotation"><span class="pre">SceneAnnotation</span></a></span></span><a class="headerlink" href="#vapor.session.Session.GetSceneAnnotations" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.NewRenderer">
+<span class="sig-name descname"><span class="pre">NewRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">Renderer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="vapor.renderer.html#vapor.renderer.Renderer" title="vapor.renderer.Renderer"><span class="pre">Renderer</span></a></span></span><a class="headerlink" href="#vapor.session.Session.NewRenderer" title="Permalink to this definition">#</a></dt>
+<dd><p>std::string Session::NewRenderer(String type, String dataset = “”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.OpenDataset">
+<span class="sig-name descname"><span class="pre">OpenDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.OpenDataset" title="Permalink to this definition">#</a></dt>
+<dd><p>Open a dataset of type datasetType from a list of files.
+A list of supported dataset types can be retrieved from Dataset.GetDatasetTypes()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.RenderToImage">
+<span class="sig-name descname"><span class="pre">RenderToImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'PIL.Image'</span> <span class="pre">from</span> <span class="pre">'/opt/anaconda3/envs/VaporDocumentationWebsite/lib/python3.9/site-packages/PIL/Image.py'&gt;</span></span></span><a class="headerlink" href="#vapor.session.Session.RenderToImage" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.SetResolution">
+<span class="sig-name descname"><span class="pre">SetResolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.SetResolution" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.session.Session.Show">
+<span class="sig-name descname"><span class="pre">Show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vapor.session.Session.Show" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.session.Session.getAnimationParams">
+<span class="sig-name descname"><span class="pre">getAnimationParams</span></span><a class="headerlink" href="#vapor.session.Session.getAnimationParams" title="Permalink to this definition">#</a></dt>
+<dd><p>AnimationParams* __cppyy_internal::Dispatcher1::getAnimationParams()</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.session.Session.getGUIStateParams">
+<span class="sig-name descname"><span class="pre">getGUIStateParams</span></span><a class="headerlink" href="#vapor.session.Session.getGUIStateParams" title="Permalink to this definition">#</a></dt>
+<dd><p>GUIStateParams* __cppyy_internal::Dispatcher1::getGUIStateParams()</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.session.Session.getParamsDatasetInfo">
+<span class="sig-name descname"><span class="pre">getParamsDatasetInfo</span></span><a class="headerlink" href="#vapor.session.Session.getParamsDatasetInfo" title="Permalink to this definition">#</a></dt>
+<dd><p>void __cppyy_internal::Dispatcher1::getParamsDatasetInfo(std::string arg0, std::string* arg1, std::vector&lt;std::string&gt;* arg2)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.session.Session.getSettingsParams">
+<span class="sig-name descname"><span class="pre">getSettingsParams</span></span><a class="headerlink" href="#vapor.session.Session.getSettingsParams" title="Permalink to this definition">#</a></dt>
+<dd><p>SettingsParams* __cppyy_internal::Dispatcher1::getSettingsParams()</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.session.Session.getWinName">
+<span class="sig-name descname"><span class="pre">getWinName</span></span><a class="headerlink" href="#vapor.session.Session.getWinName" title="Permalink to this definition">#</a></dt>
+<dd><p>std::string __cppyy_internal::Dispatcher1::getWinName()</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vapor.session.Session.loadAllParamsDatasets">
+<span class="sig-name descname"><span class="pre">loadAllParamsDatasets</span></span><a class="headerlink" href="#vapor.session.Session.loadAllParamsDatasets" title="Permalink to this definition">#</a></dt>
+<dd><p>void __cppyy_internal::Dispatcher1::loadAllParamsDatasets()</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
@@ -512,6 +660,42 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session"><code class="docutils literal notranslate"><span class="pre">Session</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.CreatePythonDataset"><code class="docutils literal notranslate"><span class="pre">Session.CreatePythonDataset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.DeleteRenderer"><code class="docutils literal notranslate"><span class="pre">Session.DeleteRenderer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetAxisAnnotations"><code class="docutils literal notranslate"><span class="pre">Session.GetAxisAnnotations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetCamera"><code class="docutils literal notranslate"><span class="pre">Session.GetCamera()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetDataset"><code class="docutils literal notranslate"><span class="pre">Session.GetDataset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetDatasets"><code class="docutils literal notranslate"><span class="pre">Session.GetDatasets()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetRenderer"><code class="docutils literal notranslate"><span class="pre">Session.GetRenderer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetRenderers"><code class="docutils literal notranslate"><span class="pre">Session.GetRenderers()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.GetSceneAnnotations"><code class="docutils literal notranslate"><span class="pre">Session.GetSceneAnnotations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.NewRenderer"><code class="docutils literal notranslate"><span class="pre">Session.NewRenderer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.OpenDataset"><code class="docutils literal notranslate"><span class="pre">Session.OpenDataset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.RenderToImage"><code class="docutils literal notranslate"><span class="pre">Session.RenderToImage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.SetResolution"><code class="docutils literal notranslate"><span class="pre">Session.SetResolution()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.Show"><code class="docutils literal notranslate"><span class="pre">Session.Show()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getAnimationParams"><code class="docutils literal notranslate"><span class="pre">Session.getAnimationParams</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getGUIStateParams"><code class="docutils literal notranslate"><span class="pre">Session.getGUIStateParams</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getParamsDatasetInfo"><code class="docutils literal notranslate"><span class="pre">Session.getParamsDatasetInfo</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getSettingsParams"><code class="docutils literal notranslate"><span class="pre">Session.getSettingsParams</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.getWinName"><code class="docutils literal notranslate"><span class="pre">Session.getWinName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.session.Session.loadAllParamsDatasets"><code class="docutils literal notranslate"><span class="pre">Session.loadAllParamsDatasets</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

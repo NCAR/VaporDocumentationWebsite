@@ -6,12 +6,12 @@ For generating a tar.bz2 installer bundle for testing or hosting on a remote ser
 Building a local conda bundle
 _____________________________
 
-1. After forking Vapor and installing Anaconda, open a new console that will be in the (base) environment.  Add access to the conda-forge channel, create a new environment with the packages conda-build and python=3.9, and activate it.
+1. After forking Vapor and installing Anaconda, open a new console that will be in the (base) environment.  Add access to the conda-forge channel, create a new environment with the packages conda-build and activate it.
 
 .. code-block:: console
 
     conda config --add channels conda-forge
-    conda create -n myEnvironment python=3.9 conda-build
+    conda create -n myEnvironment conda-build
     conda activate myEnvironment
 
 2. After making necessary changes to the source code, cd into VAPOR's /conda directory.
