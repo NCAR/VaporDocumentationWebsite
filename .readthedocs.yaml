@@ -13,7 +13,7 @@ build:
     - python -c "help(\"modules\")"
     - python -c "import matplotlib"
     #- cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
-    - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/rtd-test2025/conda/latest
+    - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest
     - python -c "from vapor import animation"
 
 #python:
