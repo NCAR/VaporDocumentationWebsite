@@ -1,0 +1,27 @@
+version: "2"
+
+  #apt_packages:
+  #  - 
+build:
+  os: "ubuntu-20.04"
+  tools:
+    python: "mambaforge-22.9"
+  jobs:
+    post_build:
+    - conda env export --from-history
+    - python -c "print(\"hi?\")"
+    - python -c "help(\"modules\")"
+    - python -c "import matplotlib"
+    #- cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
+    - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/rtd-test2025/conda/latest
+    - python -c "from vapor import animation"
+
+#python:
+#  install:
+#    - requirements: docs/requirements.txt
+
+sphinx:
+  configuration: docs/source/conf.py
+
+conda:
+  environment: environment.yml
