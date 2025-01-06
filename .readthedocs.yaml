@@ -21,7 +21,8 @@ build:
 #    - requirements: docs/requirements.txt
 
 sphinx:
-  configuration: docs/source/conf.py
+  configuration: docs/conf.py
+  #configuration: docs/source/conf.py
 
 conda:
   environment: environment.yml
