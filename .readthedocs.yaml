@@ -7,6 +7,8 @@ build:
   tools:
     python: "mambaforge-22.9"
   jobs:
+    pre_build:
+    - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
     post_build:
     - conda env export --from-history
     - python -c "print(\"hi?\")"
@@ -17,7 +19,7 @@ build:
     #- ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite
     #- ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda
     #- ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest
-    - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
+    #- cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
     - python -c "from vapor import animation"
     - ls $READTHEDOCS_REPOSITORY_PATH/docs/pythonAPIReference/devModules
 
