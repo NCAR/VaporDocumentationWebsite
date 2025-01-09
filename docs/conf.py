@@ -27,6 +27,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "sphinx_copybutto
 # Add vapor_utils to path and vapor_wrf modules for python engine documentation
 sys.path.insert(0, os.path.abspath('vaporApplicationReference/otherTools'))
 sys.path.insert(0, os.path.abspath('/home/docs/checkouts/readthedocs.org/user_builds/vapor/conda/pythonapi2/lib/python3.9/site-packages/vapor'))
+sys.path.insert(0, os.path.abspath('/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest'))
 
 # -- Project information -----------------------------------------------------
 
