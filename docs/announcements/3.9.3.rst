@@ -14,7 +14,7 @@
                 <img src="../_images/macIcon.png" alt="Mac" style="width: 100px; background: none; filter: drop-shadow(0 0 5px white);">
             </td>
             <td>
-                <img src="../_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
+                <img src="_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
             </td>
         </tr>
         <tr>
