@@ -88,9 +88,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
-
 html_logo = "_images/vaporLogoBlack.png"
 html_favicon = "_images/vaporVLogo.png"
+html_extra_path = ['_images']
 
 html_theme = "sphinx_book_theme"
 html_theme_options = dict(
