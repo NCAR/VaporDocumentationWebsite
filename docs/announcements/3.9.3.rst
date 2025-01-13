@@ -11,6 +11,7 @@ Download VAPOR's Latest Release (v3.9.3)
    :header-rows: 0
    :widths: 33 33 33
    :align: center
+   :class: no-hover
 
    * - .. image:: _static/windowsIcon.png
          :alt: Windows
