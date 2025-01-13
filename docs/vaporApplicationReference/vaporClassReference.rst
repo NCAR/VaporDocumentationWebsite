@@ -14,3 +14,7 @@ Class Reference
 
 `Link to Class Reference <vaporClassReference/index.html>`_
 
+`Link to Class Reference <vaporApplicationReference/vaporClassReference/index.html>`_
+
+`Link to Class Reference <index.html>`_
+
