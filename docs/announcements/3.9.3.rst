@@ -42,15 +42,6 @@ For VAPOR's weekly build, source code, and previous versions, visit our `GitHub 
     .no-hover tr:hover {
         background-color: transparent !important;
     }
-
-    .no-hover td, .no-hover th {
-        text-align: center;
-    }
-    .no-hover td img, .no-hover th img {
-        display: block;
-        margin: 0 auto;
-    }
-
     </style>
 
 .. raw:: html
