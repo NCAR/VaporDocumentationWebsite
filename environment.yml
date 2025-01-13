@@ -1,4 +1,4 @@
-name: VaporDocumentationWebsite
+name: VDC2
 channels:
   - conda-forge
   - ncar-vapor
