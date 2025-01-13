@@ -2,32 +2,13 @@
 
 .. title:: Download VAPOR
 
-Download VAPOR's Latest Release (v3.9.3)
-========================================
-
-.. centered:: **Download VAPOR's Latest Release (v3.9.3)**
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-   * - .. raw:: html
-
-         <p>My Name Here<br>My address here<br>City, State, Zip<br>Ph: 214-555-1212<br></p>
-
-     - **INVOICE**
-   * - This is a test
-     - .. raw:: html
-
-         <p>Invoice #20120622001<br>Date: 25 June 2012<br></p>
-
 .. list-table:: Available Downloads
    :header-rows: 0
    :widths: 33 33 33
    :align: center
    :class: no-hover
 
-   * - .. image:: _static/windowsIcon.png
+   * - .. image:: ../_images/windowsIcon.png
          :alt: Windows
          :width: 98px
      - .. image:: ../_images/macIcon.png
@@ -48,14 +29,6 @@ Download VAPOR's Latest Release (v3.9.3)
 
           <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-win64.exe" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Windows_64' });">Linux</a>
 
-   * - **Windows**  
-       `Download for Windows <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-win64.exe>`_
-     - **macOS Apple Silicon**  
-       `Download for macOS Apple Silicon <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-AppleSilicon.dmg>`_  
-       **macOS Intel x86**  
-       `Download for macOS Intel x86 <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-Darwinx86.dmg>`_
-     -
-
 For VAPOR's weekly build, source code, and previous versions, visit our `GitHub page <https://github.com/NCAR/VAPOR/releases>`_.
 
 .. raw:: html
@@ -75,56 +48,6 @@ For VAPOR's weekly build, source code, and previous versions, visit our `GitHub 
         margin: 0 auto;
     }
     </style>
-
-.. raw:: html
-
-    <div style="text-align: center;">
-        <h2>Download VAPOR's Latest Release (v3.9.3)</h2>
-    </div>
-
-    <table style="width: 100%; text-align: center; table-layout: fixed;">
-        <tr>
-            <td>
-                <img src="_static/windowsIcon.png" alt="Windows" style="width: 98px; background: none;">
-            </td>
-            <td>
-                <img src="../_images/macIcon.png" alt="Mac" style="width: 100px; background: none; filter: drop-shadow(0 0 5px white);">
-            </td>
-            <td>
-                <img src="../_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div style="text-align: center;">
-                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-win64.exe" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Windows_64' });">
-                        <img src="../_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Windows
-                    </a>
-                </div>
-            </td>
-            <td>
-                <div style="text-align: center;">
-                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-AppleSilicon.dmg" style="display: inline-block; width: 185px; height: 50px; padding: 0; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 2px 2px 2px 2px; cursor: pointer; vertical-align: middle; line-height: 50px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'MacOS_M1' });">
-                        <img src="../_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">macOS Apple Silicon
-                    </a>
-                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-Darwinx86.dmg" style="display: inline-block; width: 185px; height: 50px; padding: 0; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 2px 2px 2px 2px; cursor: pointer; vertical-align: middle; line-height: 50px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'MacOS_x86' });">
-                        <img src="../_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">macOS Intel x86
-                    </a>
-                </div>
-            </td>
-            <td>
-                <div style="text-align: center;">
-                    <a href="https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR-3.9.3-x86_64.AppImage" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Linux_AppImage' });">
-                        <img src="../_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Linux
-                    </a>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <div style="text-align: center;">
-        <h5><br>For VAPOR's weekly build, source code, and previous versions visit our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
-    </div>
 
 Vapor has released a minor version, v3.9.3, on August 16, 2024.
 
