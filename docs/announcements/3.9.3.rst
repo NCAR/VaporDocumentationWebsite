@@ -52,6 +52,7 @@
     }
     .no-hover td, .no-hover th {
         text-align: center;
+        background-color: transparent !important;
     }
     .no-hover td img, .no-hover th img {
         display: block;

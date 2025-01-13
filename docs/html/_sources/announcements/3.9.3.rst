@@ -2,7 +2,13 @@
 
 .. title:: Download VAPOR
 
-.. list-table:: Download VAPOR's Latest Release (v3.9.3)
+.. raw:: html
+
+    <div style="text-align: center;">
+        <h2>Download VAPOR's Latest Release (v3.9.3)</h2>
+    </div>
+
+.. list-table::
    :header-rows: 0
    :widths: 33 33 33
    :align: center
@@ -34,8 +40,6 @@
     <div style="text-align: center;">
         <h5><br>For VAPOR's weekly build, source code, and previous versions visit our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
     </div>
-
-For VAPOR's weekly build, source code, and previous versions, visit our `GitHub page <https://github.com/NCAR/VAPOR/releases>`_.
 
 .. raw:: html
 
