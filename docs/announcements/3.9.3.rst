@@ -34,6 +34,13 @@ Download VAPOR's Latest Release (v3.9.3)
 
 For VAPOR's weekly build, source code, and previous versions, visit our `GitHub page <https://github.com/NCAR/VAPOR/releases>`_.
 
+.. raw:: html
+
+    <style>
+    .no-hover tr:hover {
+        background-color: transparent !important;
+    }
+    </style>
 
 .. raw:: html
 
