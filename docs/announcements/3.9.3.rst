@@ -1,4 +1,39 @@
 .. _3.9.3:
+
+.. title:: Download VAPOR
+
+Download VAPOR's Latest Release (v3.9.3)
+========================================
+
+.. centered:: **Download VAPOR's Latest Release (v3.9.3)**
+
+.. list-table:: Available Downloads
+   :header-rows: 0
+   :widths: 33 33 33
+   :align: center
+
+   * - .. image:: _static/windowsIcon.png
+         :alt: Windows
+         :width: 98px
+     - .. image:: ../_images/macIcon.png
+         :alt: Mac
+         :width: 100px
+     - .. image:: ../_images/linuxIcon.png
+         :alt: Linux
+         :width: 100px
+
+   * - **Windows**  
+       `Download for Windows <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-win64.exe>`_
+     - **macOS Apple Silicon**  
+       `Download for macOS Apple Silicon <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-AppleSilicon.dmg>`_  
+       **macOS Intel x86**  
+       `Download for macOS Intel x86 <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-Darwinx86.dmg>`_
+     - **Linux**  
+       `Download for Linux (AppImage) <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR-3.9.3-x86_64.AppImage>`_
+
+For VAPOR's weekly build, source code, and previous versions, visit our `GitHub page <https://github.com/NCAR/VAPOR/releases>`_.
+
+
 .. raw:: html
 
     <div style="text-align: center;">
