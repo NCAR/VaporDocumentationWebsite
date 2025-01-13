@@ -25,11 +25,11 @@ Download VAPOR's Latest Release (v3.9.3)
 
    * - .. raw:: html
 
-         <div style="text-align: center;">
-             <a href="https://example.com/windows" style="display: inline-block; width: 150px; height: 104px; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none;">
-                 <img src="../_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px;"> Windows
-             </a>
-         </div>
+           <div style="text-align: center;">
+               <a href="https://example.com/windows" style="display: inline-block; width: 150px; height: 104px; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none;">
+                   <img src="../_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px;"> Windows
+               </a>
+           </div>
 
    * - **Windows**  
        `Download for Windows <https://github.com/NCAR/VAPOR/releases/download/v3.9.3/VAPOR3-3.9.3-win64.exe>`_
