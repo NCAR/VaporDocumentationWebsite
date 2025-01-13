@@ -12,5 +12,5 @@ Class Reference
 
     <a href="vaporApplicationReference/vaporClassReference/index.html">Doxygen documentation for the classes used in VAPOR's GUI can be found here2</a>
 
-`Link to Class Reference <vaporApplicationReference/vaporClassReference/example.html>`_
+`Link to Class Reference <vaporClassReference/index.html>`_
 
