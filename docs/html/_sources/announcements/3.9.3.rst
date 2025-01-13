@@ -47,11 +47,12 @@
     .no-hover tr:hover, 
     .no-hover td:hover, 
     .no-hover th:hover {
-        background-color: transparent !important;
+        background-color: white !important;
         box-shadow: none !important;
     }
     .no-hover td, .no-hover th {
         text-align: center;
+        background-color: transparent !important;
     }
     .no-hover td img, .no-hover th img {
         display: block;
