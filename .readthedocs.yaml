@@ -18,6 +18,7 @@ build:
     - ls $READTHEDOCS_REPOSITORY_PATH/vaporApplicationReference/vaporClassReference
     - ls $READTHEDOCS_OUTPUT
     - ls $READTHEDOCS_OUTPUT/html
+    - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference
 
 sphinx:
   configuration: docs/conf.py
