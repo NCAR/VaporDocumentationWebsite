@@ -24,8 +24,8 @@ build:
     - echo $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - mkdir -p $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference $READTHEDOCS_OUTPUT/html/vaporApplicationReference
-    - ls $READTHEDOCS_OUTPUT/html/_static
-    - ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference
+    - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference
+    - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference/vaporClassReference
     - ls
     - pwd
     #- ls _static
