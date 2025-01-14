@@ -32,6 +32,7 @@ build:
     - ls _readthedocs
     - ls _readthedocs/html
     - ls _readthedocs/html/_static
+    - ls _readthedocs/html/_static/vaporClassReference
     #- ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference/vaporApplicationReference
 
 

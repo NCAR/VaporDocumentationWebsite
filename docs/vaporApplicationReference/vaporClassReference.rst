@@ -17,4 +17,6 @@ Class Reference
 `Link to Class Reference4 <../../_static/vaporApplicationReference/index.html>`_
 - https://vapordocumentationwebsite.readthedocs.io/en/_static/vaporApplicationReference/index.html
 
+`Link to Class Reference5 <../_readthedocs/html/_static/vaporClassReference/index.html>`_
+
 foo???
