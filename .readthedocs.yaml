@@ -9,6 +9,8 @@ build:
   jobs:
     pre_build:
     - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
+    - mkdir -p _readTheDocs/_static
+    - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _readTheDocs/_static
     post_build:
     - conda env export --from-history
     - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest
@@ -22,6 +24,7 @@ build:
     - echo $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - ls $READTHEDOCS_OUTPUT/html/_static
     - ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference
+    - ls _readTheDocs/_static
     #- ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference/vaporApplicationReference
 
 
