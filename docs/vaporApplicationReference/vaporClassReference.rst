@@ -20,4 +20,6 @@ Class Reference
 
 `Link to Class Referencee <_static/vaporClassReference/index.html>`_
 
+`Link to Class Referencee <_static/vaporApplicationReference/index.html>`_
+
 foo?
