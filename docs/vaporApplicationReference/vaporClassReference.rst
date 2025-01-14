@@ -4,22 +4,11 @@
 Class Reference
 ===============
 
-.. raw:: html
 
-    <a href="vaporClassReference/index.html">Doxygen documentation for the classes used in VAPOR's GUI can be found here</a>
+`Link to Class Reference1 <index.html>`_
 
-.. raw:: html
+`Link to Class Reference2 <_static/vaporClassReference/index.html>`_
 
-    <a href="vaporApplicationReference/vaporClassReference/index.html">Doxygen documentation for the classes used in VAPOR's GUI can be found here2</a>
-
-`Link to Class Reference <vaporClassReference/index.html>`_
-
-`Link to Class Reference <vaporApplicationReference/vaporClassReference/index.html>`_
-
-`Link to Class Reference <index.html>`_
-
-`Link to Class Referencee <_static/vaporClassReference/index.html>`_
-
-`Link to Class Referencee <_static/vaporApplicationReference/index.html>`_
+`Link to Class Reference3 <_static/vaporApplicationReference/index.html>`_
 
 foo?
