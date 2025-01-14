@@ -89,7 +89,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = None
 
 #html_extra_path = ['vaporApplicationReference/vaporClassReference']
-html_static_path = ['_static']
+#html_static_path = ['_static']
+#html_static_path = ['.']
 html_scaled_image_link = False
 html_logo = "_images/vaporLogoBlack.png"
 html_favicon = "_images/vaporVLogo.png"
