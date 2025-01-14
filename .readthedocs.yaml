@@ -13,6 +13,7 @@ build:
     #- cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _readthedocs/_static
     - mkdir -p $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference $READTHEDOCS_OUTPUT/html/vaporApplicationReference
+    - cp $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference/index.html $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     post_build:
     - conda env export --from-history
     - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest
@@ -24,7 +25,6 @@ build:
     - ls $READTHEDOCS_OUTPUT/html
     - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - echo $READTHEDOCS_OUTPUT/html/vaporApplicationReference
-    - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference/vaporClassReference
     - ls
     - pwd
