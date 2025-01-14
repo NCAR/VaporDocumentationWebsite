@@ -30,7 +30,8 @@ build:
     - pwd
     - ls _static
     - ls _readthedocs
-    - ls _readthedocs/_static
+    - ls _readthedocs/html
+    - ls _readthedocs/html/_static
     #- ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference/vaporApplicationReference
 
 
