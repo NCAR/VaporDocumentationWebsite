@@ -26,12 +26,11 @@ build:
     - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _$READTHEDOCS_OUTPUT/html/vaporApplicationReferenc
     - ls $READTHEDOCS_OUTPUT/html/_static
     - ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference
-    - ls _readTheDocs
     - ls
     - pwd
-    - ls _static
-    - ls _readthedocs
-    - ls _readthedocs/html
+    #- ls _static
+    #- ls _readthedocs
+    #- ls _readthedocs/html
     #- ls _readthedocs/html/_static
     #- ls _readthedocs/html/_static/vaporClassReference
     #- ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference/vaporApplicationReference
