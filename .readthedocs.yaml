@@ -21,7 +21,8 @@ build:
     - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - echo $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - ls $READTHEDOCS_OUTPUT/html/_static
-    - ls $READTHEDOCS_OUTPUT/html/_static/vaporApplicationReference
+    - ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference
+    - ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference/vaporApplicationReference
 
 
 sphinx:
