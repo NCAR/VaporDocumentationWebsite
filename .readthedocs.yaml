@@ -26,7 +26,6 @@ build:
     - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _$READTHEDOCS_OUTPUT/html/vaporApplicationReferenc
     - ls $READTHEDOCS_OUTPUT/html/_static
     - ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference
-    - ls _readTheDocs/_static
     - ls _readTheDocs
     - ls
     - pwd
