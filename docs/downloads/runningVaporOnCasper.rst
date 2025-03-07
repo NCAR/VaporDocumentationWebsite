@@ -28,7 +28,7 @@ Connecting to a Remote Desktop
     :align: center
     :figclass: align-center
 
-3. Run the ssh command provided in this message. In the screenshot above, this command is boxed in red. You should see something similar with your login information. After running this command, it will prompt you to log in again. Then, you should get the following message:
+3. Run the ssh command provided in this message within your local terminal. In the screenshot above, this command is boxed in red. You should see something similar with your login information. After running this command, it will prompt you to log in again. Then, you should get the following message:
 
 .. figure:: ../_images/VNC_instructions.png
     :align: center

@@ -27,6 +27,7 @@ VAPOR is a product of the National Center for Atmospheric Research’s Computati
    Get Help on Our Forum <https://vapor.discourse.group>
    contributingToVapor
    citationAndLicense
+   Cookie Policy <https://www.ucar.edu/cookie-other-tracking-technologies-notice>
 
 .. image:: _images/vaporBanner.png
 
