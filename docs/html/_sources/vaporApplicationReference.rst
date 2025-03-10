@@ -26,5 +26,3 @@ If any feature in VAPOR is not sufficienty self describing in the application, t
     vaporApplicationReference/export.rst
     vaporApplicationReference/otherTools.rst
     vaporApplicationReference/vaporClassReference.rst
-    Vapor Class Reference <vaporClassReference/index.html>
-    Vapor Class Reference2 <vaporApplicationReference/vaporClassReference/index.html>
