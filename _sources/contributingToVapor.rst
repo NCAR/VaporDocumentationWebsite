@@ -5,10 +5,8 @@ Contributing to Vapor
 =====================
 
 .. toctree::
-   :maxdepth: 1
 
-   contributingToVapor/whereToStart.rst
-   contributingToVapor/bugReportsAndFeatureRequests.rst
+   contributingToVapor/bugReports.rst
+   contributingToVapor/docsContributions.rst
    contributingToVapor/codeContributions.rst
-   contributingToVapor/contributingToVaporsDocumentation.rst
-   contributingToVapor/contributingToVaporsGallery.rst
+   contributingToVapor/galleryContributions.rst

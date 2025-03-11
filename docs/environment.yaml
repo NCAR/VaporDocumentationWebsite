@@ -1,9 +1,9 @@
-name: readTheDocs
+name: VaporDocumentationWebsite
 channels:
   - conda-forge
   - ncar-vapor
 dependencies:
-  - sphinx = 4.2.0
+  - sphinx
   - sphinx-gallery
   - sphinx-book-theme >= 0.0.38
   - python = 3.9

@@ -12,6 +12,11 @@ import sys
 import subprocess
 import pkgutil
 
+# Ensure sphinxcontrib.googleanalytics and sphinx_copybutton are installed
+subprocess.check_call([sys.executable, "-m", "pip", "install", "sphinxcontrib.googleanalytics"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "sphinx_copybutton"])
+
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -22,6 +27,7 @@ import pkgutil
 # Add vapor_utils to path and vapor_wrf modules for python engine documentation
 sys.path.insert(0, os.path.abspath('vaporApplicationReference/otherTools'))
 sys.path.insert(0, os.path.abspath('/home/docs/checkouts/readthedocs.org/user_builds/vapor/conda/pythonapi2/lib/python3.9/site-packages/vapor'))
+sys.path.insert(0, os.path.abspath('/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest'))
 
 # -- Project information -----------------------------------------------------
 
@@ -34,8 +40,16 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = '3.9.3'
 
-#breathe_projects = { "myproject": "/Users/pearse/vapor2/targets/common/doc/library/xml" }
-#breathe_default_project = "myproject"
+from pathlib import Path
+home = str(Path.home())
+
+# Breathe was last tried on 9/25/2024.  It was problematic because it would ingest Doxygen's XML output
+# as one single file that was thousands of lines long and hard to comprehend on a website.  Doxygen's
+# html generator automatically categorizes VAPOR's modules, classes, and namespaces.  Rather than write
+# a new script that does this for XML, I've chosen to just re-use the html that is automatically organized
+# by Doxygen. -Scott
+#breathe_projects = { "VAPOR": home+"/VAPOR/build/doc/xml" }
+#breathe_default_project = "VAPOR"
 
 extensions = [
     'sphinx.ext.imgmath', 
@@ -45,8 +59,8 @@ extensions = [
     'sphinx_gallery.gen_gallery',
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton'
-    #'jupyter_sphinx.execute'
     #'breathe'
+    #'jupyter_sphinx.execute'
     #'wheel'
 ]
 
@@ -74,10 +88,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
-
+html_scaled_image_link = False
 html_logo = "_images/vaporLogoBlack.png"
 html_favicon = "_images/vaporVLogo.png"
-
 html_theme = "sphinx_book_theme"
 html_theme_options = dict(
     # analytics_id=''  this is configured in rtfd.io
@@ -93,12 +106,6 @@ html_theme_options = dict(
     navbar_footer_text="",
     extra_footer=""
 )
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
-
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -146,8 +153,6 @@ epub_title = project
 
 # Download example data 
 import requests
-from pathlib import Path
-home = str(Path.home())
 simpleNC = home + "/simple.nc"
 dataFile = "https://github.com/NCAR/VAPOR-Data/raw/main/netCDF/simple.nc"
 response = requests.get(dataFile, stream=True)

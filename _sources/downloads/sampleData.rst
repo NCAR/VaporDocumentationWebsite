@@ -49,4 +49,6 @@ The following datasets are provided for user experimentation. They can also be f
 
 .. _Katrina: https://data.rda.ucar.edu/ds897.7/Katrina.zip
 
-.. note:: Users can download a 500 meter resolution image of NASA's `BigBlueMarble <https://drive.google.com/open?id=1qIwh8ZJj67d85ktkjpgOVBAE-oMRi3rD>`_ for use in Vapor's Image Renderer.
+Maps
+----
+Users can download a 500 meter resolution image of NASA's `BigBlueMarble <https://vaporawsbucket.s3.us-west-2.amazonaws.com/BBM_500m.tar.gz>`_ for use in Vapor's Image Renderer.

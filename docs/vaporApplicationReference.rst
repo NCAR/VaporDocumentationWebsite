@@ -17,7 +17,7 @@ If any feature in VAPOR is not sufficienty self describing in the application, t
 |
 
 .. toctree::
-    :maxdepth: 1 
+    :maxdepth: 1
 
     vaporApplicationReference/quickStartGuide.rst
     vaporApplicationReference/renderers.rst
@@ -25,3 +25,4 @@ If any feature in VAPOR is not sufficienty self describing in the application, t
     vaporApplicationReference/globalSettings.rst
     vaporApplicationReference/export.rst
     vaporApplicationReference/otherTools.rst
+    vaporApplicationReference/vaporClassReference.rst
