@@ -55,6 +55,7 @@ Once you've built a tar.bz2 image or downloaded one from another source, you can
    .. code-block:: console
 
       conda config --add channels conda-forge
+      conda config --add channels ncar-vapor
       conda create -n myEnvironment python=3.9 conda-build
       conda activate myEnvironment
 
@@ -78,13 +79,13 @@ Once you've built a tar.bz2 image or downloaded one from another source, you can
 
 .. code-block:: console
 
-    conda index ~/channel
+    python -m conda_index path/to/my/channel
 
 4) Install your .tar.bz2 package.  You must use a full file path to your channel.
 
 .. code-block:: console
 
-    conda install -c file://Users/myUserName/channel vapor
+    conda install -c file:///path/to/my/channel vapor
 
 The installation can be ferified with the following commands in your console:
 
