@@ -850,6 +850,7 @@ es for review and approval.  Prerequisite software for all platforms includes:</
 <p class="admonition-title">Note</p>
 <p>If you downloaded your .tar.bz2 file from another source, you will need to create a new environment with access to the conda-forge channel, and the conda-build and python=3.9 packages.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels conda-forge</span>
+<span class="go">conda config --add channels ncar-vapor</span>
 <span class="go">conda create -n myEnvironment python=3.9 conda-build</span>
 <span class="go">conda activate myEnvironment</span>
 </pre></div>
@@ -874,13 +875,13 @@ es for review and approval.  Prerequisite software for all platforms includes:</
 <ol class="arabic simple" start="3">
 <li><p>Index your new local channel, so conda knows about it.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda index ~/channel</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m conda_index path/to/my/channel</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
 <li><p>Install your .tar.bz2 package.  You must use a full file path to your channel.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c file://Users/myUserName/channel vapor</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c file:///path/to/my/channel vapor</span>
 </pre></div>
 </div>
 <p>The installation can be ferified with the following commands in your console:</p>
