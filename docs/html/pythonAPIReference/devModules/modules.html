@@ -25,30 +25,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=0afac363"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -63,6 +66,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -86,19 +90,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -106,7 +99,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -114,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -133,7 +125,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -163,21 +156,17 @@
     
     
     <img src="../../_static/vaporLogoBlack.png" class="logo__image only-light" alt="  3.9.3 documentation - Home"/>
-    <script>document.write(`<img src="../../_static/vaporLogoBlack.png" class="logo__image only-dark" alt="  3.9.3 documentation - Home"/>`);</script>
+    <img src="../../_static/vaporLogoBlack.png" class="logo__image only-dark pst-js-only" alt="  3.9.3 documentation - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
@@ -464,24 +453,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -515,7 +496,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="vapor.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="vapor.utils.html">vapor.utils package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="vapor.utils.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.utils.html#module-vapor.utils">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.utils.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -535,41 +516,13 @@ document.write(`
 <li class="toctree-l4"><a class="reference internal" href="vapor.config.html#vapor.config.PathExists"><code class="docutils literal notranslate"><span class="pre">PathExists()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.cppyyDoxygenWrapper.html">vapor.cppyyDoxygenWrapper module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="vapor.cppyyDoxygenWrapper.html#vapor.cppyyDoxygenWrapper.CPPYYDoxygenWrapperMeta"><code class="docutils literal notranslate"><span class="pre">CPPYYDoxygenWrapperMeta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.cppyyDoxygenWrapper.html">vapor.cppyyDoxygenWrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.link.html">vapor.link module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.params.html">vapor.params module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.link.html">vapor.link module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="vapor.link.html#vapor.link.FixModuleOwnership"><code class="docutils literal notranslate"><span class="pre">FixModuleOwnership()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.link.html#vapor.link.include"><code class="docutils literal notranslate"><span class="pre">include()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.params.html">vapor.params module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapper</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperBool"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperBool</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperDouble"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperDouble</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperList"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperList</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperLong"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperLong</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsTagWrapperString"><code class="docutils literal notranslate"><span class="pre">ParamsTagWrapperString</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.params.html#vapor.params.ParamsWrapper"><code class="docutils literal notranslate"><span class="pre">ParamsWrapper</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="vapor.smartwrapper.html">vapor.smartwrapper module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.EnumWrapper"><code class="docutils literal notranslate"><span class="pre">EnumWrapper()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.EnumWrapperMeta"><code class="docutils literal notranslate"><span class="pre">EnumWrapperMeta</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapper"><code class="docutils literal notranslate"><span class="pre">FuncWrapper</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperRegex"><code class="docutils literal notranslate"><span class="pre">FuncWrapperRegex</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperRename"><code class="docutils literal notranslate"><span class="pre">FuncWrapperRename</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperStrList"><code class="docutils literal notranslate"><span class="pre">FuncWrapperStrList</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperWrapAll"><code class="docutils literal notranslate"><span class="pre">FuncWrapperWrapAll</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.FuncWrappers"><code class="docutils literal notranslate"><span class="pre">FuncWrappers()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.SmartWrapper"><code class="docutils literal notranslate"><span class="pre">SmartWrapper</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="vapor.smartwrapper.html#vapor.smartwrapper.SmartWrapperMeta"><code class="docutils literal notranslate"><span class="pre">SmartWrapperMeta</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="vapor.html#module-vapor">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vapor.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -633,8 +586,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
