@@ -183,7 +183,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="downloads.html">Downloads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="current.html">Current Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="downloads/installationInstructions.html">Installation Instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="downloads/runningVaporOnCasper.html">Running VAPOR on Casper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads/runningVaporOnCasper.html">Running VAPOR GUI on Casper</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="downloads/sampleData.html">Sample Data</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="downloads/thirdPartyLibraries.html">Third Party Libraries</a></li>
@@ -261,6 +262,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.transform.html">vapor.transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/userModules/vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="pythonAPIReference/devModules/vapor.html">Developer Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -272,6 +274,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pythonAPIReference/devModules/vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -475,9 +478,11 @@ document.write(`
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera.AlignView">AlignView() (vapor.camera.Camera method)</a>
 </li>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes">animate_camera_keyframes() (in module vapor.utils.keyframing)</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes">[1]</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes">animate_camera_keyframes() (in module vapor.utils.keyframing)</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes">[1]</a>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes_camerafiles">animate_camera_keyframes_camerafiles() (in module vapor.utils.keyframing)</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#vapor.utils.keyframing.animate_camera_keyframes_camerafiles">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.animation.html#vapor.animation.Animation">Animation (class in vapor.animation)</a>
 </li>
@@ -509,14 +514,16 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera">Camera (class in vapor.camera)</a>
 </li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget">CanvasStreamWidget (class in vapor.widget)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.animation.html#vapor.animation.Animation.CaptureFrame">CaptureFrame() (vapor.animation.Animation method)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.Class">Class (in module vapor.renderer)</a>
 </li>
-      <li><a href="pythonAPIReference/userModules/vapor.annotations.html#vapor.annotations.ColorbarAnnotation">ColorbarAnnotation (class in vapor.annotations)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonAPIReference/userModules/vapor.annotations.html#vapor.annotations.ColorbarAnnotation">ColorbarAnnotation (class in vapor.annotations)</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ContourRenderer">ContourRenderer (class in vapor.renderer)</a>
 </li>
       <li><a href="pythonAPIReference/devModules/vapor.cppyyDoxygenWrapper.html#vapor.cppyyDoxygenWrapper.CPPYYDoxygenWrapperMeta">CPPYYDoxygenWrapperMeta (class in vapor.cppyyDoxygenWrapper)</a>
@@ -1041,6 +1048,8 @@ document.write(`
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.imageData">imageData (vapor.widget.CanvasStreamWidget attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.imageData">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ImageRenderer">ImageRenderer (class in vapor.renderer)</a>
 </li>
       <li><a href="pythonAPIReference/devModules/vapor.link.html#vapor.link.include">include() (in module vapor.link)</a>
@@ -1065,6 +1074,8 @@ document.write(`
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton.Left">Left (vapor.widget.VaporVisualizerWidget.TrackballButton attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton.Left">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.FlowRenderer.FlowSeedMode.LIST">LIST (vapor.renderer.FlowRenderer.FlowSeedMode attribute)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction.ListBuiltinColormaps">ListBuiltinColormaps() (vapor.transferfunction.TransferFunction class method)</a>
@@ -1080,6 +1091,8 @@ document.write(`
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction.LoadColormapFromFile">LoadColormapFromFile (vapor.transferfunction.TransferFunction attribute)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction.LoadFromFile">LoadFromFile (vapor.transferfunction.TransferFunction attribute)</a>
+</li>
+      <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera.LoadFromFile">LoadFromFile() (vapor.camera.Camera method)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera.LookAt">LookAt() (vapor.camera.Camera method)</a>
 </li>
@@ -1101,6 +1114,8 @@ document.write(`
         <li><a href="pythonAPIReference/devModules/vapor.smartwrapper.html#vapor.smartwrapper.FuncWrapperStrList.MakeList">(vapor.smartwrapper.FuncWrapperStrList method)</a>
 </li>
       </ul></li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton.Middle">Middle (vapor.widget.VaporVisualizerWidget.TrackballButton attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton.Middle">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ModelRenderer">ModelRenderer (class in vapor.renderer)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ModelRenderer.SlicePlaneOrientationMode">ModelRenderer.SlicePlaneOrientationMode (class in vapor.renderer)</a>
@@ -1147,11 +1162,25 @@ document.write(`
 </li>
         <li><a href="pythonAPIReference/devModules/vapor.utils.keyframing.html#module-vapor.utils.keyframing">vapor.utils.keyframing</a>, <a href="pythonAPIReference/userModules/vapor.utils.keyframing.html#module-vapor.utils.keyframing">[1]</a>
 </li>
+        <li><a href="pythonAPIReference/devModules/vapor.widget.html#module-vapor.widget">vapor.widget</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#module-vapor.widget">[1]</a>
+</li>
         <li><a href="vaporApplicationReference/otherTools/vaporUtilsModule.html#module-vapor_utils">vapor_utils</a>
 </li>
         <li><a href="vaporApplicationReference/otherTools/vaporWrfModule.html#module-vapor_wrf">vapor_wrf</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.mouseButton">mouseButton (vapor.widget.CanvasStreamWidget attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.mouseButton">[1]</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.mouseDown">mouseDown (vapor.widget.CanvasStreamWidget attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.mouseDown">[1]</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.mouseDownChanged">mouseDownChanged() (vapor.widget.VaporVisualizerWidget method)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.mouseDownChanged">[1]</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.mousePos">mousePos (vapor.widget.CanvasStreamWidget attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.mousePos">[1]</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.mousePosChanged">mousePosChanged() (vapor.widget.VaporVisualizerWidget method)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.mousePosChanged">[1]</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1220,21 +1249,27 @@ document.write(`
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.FlowRenderer.FlowSeedMode.RANDOM_BIAS">RANDOM_BIAS (vapor.renderer.FlowRenderer.FlowSeedMode attribute)</a>
 </li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.Render">Render() (vapor.widget.VaporVisualizerWidget method)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.Render">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.Renderer">Renderer (class in vapor.renderer)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.session.html#vapor.session.Session.RenderToImage">RenderToImage() (vapor.session.Session method)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.FlowRenderer.RenderType.RenderTypeDensity">RenderTypeDensity (vapor.renderer.FlowRenderer.RenderType attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.FlowRenderer.RenderType.RenderTypeSamples">RenderTypeSamples (vapor.renderer.FlowRenderer.RenderType attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.FlowRenderer.RenderType.RenderTypeStream">RenderTypeStream (vapor.renderer.FlowRenderer.RenderType attribute)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.Renderer.ResetUserExtentsToDataExents">ResetUserExtentsToDataExents (vapor.renderer.Renderer attribute)</a>
 </li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.resolution">resolution (vapor.widget.CanvasStreamWidget attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.resolution">[1]</a>
+</li>
       <li><a href="vaporApplicationReference/otherTools/vaporWrfModule.html#vapor_wrf.RH">RH() (in module vapor_wrf)</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton.Right">Right (vapor.widget.VaporVisualizerWidget.TrackballButton attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton.Right">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ModelRenderer.SlicePlaneOrientationMode.Rotation">Rotation (vapor.renderer.ModelRenderer.SlicePlaneOrientationMode attribute)</a>
 
@@ -1249,6 +1284,8 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pythonAPIReference/userModules/vapor.animation.html#vapor.animation.Animation.SaveMP4">SaveMP4() (vapor.animation.Animation method)</a>
+</li>
+      <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera.SaveToFile">SaveToFile() (vapor.camera.Camera method)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.annotations.html#vapor.annotations.SceneAnnotation">SceneAnnotation (class in vapor.annotations)</a>
 </li>
@@ -1351,6 +1388,8 @@ document.write(`
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.Renderer.SetHeightVariableName">SetHeightVariableName (vapor.renderer.Renderer attribute)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ImageRenderer.SetIgnoreTransparency">SetIgnoreTransparency (vapor.renderer.ImageRenderer attribute)</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.SetImage">SetImage() (vapor.widget.CanvasStreamWidget method)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.SetImage">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.ImageRenderer.SetImagePath">SetImagePath (vapor.renderer.ImageRenderer attribute)</a>
 </li>
@@ -1614,6 +1653,8 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="vaporApplicationReference/otherTools/vaporWrfModule.html#vapor_wrf.TD">TD() (in module vapor_wrf)</a>
 </li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.test">test() (vapor.widget.CanvasStreamWidget method)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.test">[1]</a>
+</li>
       <li><a href="pythonAPIReference/userModules/vapor.annotations.html#vapor.annotations.SceneAnnotation.TimeAnnotationType.Timestep">Timestep (vapor.annotations.SceneAnnotation.TimeAnnotationType attribute)</a>
 </li>
       <li><a href="vaporApplicationReference/otherTools/vaporWrfModule.html#vapor_wrf.TK">TK() (in module vapor_wrf)</a>
@@ -1625,6 +1666,8 @@ document.write(`
       <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera.TrackMovingDomainRenderRegions">TrackMovingDomainRenderRegions() (vapor.camera.Camera method)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transferfunction.html#vapor.transferfunction.TransferFunction">TransferFunction (class in vapor.transferfunction)</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.utils.histogram.html#vapor.utils.histogram.transferFunctionWidget">transferFunctionWidget() (in module vapor.utils.histogram)</a>, <a href="pythonAPIReference/userModules/vapor.utils.histogram.html#vapor.utils.histogram.transferFunctionWidget">[1]</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.transform.html#vapor.transform.Transform">Transform (class in vapor.transform)</a>
 </li>
@@ -1650,6 +1693,10 @@ document.write(`
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.value">value (vapor.widget.CanvasStreamWidget attribute)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.value">[1]</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.valueChanged">valueChanged() (vapor.widget.CanvasStreamWidget method)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.CanvasStreamWidget.valueChanged">[1]</a>
+</li>
       <li>
     vapor
 
@@ -1786,6 +1833,13 @@ document.write(`
 </li>
       </ul></li>
       <li>
+    vapor.widget
+
+      <ul>
+        <li><a href="pythonAPIReference/devModules/vapor.widget.html#module-vapor.widget">module</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#module-vapor.widget">[1]</a>
+</li>
+      </ul></li>
+      <li>
     vapor_utils
 
       <ul>
@@ -1825,6 +1879,10 @@ document.write(`
         <li><a href="pythonAPIReference/userModules/vapor.renderer.html#vapor.renderer.WireFrameRenderer.VaporName">(vapor.renderer.WireFrameRenderer attribute)</a>
 </li>
       </ul></li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget">VaporVisualizerWidget (class in vapor.widget)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget">[1]</a>
+</li>
+      <li><a href="pythonAPIReference/devModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton">VaporVisualizerWidget.TrackballButton (class in vapor.widget)</a>, <a href="pythonAPIReference/userModules/vapor.widget.html#vapor.widget.VaporVisualizerWidget.TrackballButton">[1]</a>
+</li>
       <li><a href="vaporApplicationReference/otherTools/vaporUtilsModule.html#vapor_utils.VectorRotate">VectorRotate() (in module vapor_utils)</a>
 </li>
       <li><a href="pythonAPIReference/userModules/vapor.camera.html#vapor.camera.Camera.ViewAll">ViewAll() (vapor.camera.Camera method)</a>

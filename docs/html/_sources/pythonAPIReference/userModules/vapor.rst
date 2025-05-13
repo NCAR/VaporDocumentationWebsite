@@ -23,6 +23,7 @@ Submodules
    vapor.session
    vapor.transferfunction
    vapor.transform
+   vapor.widget
 
 Module contents
 ---------------

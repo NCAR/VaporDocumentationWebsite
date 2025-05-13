@@ -22,6 +22,7 @@ Submodules
    vapor.link
    vapor.params
    vapor.smartwrapper
+   vapor.widget
 
 Module contents
 ---------------

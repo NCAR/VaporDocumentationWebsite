@@ -184,7 +184,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../downloads.html">Downloads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../current.html">Current Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/installationInstructions.html">Installation Instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../downloads/runningVaporOnCasper.html">Running VAPOR on Casper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../downloads/runningVaporOnCasper.html">Running VAPOR GUI on Casper</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/sampleData.html">Sample Data</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/thirdPartyLibraries.html">Third Party Libraries</a></li>
@@ -262,6 +263,7 @@
 <li class="toctree-l4"><a class="reference internal" href="vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.transform.html">vapor.transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../devModules/vapor.html">Developer Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -273,6 +275,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -505,6 +508,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.keyframing.animate_camera_keyframes"><code class="docutils literal notranslate"><span class="pre">animate_camera_keyframes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.keyframing.animate_camera_keyframes_camerafiles"><code class="docutils literal notranslate"><span class="pre">animate_camera_keyframes_camerafiles()</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -523,6 +527,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">vapor.utils.keyframing.</span></span><span class="sig-name descname"><span class="pre">animate_camera_keyframes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.utils.keyframing.animate_camera_keyframes" title="Link to this definition">#</a></dt>
 <dd><p>Given a list of file paths to sessions with different camera angles, returns an
 animation that performs keyframing with linear interpolation between those camera angles.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vapor.utils.keyframing.animate_camera_keyframes_camerafiles">
+<span class="sig-prename descclassname"><span class="pre">vapor.utils.keyframing.</span></span><span class="sig-name descname"><span class="pre">animate_camera_keyframes_camerafiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">primary_session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera_paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.utils.keyframing.animate_camera_keyframes_camerafiles" title="Link to this definition">#</a></dt>
+<dd><p>Given a session file and a list of paths to saved camera files, returns an
+animation that performs keyframing with linear interpolation on the saved camera angles.</p>
 </dd></dl>
 
 </section>
@@ -573,6 +584,7 @@ animation that performs keyframing with linear interpolation between those camer
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.keyframing.animate_camera_keyframes"><code class="docutils literal notranslate"><span class="pre">animate_camera_keyframes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.utils.keyframing.animate_camera_keyframes_camerafiles"><code class="docutils literal notranslate"><span class="pre">animate_camera_keyframes_camerafiles()</span></code></a></li>
 </ul>
   </nav></div>
 

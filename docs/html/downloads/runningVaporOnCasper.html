@@ -17,7 +17,7 @@
         gtag('config', 'G-VY29EEZ393');
     </script>
     
-    <title>Running VAPOR on Casper &#8212;   3.10.0 documentation</title>
+    <title>Running VAPOR GUI on Casper &#8212;   3.10.0 documentation</title>
   
   
   
@@ -184,7 +184,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../downloads.html">Downloads</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../current.html">Current Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="installationInstructions.html">Installation Instructions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Running VAPOR on Casper</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Running VAPOR GUI on Casper</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="sampleData.html">Sample Data</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="thirdPartyLibraries.html">Third Party Libraries</a></li>
@@ -262,6 +263,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/userModules/vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/userModules/vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/userModules/vapor.transform.html">vapor.transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/userModules/vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../pythonAPIReference/devModules/vapor.html">Developer Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -273,6 +275,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/devModules/vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/devModules/vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/devModules/vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pythonAPIReference/devModules/vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -494,7 +497,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Running VAPOR on Casper</h1>
+    <h1>Running VAPOR GUI on Casper</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -504,11 +507,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Running VAPOR GUI on Casper</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-a-remote-desktop">Connecting to a Remote Desktop</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-vapor-on-your-remote-desktop">Running VAPOR on your Remote Desktop</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ending-your-session">Ending your Session</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#running-vapor-python-via-portforwarding">Running Vapor-Python via portforwarding</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -519,8 +527,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="running-vapor-on-casper">
-<h1>Running VAPOR on Casper<a class="headerlink" href="#running-vapor-on-casper" title="Link to this heading">#</a></h1>
+  <section id="running-vapor-gui-on-casper">
+<h1>Running VAPOR GUI on Casper<a class="headerlink" href="#running-vapor-gui-on-casper" title="Link to this heading">#</a></h1>
 <p>In this tutorial, we will walk through the process of launching VAPOR on NCAR’s Casper supercomputer. This involves setting up a remote desktop on Casper and connecting to it using a VNC Client.</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
@@ -598,6 +606,33 @@ document.write(`
 </ol>
 </section>
 </section>
+<section id="running-vapor-python-via-portforwarding">
+<h1>Running Vapor-Python via portforwarding<a class="headerlink" href="#running-vapor-python-via-portforwarding" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Start a VNC session on Casper, just as you would for connecting to a remote desktop.</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Copy the provided ssh line and paste it into your local terminal. We will make two changes. First, remove the last string command “bash ~/.vncmgr/tunnel-VAPOR”. Then, replace the port numbers with the one that matches your jupyter notebook server (typically 8888). When we start the jupyter server in the next step, this number may be different, and we will need to logout and run this line again using the correct port.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../_images/SSH_tunnel_instructions.png" src="../_images/SSH_tunnel_instructions.png" />
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>After you have successfully logged in, activate your desired conda environment and start a jupyter notebook server.</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">module load conda</span>
+<span class="go">conda activate [env]</span>
+<span class="go">jupyter notebook</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>If you receive a “skipped non-installed server(s)” message you can safely ignore it by pressing ‘q’ then entering ‘y’.</p></li>
+<li><p>The terminal should provide you with a url you can copy and paste into your browser on your local machine. If the port number does not match the one you used to login, you will need to logout and run step 2 again with the correct port number.</p></li>
+</ol>
+</section>
 
 
                 </article>
@@ -644,11 +679,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Running VAPOR GUI on Casper</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-a-remote-desktop">Connecting to a Remote Desktop</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-vapor-on-your-remote-desktop">Running VAPOR on your Remote Desktop</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ending-your-session">Ending your Session</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#running-vapor-python-via-portforwarding">Running Vapor-Python via portforwarding</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
