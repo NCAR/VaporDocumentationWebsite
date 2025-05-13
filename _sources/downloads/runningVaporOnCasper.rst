@@ -1,4 +1,4 @@
-Running VAPOR on Casper
+Running VAPOR GUI on Casper
 =======================
 In this tutorial, we will walk through the process of launching VAPOR on NCAR's Casper supercomputer. This involves setting up a remote desktop on Casper and connecting to it using a VNC Client.
 
@@ -77,3 +77,33 @@ Your remote desktop will use compute resources until either the amount of time y
 1. Sign into Casper and run the ``vncmgr`` command. You will be able to see your active servers that are currently running
 2. Type ``kill VAPOR`` to end the session named VAPOR
 3. Wait for the session to end
+
+
+
+Running Vapor-Python via portforwarding
+======================================
+
+1. Start a VNC session on Casper, just as you would for connecting to a remote desktop.
+
+.. code-block:: console
+
+    ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00
+
+2. Copy the provided ssh line and paste it into your local terminal. We will make two changes. First, remove the last string command "bash ~/.vncmgr/tunnel-VAPOR". Then, replace the port numbers with the one that matches your jupyter notebook server (typically 8888). When we start the jupyter server in the next step, this number may be different, and we will need to logout and run this line again using the correct port.
+
+.. figure:: ../_images/SSH_tunnel_instructions.png
+    :align: center
+    :figclass: align-center
+
+
+3. After you have successfully logged in, activate your desired conda environment and start a jupyter notebook server.
+
+.. code-block:: console
+
+    module load conda
+    conda activate [env]
+    jupyter notebook
+
+4. If you receive a "skipped non-installed server(s)" message you can safely ignore it by pressing 'q' then entering 'y'. 
+
+5. The terminal should provide you with a url you can copy and paste into your browser on your local machine. If the port number does not match the one you used to login, you will need to logout and run step 2 again with the correct port number.

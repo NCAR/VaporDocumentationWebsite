@@ -184,7 +184,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../downloads.html">Downloads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../current.html">Current Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/installationInstructions.html">Installation Instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../downloads/runningVaporOnCasper.html">Running VAPOR on Casper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../downloads/runningVaporOnCasper.html">Running VAPOR GUI on Casper</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/sampleData.html">Sample Data</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../downloads/thirdPartyLibraries.html">Third Party Libraries</a></li>
@@ -262,6 +263,7 @@
 <li class="toctree-l4"><a class="reference internal" href="vapor.session.html">vapor.session module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.transferfunction.html">vapor.transferfunction module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vapor.transform.html">vapor.transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../devModules/vapor.html">Developer Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -273,6 +275,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.link.html">vapor.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.params.html">vapor.params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.smartwrapper.html">vapor.smartwrapper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../devModules/vapor.widget.html">vapor.widget module</a></li>
 </ul>
 </details></li>
 </ul>
@@ -510,7 +513,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.GetPosition"><code class="docutils literal notranslate"><span class="pre">Camera.GetPosition()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.GetTarget"><code class="docutils literal notranslate"><span class="pre">Camera.GetTarget()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.GetUp"><code class="docutils literal notranslate"><span class="pre">Camera.GetUp()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.LoadFromFile"><code class="docutils literal notranslate"><span class="pre">Camera.LoadFromFile()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.LookAt"><code class="docutils literal notranslate"><span class="pre">Camera.LookAt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SaveToFile"><code class="docutils literal notranslate"><span class="pre">Camera.SaveToFile()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SetDirection"><code class="docutils literal notranslate"><span class="pre">Camera.SetDirection()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SetPosition"><code class="docutils literal notranslate"><span class="pre">Camera.SetPosition()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SetTarget"><code class="docutils literal notranslate"><span class="pre">Camera.SetTarget()</span></code></a></li>
@@ -566,9 +571,21 @@ Axis format: [+-][XYZ]</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="vapor.camera.Camera.LoadFromFile">
+<span class="sig-name descname"><span class="pre">LoadFromFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.camera.Camera.LoadFromFile" title="Link to this definition">#</a></dt>
+<dd><p>Save camera settings to file</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="vapor.camera.Camera.LookAt">
 <span class="sig-name descname"><span class="pre">LookAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.camera.Camera.LookAt" title="Link to this definition">#</a></dt>
 <dd><p>Moves the camera to camera_position facing target. up can be used to adjust the camera roll.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vapor.camera.Camera.SaveToFile">
+<span class="sig-name descname"><span class="pre">SaveToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vapor.camera.Camera.SaveToFile" title="Link to this definition">#</a></dt>
+<dd><p>Load camera settings from file</p>
 </dd></dl>
 
 <dl class="py method">
@@ -671,7 +688,9 @@ This is the default view when opening a new dataset.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.GetPosition"><code class="docutils literal notranslate"><span class="pre">Camera.GetPosition()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.GetTarget"><code class="docutils literal notranslate"><span class="pre">Camera.GetTarget()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.GetUp"><code class="docutils literal notranslate"><span class="pre">Camera.GetUp()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.LoadFromFile"><code class="docutils literal notranslate"><span class="pre">Camera.LoadFromFile()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.LookAt"><code class="docutils literal notranslate"><span class="pre">Camera.LookAt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SaveToFile"><code class="docutils literal notranslate"><span class="pre">Camera.SaveToFile()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SetDirection"><code class="docutils literal notranslate"><span class="pre">Camera.SetDirection()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SetPosition"><code class="docutils literal notranslate"><span class="pre">Camera.SetPosition()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor.camera.Camera.SetTarget"><code class="docutils literal notranslate"><span class="pre">Camera.SetTarget()</span></code></a></li>

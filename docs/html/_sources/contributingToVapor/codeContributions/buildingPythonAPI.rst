@@ -87,7 +87,7 @@ Once you've built a tar.bz2 image or downloaded one from another source, you can
 
     conda install -c file:///path/to/my/channel vapor
 
-The installation can be ferified with the following commands in your console:
+The installation can be verified with the following commands in your console:
 
 .. code-block:: console
 
