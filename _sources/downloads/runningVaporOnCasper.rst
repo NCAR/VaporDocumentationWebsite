@@ -1,4 +1,4 @@
-Running VAPOR GUI on Casper
+Running VAPOR on Casper
 =======================
 In this tutorial, we will walk through the process of launching VAPOR on NCAR's Casper supercomputer. This involves setting up a remote desktop on Casper and connecting to it using a VNC Client.
 
