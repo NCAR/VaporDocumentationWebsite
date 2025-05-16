@@ -59,10 +59,15 @@ extensions = [
     'sphinx_gallery.gen_gallery',
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton'
+    # 'sphinx_pushfeedback'
     #'breathe'
     #'jupyter_sphinx.execute'
     #'wheel'
 ]
+
+# pushfeedback_hide_email = True
+# pushfeedback_hide_screenshot_button = True
+# pushfeedback_button_position = "bottom"
 
 googleanalytics_id = "G-VY29EEZ393"
 
