@@ -19,32 +19,9 @@ build:
     #- curl -O https://github.com/NCAR/VAPOR/blob/main/apps/pythonapi/vapor/config.py
     #- cp config.py $CONDA_ENVS_PATH/$READTHEDOCS_VERSION/lib/python3.9/site-packages/vapor
     - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/$READTHEDOCS_VERSION/lib/python3.9/site-packages/vapor
-    #- mkdir -p _readthedocs/_static
-    #- cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _readthedocs/_static
     - mkdir -p $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference $READTHEDOCS_OUTPUT/html/vaporApplicationReference
-    #- cp $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference/index.html $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     post_build:
-    #- ls /home/
-    #- ls /home/docs/
-    #- ls /home/docs/checkouts/
-    #- ls /home/docs/checkouts/readthedocs.org/
-    #- ls /home/docs/checkouts/readthedocs.org/user_builds/
-    #- ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/
-    #- ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/
-    #- ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
-    #- conda env export --from-history
-    #- export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
-    #- export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/51
-    #- echo $CONDA_PREFIX
-    #- echo $PYTHONVERSION
-    #- cat $CONDA_PREFIX/lib/python3.9/site-packages/vapor/config.py
-    - ls $READTHEDOCS_OUTPUT/html
-    - ls $READTHEDOCS_OUTPUT/html/_images
-    - ls $READTHEDOCS_OUTPUT/html/_static
-    - ls $READTHEDOCS_REPOSITORY_PATH/docs
-    - ls $READTHEDOCS_REPOSITORY_PATH/docs/_images
-    - ls $READTHEDOCS_REPOSITORY_PATH/docs/_static
     - python -c "from vapor import animation"
 
 
