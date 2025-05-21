@@ -38,7 +38,7 @@ for p in modulePaths:
     print("mod " + str(p))
 
 #condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/rtd-test2025/conda/latest']
-condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/rtd-test2025/conda/51']
+condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/51']
 
 #condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest']
 #condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/{os.environ['READTHEDOCS_VERSION']}']
