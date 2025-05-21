@@ -40,7 +40,9 @@ for p in modulePaths:
 #condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/rtd-test2025/conda/latest']
 
 #condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest']
-condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/{os.environ['READTHEDOCS_VERSION']}']
+#condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/{os.environ['READTHEDOCS_VERSION']}']
+#condaPaths = [os.getenv('CONDA_PREFIX', "/"), f'{{os.environ['CONDA_ENVS_PATH']}/os.environ['READTHEDOCS_VERSION']}']
+condaPaths = os.environ.get("CONDA_PREFIX", f"{os.environ['CONDA_ENVS_PATH']}/{os.environ['READTHEDOCS_VERSION']}")
 for p in condaPaths:
     print("con " + str(p))
 
