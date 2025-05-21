@@ -8,6 +8,7 @@ build:
     python: "mambaforge-22.9"
   jobs:
     pre_build:
+    - echo $READTHEDOCS_GIT_IDENTIFIER
     - echo $CONDA_ENVS_PATH
     - echo $READTHEDOCS_REPOSITORY_PATH
     - echo $READTHEDOCS_GIT_BRANCH
