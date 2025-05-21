@@ -39,23 +39,12 @@ build:
     #- echo $CONDA_PREFIX
     #- echo $PYTHONVERSION
     #- cat $CONDA_PREFIX/lib/python3.9/site-packages/vapor/config.py
-    - python -c "from vapor import animation"
-    - ls $READTHEDOCS_REPOSITORY_PATH
-    - ls $READTHEDOCS_REPOSITORY_PATH/vaporApplicationReference
-    - ls $READTHEDOCS_REPOSITORY_PATH/vaporApplicationReference/vaporClassReference
+    - ls _images
     - ls $READTHEDOCS_OUTPUT
     - ls $READTHEDOCS_OUTPUT/html
-    - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference
-    - echo $READTHEDOCS_OUTPUT/html/vaporApplicationReference
-    - ls $READTHEDOCS_OUTPUT/html/vaporApplicationReference/vaporClassReference
-    - ls
-    - pwd
-    #- ls _static
-    #- ls _readthedocs
-    #- ls _readthedocs/html
-    #- ls _readthedocs/html/_static
-    #- ls _readthedocs/html/_static/vaporClassReference
-    #- ls $READTHEDOCS_OUTPUT/html/_static/vaporClassReference/vaporApplicationReference
+    - ls $READTHEDOCS_OUTPUT/html/_images
+    - python -c "from vapor import animation"
+    - ls $READTHEDOCS_OUTPUT/html
 
 
 sphinx:
