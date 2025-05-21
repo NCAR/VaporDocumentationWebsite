@@ -10,6 +10,8 @@ build:
     pre_build:
     - ls $READTHEDOCS_REPOSITORY_PATH
     - ls $CONDA_ENVS_PATH/$READTHEDOCS_GIT_BRANCH
+    - echo $CONDA_ENVS_PATH
+    - echo $READTHEDOCS_GIT_BRANCH
     - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/$READTHEDOCS_GIT_BRANCH/lib/python3.9/site-packages/vapor
     #- mkdir -p _readthedocs/_static
     #- cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _readthedocs/_static
