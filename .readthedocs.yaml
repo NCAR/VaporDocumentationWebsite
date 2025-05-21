@@ -8,8 +8,8 @@ build:
     python: "mambaforge-22.9"
   jobs:
     pre_build:
-    - echo home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/
-    - echo home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
+    - ls home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/
+    - ls home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
     - echo $READTHEDOCS_VERSION
     - ls $CONDA_ENVS_PATH/$READTHEDOCS_VERSION
     - ls $READTHEDOCS_REPOSITORY_PATH
