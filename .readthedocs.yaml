@@ -39,10 +39,12 @@ build:
     #- echo $CONDA_PREFIX
     #- echo $PYTHONVERSION
     #- cat $CONDA_PREFIX/lib/python3.9/site-packages/vapor/config.py
-    - ls $READTHEDOCS_OUTPUT/html/_images
     - ls $READTHEDOCS_OUTPUT/html
+    - ls $READTHEDOCS_OUTPUT/html/_images
+    - ls $READTHEDOCS_OUTPUT/html/_static
     - ls $READTHEDOCS_REPOSITORY_PATH/docs
     - ls $READTHEDOCS_REPOSITORY_PATH/docs/_images
+    - ls $READTHEDOCS_REPOSITORY_PATH/docs/_static
     - python -c "from vapor import animation"
 
 
