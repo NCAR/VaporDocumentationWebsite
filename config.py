@@ -38,8 +38,8 @@ for p in modulePaths:
     print("mod " + str(p))
 
 condaPaths = [os.environ.get("CONDA_PREFIX", "/")]
-if (os.environ.get("READTHEDOCS"):
-    condaPaths.append(f"{os.environ['CONDA_ENVS_PATH']}/{os.environ['READTHEDOCS_VERSION']}"))
+if (os.environ.get("READTHEDOCS")):
+    condaPaths.append(f"{os.environ['CONDA_ENVS_PATH']}/{os.environ['READTHEDOCS_VERSION']}")
 
 for p in condaPaths:
     print("con " + str(p))
