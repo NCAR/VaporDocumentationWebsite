@@ -32,7 +32,8 @@ build:
     - ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/
     - ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
     - conda env export --from-history
-    #- export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
+    - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
+    - cat $CONDA_PREFIX/lib/python3.9/site-packages/vapor/config.py
     - python -c "from vapor import animation"
     - ls $READTHEDOCS_REPOSITORY_PATH
     - ls $READTHEDOCS_REPOSITORY_PATH/vaporApplicationReference
