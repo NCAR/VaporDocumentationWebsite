@@ -37,7 +37,7 @@ modulePaths = [Path(__file__).parent]
 for p in modulePaths:
     print("mod " + str(p))
 
-condaPaths = [os.environ.get("CONDA_PREFIX", "/")
+condaPaths = [os.environ.get("CONDA_PREFIX", "/")]
 if (os.environ.get("READTHEDOCS"):
     condaPaths.append(f"{os.environ['CONDA_ENVS_PATH']}/{os.environ['READTHEDOCS_VERSION']}"))
 
