@@ -1,9 +1,4 @@
 .. _3.10.1:
-
-.. image:: _images/windowsIcon.png
-  :height: 0px
-  :width: 0px
-
 .. raw:: html
 
     <div style="text-align: center;">
