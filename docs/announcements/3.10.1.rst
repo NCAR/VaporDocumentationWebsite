@@ -49,7 +49,7 @@
         <h5><br>For VAPOR's weekly build, source code, and previous versions visit our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
     </div>
 
-Vapor has released a minor version, v3.10.1, on May 19, 2025.
+Vapor has released a minor version, v3.10.1, on May 19, 2025. 
 
 **What's Changed**
 
