@@ -8,7 +8,7 @@ build:
     python: "mambaforge-22.9"
   jobs:
     pre_build:
-    - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
+    - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/$READTHEDOCS_GIT_BRANCH/lib/python3.9/site-packages/vapor
     #- mkdir -p _readthedocs/_static
     #- cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference _readthedocs/_static
     - mkdir -p $READTHEDOCS_OUTPUT/html/vaporApplicationReference
@@ -16,7 +16,7 @@ build:
     #- cp $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference/index.html $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     post_build:
     - conda env export --from-history
-    - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest
+    - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_GIT_BRANCH
     - python -c "from vapor import animation"
     - ls $READTHEDOCS_REPOSITORY_PATH
     - ls $READTHEDOCS_REPOSITORY_PATH/vaporApplicationReference
