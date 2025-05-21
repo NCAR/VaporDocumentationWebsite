@@ -8,6 +8,7 @@ build:
     python: "mambaforge-22.9"
   jobs:
     pre_build:
+    - echo $CONDA_ENVS_PATH
     - echo $READTHEDOCS_REPOSITORY_PATH
     - echo $READTHEDOCS_GIT_BRANCH
     - echo $CONDA_ENVS_PATH/latest/lib/python3.9/site-packages/vapor
