@@ -9,6 +9,7 @@ build:
   jobs:
     pre_build:
     - ls $READTHEDOCS_REPOSITORY_PATH
+    - ls $CONDA_ENVS_PATH
     - ls $CONDA_ENVS_PATH/$READTHEDOCS_GIT_BRANCH
     - echo $CONDA_ENVS_PATH
     - echo $READTHEDOCS_GIT_BRANCH
