@@ -8,13 +8,13 @@
     <table style="width: 100%; text-align: center; table-layout: fixed;">
         <tr>
             <td>
-                <img src="../_images/windowsIcon.png" alt="Windows" style="width: 98px; background: none;">
+                <img src="/_images/windowsIcon.png" alt="Windows" style="width: 98px; background: none;">
             </td>
             <td>
-                <img src="../_images/macIcon.png" alt="Mac" style="width: 100px; background: none; filter: drop-shadow(0 0 5px white);">
+                <img src="/_images/macIcon.png" alt="Mac" style="width: 100px; background: none; filter: drop-shadow(0 0 5px white);">
             </td>
             <td>
-                <img src="../_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
+                <img src="/_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
             </td>
         </tr>
         <tr>
