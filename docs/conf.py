@@ -38,7 +38,7 @@ author = ''
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '3.10.0'
+release = '3.10.1'
 
 from pathlib import Path
 home = str(Path.home())
@@ -82,10 +82,15 @@ extensions = [
     'sphinx_gallery.gen_gallery',
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton'
+    # 'sphinx_pushfeedback'
     #'breathe'
     #'jupyter_sphinx.execute'
     #'wheel'
 ]
+
+# pushfeedback_hide_email = True
+# pushfeedback_hide_screenshot_button = True
+# pushfeedback_button_position = "bottom"
 
 googleanalytics_id = "G-VY29EEZ393"
 

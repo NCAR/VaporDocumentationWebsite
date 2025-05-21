@@ -53,10 +53,10 @@ Vapor has released a minor version, v3.10.1, on May 19, 2025.
 
 **What's Changed**
 
-* Fix VAPOR freezes after rendering #3768 by @StasJ in #3775
-* Upgrade conda by @StasJ in #3774
-* Fix warning and invalid animation state by @StasJ in #3777
-* Fix Open session from command line broken #3772 by @StasJ in #3776
+* Fix VAPOR freezes after rendering #3768 by @StasJ in https://github.com/NCAR/VAPOR/pull/3775
+* Upgrade conda by @StasJ in https://github.com/NCAR/VAPOR/pull/3774
+* Fix warning and invalid animation state by @StasJ in https://github.com/NCAR/VAPOR/pull/3777
+* Fix Open session from command line broken #3772 by @StasJ in https://github.com/NCAR/VAPOR/pull/3776
 
 
-**Full Changelog**: https://github.com/NCAR/VAPOR/compare/v3.10.0...3.10.1
+**Full Changelog**: https://github.com/NCAR/VAPOR/compare/3.10.0...v3.10.1
