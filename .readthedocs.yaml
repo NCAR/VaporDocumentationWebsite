@@ -23,8 +23,13 @@ build:
     - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     #- cp $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference/index.html $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     post_build:
-    - ls home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/
-    - ls home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
+    - ls /home/
+    - ls /home/docs/
+    - ls /home/docs/checkouts/
+    - ls /home/docs/checkouts/readthedocs.org/
+    - ls /home/docs/checkouts/readthedocs.org/user_builds/
+    - ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/
+    - ls /home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
     - conda env export --from-history
     - export CONDA_PREFIX=/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/$READTHEDOCS_VERSION
     - python -c "from vapor import animation"
