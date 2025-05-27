@@ -1,6 +1,32 @@
-.pushfeedback-container {
+#floating-box {
+    position: fixed !important;
+    bottom: 7rem !important;
+    right: 1rem !important;
+    z-index: 9999 !important;
+}
+
+/*.pushfeedback-container {
+    position: fixed;
+    top: 5rem;
+    left: 1rem;
+    z-index: 9999;
+}*/
+
+/*.pushfeedback-container {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 9999;
+}*/
+
+/*.pushfeedback-container {
     position: fixed;
     bottom: 20px;
     left: 20px;
     z-index: 9999;
-}
+}*/
+
+/*.pushfeedback {
+    top: auto !important;
+    bottom: 1rem;
+}*/
