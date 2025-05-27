@@ -37,10 +37,9 @@ modulePaths = [Path(__file__).parent]
 for p in modulePaths:
     print("mod " + str(p))
 
-condaPaths = [os.environ.get("CONDA_PREFIX", "/")]
-if (os.environ.get("READTHEDOCS")):
-    condaPaths.append(f"{os.environ['CONDA_ENVS_PATH']}/{os.environ['READTHEDOCS_VERSION']}")
+#condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/rtd-test2025/conda/latest']
 
+condaPaths = [os.getenv('CONDA_PREFIX', "/"), r'/home/docs/checkouts/readthedocs.org/user_builds/vapordocumentationwebsite/conda/latest']
 for p in condaPaths:
     print("con " + str(p))
 

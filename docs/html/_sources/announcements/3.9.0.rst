@@ -1,0 +1,48 @@
+.. _3.9.0:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/antqCbgytsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+|
+
+`Download here <https://forms.gle/xLGwLgYSiABbHe8t8>`__
+
+September 6, 2023
+
+Vapor 3.9.0 is now live and includes the enhancements and fixed issues below.  Several significant enhancements have been added including a new and improved UI for Vapor's renderer table which better shows metadata, support for moving domains, and updated third party libraries.  `PythonAPI documentation and examples have been added<https://ncar.github.io/VaporDocumentationWebsite/pythonAPIReference/examples.html>`__, and changes to Vapor's session file format now make it easier to share sessions with colleagues.  Thank you to everyone who has suggested new features and reported bugs in the past months.  Stay tuned for more updates as we continue to increase the frequency of our release cycle.
+
+**New Enhancements**
+
+* 3399 - Relative, not absolute paths in VAPOR session files
+* 3394 - Python API support ZFP compressed data
+* 3392 - Colorbar font and background color controls
+* 3344 - Refactor renderer list GUI
+* 3307 - Third party library updates
+* 3258 - Add Lighting panel to Flow rendering Appearance option
+* 433 - Support for moving domains
+
+**Fixed Issues**
+
+* 3439 - Broken CentOS installer
+* 3432 - Windows build is currently broken
+* 3431 - MacOS and Ubuntu installers broken
+* 3426 - Installer builds broken
+* 3424 - Zenodo authors are incorrect
+* 3421 - Python Engine not issuing error reports
+* 3408 - Changing projection string with active renderers crashes vapor
+* 3407 - OpenGL log is displayed as an error in Jupyter
+* 3397 - Vapor's online documentation page for vapor.session is empty
+* 3393 - SetHDF5PluginPath clobbers user environment
+* 3390 - Python animation video writer does not honor framerate parameter
+* 3389 - Vapor does not handle session files with relative dataset paths
+* 3372 - Pathline render bug
+* 3366 - Verify documentation links
+* 3368 - Python documentation missing
+* 3365 - Visualizer default view has partial domain
+* 3361 - Flow streamlines give incorrect time information when written to file
+* 3350 - Docstring missing from vapor modules
+* 3334 - 3D grids in XArray are not supported
+* 3333 - XArray axes are swapped compared to Vapor convention
+* 3123 - VAPOR Python examples in Jupyter Notebook gallery form
+* 2973 - Python scripts saved in session files only usable with data sets they were created with

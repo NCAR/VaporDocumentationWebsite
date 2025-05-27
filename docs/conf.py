@@ -43,29 +43,6 @@ release = '3.10.1'
 from pathlib import Path
 home = str(Path.home())
 
-# Sphinx will not recognize images that are not included as raw html references.
-# This creates a file called silent_image_includes.txt that is included in index.rst,
-# so the raw html references will be registered.
-import textwrap
-# get directories
-confdir = Path(__file__).parent        # docs/source
-src_imgdir = Path(confdir, '_images')  # docs/source/_images
-# get image paths & make .rst text
-img_exts = ('.png', '.svg')
-txt = ""
-for file in src_imgdir.iterdir():
-    if file.suffix in img_exts:
-        txt += """
-               .. image:: _images/{}
-                 :height: 0px
-                 :width: 0px
-               """.format(file.name)
-# unindent multiline string
-txt = textwrap.dedent(txt)
-# make a .txt to be `.. include`-ed
-with open('silent_image_includes.txt', 'w') as f:
-    f.write(txt)
-
 # Breathe was last tried on 9/25/2024.  It was problematic because it would ingest Doxygen's XML output
 # as one single file that was thousands of lines long and hard to comprehend on a website.  Doxygen's
 # html generator automatically categorizes VAPOR's modules, classes, and namespaces.  Rather than write
@@ -112,9 +89,6 @@ language = 'en'
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-html_static_path = ["_static"]
-html_css_files = ["custom.css"]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
