@@ -11,7 +11,7 @@ build:
     #- cp config.py $CONDA_ENVS_PATH/$READTHEDOCS_VERSION/lib/python3.9/site-packages/vapor
     - cp $READTHEDOCS_REPOSITORY_PATH/config.py $CONDA_ENVS_PATH/$READTHEDOCS_VERSION/lib/python3.9/site-packages/vapor
     - mkdir -p $READTHEDOCS_OUTPUT/html/vaporApplicationReference
-    #- cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference $READTHEDOCS_OUTPUT/html/vaporApplicationReference
+    - cp -r $READTHEDOCS_REPOSITORY_PATH/docs/_static/vaporClassReference $READTHEDOCS_OUTPUT/html/vaporApplicationReference
     post_build:
     - python -c "from vapor import animation"
 
