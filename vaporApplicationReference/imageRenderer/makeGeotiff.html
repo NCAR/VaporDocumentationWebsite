@@ -528,7 +528,22 @@ a set of lat/lon coordinates.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_images/map.png&#39;</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Dependencies</span>
+<span class="sd">-------------------------</span>
+<span class="sd">This script requires the following Python packages:</span>
+<span class="sd">   - cartopy</span>
+<span class="sd">   - gdal</span>
+<span class="sd">   - matplotlib</span>
+<span class="sd">   - scipy</span>
+<span class="sd">   - owslib</span>
+
+<span class="sd">Note: Some dependencies are difficult to install with pip, and may produce cryptic error messages.</span>
+<span class="sd">We recommend using conda to install them:</span>
+<span class="sd">conda install -c conda-forge cartopy gdal matplotlib scipy owslib</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_path = &#39;_images/map.png&#39;</span>
 
 <span class="n">targetDir</span> <span class="o">=</span> <span class="s2">&quot;/Users/pearse/&quot;</span>
 <span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;landSat_test2&quot;</span>
