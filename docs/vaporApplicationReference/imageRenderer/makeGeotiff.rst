@@ -29,10 +29,25 @@ It performs the the following:
    - A NaturalEarth shapfile describing roads in North America are added to the produced GeoTiff
    - Coastlines are added to the map through Cartopy
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-25
+.. GENERATED FROM PYTHON SOURCE LINES 15-40
 
 .. code-block:: Python
 
+
+    """
+    Dependencies
+    -------------------------
+    This script requires the following Python packages:
+       - cartopy
+       - gdal
+       - matplotlib
+       - scipy
+       - owslib
+   
+    Note: Some dependencies are difficult to install with pip, and may produce cryptic error messages. 
+    We recommend using conda to install them:
+    conda install -c conda-forge cartopy gdal matplotlib scipy owslib
+    """
 
     # sphinx_gallery_thumbnail_path = '_images/map.png'
 
@@ -44,7 +59,7 @@ It performs the the following:
     south = 39.6
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-31
+.. GENERATED FROM PYTHON SOURCE LINES 41-46
 
 Size of our output figure.
 Note: If your specified lat/lon extents have a different aspect ratio than 
@@ -52,7 +67,7 @@ your width and height, the geotiff will have either its dimensions scaled to
 match the aspect ratio of the specified extents of the west/north/east/south 
 variables.
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-34
+.. GENERATED FROM PYTHON SOURCE LINES 46-49
 
 .. code-block:: Python
 
@@ -60,31 +75,31 @@ variables.
     height = 1080
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-38
+.. GENERATED FROM PYTHON SOURCE LINES 50-53
 
 For the generated tiff to have the correct width and height, the "dpi" 
 variable must be set according to that of your monitor.  
 To find your DPI, see here: https://www.infobyip.com/detectmonitordpi.php
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-40
+.. GENERATED FROM PYTHON SOURCE LINES 53-55
 
 .. code-block:: Python
 
     dpi = 96
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-42
+.. GENERATED FROM PYTHON SOURCE LINES 56-57
 
 URL for NASA's EarthData/WorldView web map tile service
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-44
+.. GENERATED FROM PYTHON SOURCE LINES 57-59
 
 .. code-block:: Python
 
     url = 'https://map1c.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi'
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-54
+.. GENERATED FROM PYTHON SOURCE LINES 60-69
 
 Specify the layer from the EarthData WMTS to draw to our geotiff.
 See Vapor's Image Renderer documentation for a complete list of available 
@@ -96,18 +111,18 @@ Some options include:
   GOES-West_ABI_Band2_Red_Visible_1km
 To preview these layers, visit https://worldview.earthdata.nasa.gov/
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-56
+.. GENERATED FROM PYTHON SOURCE LINES 69-71
 
 .. code-block:: Python
 
     layer = 'Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual'
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-58
+.. GENERATED FROM PYTHON SOURCE LINES 72-73
 
 Generate our matplotlib figure with a subplot to draw our map upon
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-71
+.. GENERATED FROM PYTHON SOURCE LINES 73-86
 
 .. code-block:: Python
 
@@ -125,22 +140,22 @@ Generate our matplotlib figure with a subplot to draw our map upon
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-73
+.. GENERATED FROM PYTHON SOURCE LINES 87-88
 
 Add coastlines from Cartopy
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-75
+.. GENERATED FROM PYTHON SOURCE LINES 88-90
 
 .. code-block:: Python
 
     ax.coastlines(resolution='50m', color='yellow')
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-77
+.. GENERATED FROM PYTHON SOURCE LINES 91-92
 
 Add roads from NaturalEarth
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-84
+.. GENERATED FROM PYTHON SOURCE LINES 92-99
 
 .. code-block:: Python
 
@@ -152,11 +167,11 @@ Add roads from NaturalEarth
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-86
+.. GENERATED FROM PYTHON SOURCE LINES 100-101
 
 Generate our initial tiff file
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-93
+.. GENERATED FROM PYTHON SOURCE LINES 101-108
 
 .. code-block:: Python
 
@@ -168,11 +183,11 @@ Generate our initial tiff file
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-95
+.. GENERATED FROM PYTHON SOURCE LINES 109-110
 
 Write our tiff file with GeoTiff extent information
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-105
+.. GENERATED FROM PYTHON SOURCE LINES 110-120
 
 .. code-block:: Python
 
@@ -187,12 +202,12 @@ Write our tiff file with GeoTiff extent information
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-108
+.. GENERATED FROM PYTHON SOURCE LINES 121-123
 
 Give our GeoTiff file a projected coordinate system, equivalent to the following proj4 string:
 Proj4: "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84"
 
-.. GENERATED FROM PYTHON SOURCE LINES 108-114
+.. GENERATED FROM PYTHON SOURCE LINES 123-129
 
 .. code-block:: Python
 
@@ -203,11 +218,11 @@ Proj4: "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84"
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-116
+.. GENERATED FROM PYTHON SOURCE LINES 130-131
 
 Clean up intermediate translated file
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-118
+.. GENERATED FROM PYTHON SOURCE LINES 131-133
 
 .. code-block:: Python
 
