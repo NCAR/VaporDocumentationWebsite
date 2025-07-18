@@ -1,0 +1,6 @@
+#floating-box {
+    position: fixed !important;
+    bottom: 7rem !important;
+    right: 1rem !important;
+    z-index: 9999 !important;
+}

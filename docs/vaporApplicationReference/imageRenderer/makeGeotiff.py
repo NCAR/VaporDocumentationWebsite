@@ -13,6 +13,21 @@ It performs the the following:
    - Coastlines are added to the map through Cartopy
 """
 
+"""
+Dependencies
+-------------------------
+This script requires the following Python packages:
+   - cartopy
+   - gdal
+   - matplotlib
+   - scipy
+   - owslib
+   
+Note: Some dependencies are difficult to install with pip, and may produce cryptic error messages. 
+We recommend using conda to install them:
+conda install -c conda-forge cartopy gdal matplotlib scipy owslib
+"""
+
 # sphinx_gallery_thumbnail_path = '_images/map.png'
 
 targetDir = "/Users/pearse/"
