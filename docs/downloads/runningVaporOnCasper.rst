@@ -14,7 +14,7 @@ Connecting to a Remote Desktop
 
 .. code-block:: console
 
-    ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00
+    ssh -t -l YOUR_USERNAME casper.hpc.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00
 
 .. note::
 
@@ -87,7 +87,7 @@ Running Vapor-Python via portforwarding
 
 .. code-block:: console
 
-    ssh -t -l YOUR_USERNAME casper.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00
+    ssh -t -l YOUR_USERNAME casper.hpc.ucar.edu /glade/u/apps/opt/vncmgr/bin/vncmgr create VAPOR -A PROJECT_CODE -t 4:00:00
 
 2. Copy the provided ssh line and paste it into your local terminal. We will make two changes. First, remove the last string command "bash ~/.vncmgr/tunnel-VAPOR". Then, replace the port numbers with the one that matches your jupyter notebook server (typically 8888). When we start the jupyter server in the next step, this number may be different, and we will need to logout and run this line again using the correct port.
 

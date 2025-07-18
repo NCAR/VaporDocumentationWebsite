@@ -29,18 +29,38 @@
 
 
 <style>
+  #floating-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 0.5px solid black;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  @media (prefers-color-scheme: dark) {
     #floating-box {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: transparent;
-        border: 0.5px solid black;
-        color: black;
-        padding: 15px;
-        border-radius: 10px;
-        z-index: 1000;
+      border-color: #ccc;
+      color: #ccc;
     }
+
+    #floating-box b {
+      color: #ccc;
+    }
+
+    #floating-box button.btn-outline-primary {
+      border-color: #ccc;
+    }
+
+    #floating-box button.btn-outline-primary svg {
+      stroke: #66aaff;
+    }
+  }
 </style>
+
 
 <div id="floating-box">
   <div class="feedback-widget">

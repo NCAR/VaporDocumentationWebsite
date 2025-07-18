@@ -29,25 +29,25 @@ The following datasets are provided for user experimentation. They can also be f
 | Particles_                  | Synthetic | DCP            | N/A               | 119 KB    |
 +-----------------------------+-----------+----------------+-------------------+-----------+
 
-.. _DUKU: https://data.rda.ucar.edu/ds897.7/DUKU.zip
+.. _DUKU: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/DUKU.zip
 
-.. _Kauffman: https://data.rda.ucar.edu/ds897.7/kauffmanSample.zip
+.. _Kauffman: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/kauffmanSample.zip
 
-.. _UGRIDsmall: https://data.rda.ucar.edu/ds897.7/UGRIDsmall.zip
+.. _UGRIDsmall: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/UGRIDsmall.zip
 
-.. _Tornado: https://data.rda.ucar.edu/ds897.7/Tornado.zip
+.. _Tornado: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/Tornado.zip
 
-.. _OvershootingTop: https://data.rda.ucar.edu/ds897.7/overshootingTop.zip
+.. _OvershootingTop: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/overshootingTop.zip
 
-.. _MultiTimeMultiVar: https://data.rda.ucar.edu/ds897.7/Brick.zip
+.. _MultiTimeMultiVar: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/Brick.zip
 
-.. _wmag: https://data.rda.ucar.edu/ds897.7/wmag.zip
+.. _wmag: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/wmag.zip
 
-.. _Particles: https://data.rda.ucar.edu/ds897.7/Particles.zip
+.. _Particles: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/Particles.zip
 
-.. _Marshall: https://data.rda.ucar.edu/ds897.7/MarshallWildfire.zip
+.. _Marshall: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/MarshallWildfire.zip
 
-.. _Katrina: https://data.rda.ucar.edu/ds897.7/Katrina.zip
+.. _Katrina: https://data-osdf.rda.ucar.edu/ncar/rda/d897007/Katrina.zip
 
 Maps
 ----
