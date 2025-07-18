@@ -1,0 +1,101 @@
+.. _3.10.0:
+.. raw:: html
+
+    <div style="text-align: center;">
+        <h2>Download VAPOR's Latest Release (v3.10.0)</h2>
+    </div>
+
+    <table style="width: 100%; text-align: center; table-layout: fixed;">
+        <tr>
+            <td>
+                <img src="_images/windowsIcon.png" alt="Windows" style="width: 98px; background: none;">
+            </td>
+            <td>
+                <img src="_images/macIcon.png" alt="Mac" style="width: 100px; background: none; filter: drop-shadow(0 0 5px white);">
+            </td>
+            <td>
+                <img src="_images/linuxIcon.png" alt="Linux" style="width: 100px; background: none;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="text-align: center;">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/3.10.0/VAPOR3-3.10.0-win64.exe" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Windows_64' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Windows
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div style="text-align: center;">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/3.10.0/VAPOR3-3.10.0-AppleSilicon.dmg" style="display: inline-block; width: 185px; height: 50px; padding: 0; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 2px 2px 2px 2px; cursor: pointer; vertical-align: middle; line-height: 50px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'MacOS_M1' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">macOS Apple Silicon
+                    </a>
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/3.10.0/VAPOR3-3.10.0-macOSx86.dmg" style="display: inline-block; width: 185px; height: 50px; padding: 0; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 2px 2px 2px 2px; cursor: pointer; vertical-align: middle; line-height: 50px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'MacOS_x86' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">macOS Intel x86
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div style="text-align: center;">
+                    <a href="https://github.com/NCAR/VAPOR/releases/download/3.10.0/VAPOR-3.10.0-x86_64.AppImage" style="display: inline-block; width: 150px; height: 104px; padding: 0; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: #17a2b8; border: none; border-radius: 0; margin: 10px 0; cursor: pointer; vertical-align: middle; line-height: 104px;" onclick="gtag('event', 'click', { 'event_category': 'Downloads', 'event_label': 'Linux_AppImage' });">
+                        <img src="_images/downloadIcon.svg" alt="Download" style="width: 17px; vertical-align: middle; margin-right: 8px; background: none;">Linux
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center;">
+        <h5><br>For VAPOR's weekly build, source code, and previous versions visit our <a href="https://github.com/NCAR/VAPOR/releases">GitHub</a>.<br><br></h5>
+    </div>
+
+Vapor has released a minor version, v3.10.0, on April 25, 2025.
+
+**What's Changed**
+
+* Remove cache by @sgpearse in https://github.com/NCAR/VAPOR/pull/3659
+* Fix particle direction rendering performance by @StasJ in https://github.com/NCAR/VAPOR/pull/3657
+* Signal to docs repository on release by @ifranda in https://github.com/NCAR/VAPOR/pull/3660
+* Libs aug2024 by @sgpearse in https://github.com/NCAR/VAPOR/pull/3667
+* Fix height offset issues by @sgpearse in https://github.com/NCAR/VAPOR/pull/3670
+* Fix CopyRegionAnnotationWidget by @sgpearse in https://github.com/NCAR/VAPOR/pull/3669
+* Fix #3574 - Slice renderer not rendering until after timestep changed by @sgpearse in https://github.com/NCAR/VAPOR/pull/3671
+* Make VAPOR version number more prominent by @sgpearse in https://github.com/NCAR/VAPOR/pull/3673
+* Weekly installer names + restore sha hashes by @ifranda in https://github.com/NCAR/VAPOR/pull/3674
+* Refactor application logic by @StasJ in https://github.com/NCAR/VAPOR/pull/3676
+* Fix broken windows build by @sgpearse in https://github.com/NCAR/VAPOR/pull/3684
+* Update MacOS minimum version by @sgpearse in https://github.com/NCAR/VAPOR/pull/3686
+* Fix Particles crash #3678 by @StasJ in https://github.com/NCAR/VAPOR/pull/3689
+* Update CODE_OF_CONDUCT.md by @NihanthCW in https://github.com/NCAR/VAPOR/pull/3701
+* Python: load/save camera file files, keyframing using camera files by @ifranda in https://github.com/NCAR/VAPOR/pull/3690
+* Fix python api memory error by @StasJ in https://github.com/NCAR/VAPOR/pull/3704
+* Fix VAssert fails when saving session #3697 by @StasJ in https://github.com/NCAR/VAPOR/pull/3716
+* Fix Isosurface Transfer Function missing isovalue control points #3695 by @StasJ in https://github.com/NCAR/VAPOR/pull/3715
+* Fix Regression: wrong mapping function displayed #3693 by @StasJ in https://github.com/NCAR/VAPOR/pull/3714
+* Fix "Do you want to continue?" dialog on Open Session first try #3679 by @StasJ in https://github.com/NCAR/VAPOR/pull/3729
+* Fix Duplicate renderer does not duplicate RenderParams #3720 by @StasJ in https://github.com/NCAR/VAPOR/pull/3728
+* Fix Session with slow renderers lags on first navigation #3710 by @StasJ in https://github.com/NCAR/VAPOR/pull/3725
+* Fix Create renderer should default to the active dataset #3702 by @StasJ in https://github.com/NCAR/VAPOR/pull/3724
+* Fix Buggy handling of mapping range extents #3713 by @StasJ in https://github.com/NCAR/VAPOR/pull/3727
+* Fix UI left toolbar wrong default size on Casper #3683 by @StasJ in https://github.com/NCAR/VAPOR/pull/3726
+* Issue1123 - Expandable Transfer Function by @sgpearse in https://github.com/NCAR/VAPOR/pull/3698
+* Fix Regression: Play animation forward does not advance through time series #3731 by @StasJ in https://github.com/NCAR/VAPOR/pull/3732
+* Fix Use Dark Gray default background instead of black #3730 by @StasJ in https://github.com/NCAR/VAPOR/pull/3734
+* Fix Problems with Macs and external monitors #2851 by @StasJ in https://github.com/NCAR/VAPOR/pull/3733
+* Fix Time step spinbox issues changed when text changed #3722 by @StasJ in https://github.com/NCAR/VAPOR/pull/3740
+* Fix Regression: Error report details missing #3738 by @StasJ in https://github.com/NCAR/VAPOR/pull/3739
+* Fix Crash when loading UGRID data as NetCDF #3652 by @StasJ in https://github.com/NCAR/VAPOR/pull/3741
+* Fix broken Windows build by @sgpearse in https://github.com/NCAR/VAPOR/pull/3743
+* Restructure the GUI - Fixes Issue3603 by @sgpearse in https://github.com/NCAR/VAPOR/pull/3719
+* Adds DrawInFront parameter to RenderParams by @sgpearse in https://github.com/NCAR/VAPOR/pull/3742
+* Transfer function widget by @ifranda in https://github.com/NCAR/VAPOR/pull/3748
+* Fix Capture image sequence saves files twice #3744 by @StasJ in https://github.com/NCAR/VAPOR/pull/3751
+* Fix conda build by @StasJ in https://github.com/NCAR/VAPOR/pull/3750
+* Issue3757 by @sgpearse in https://github.com/NCAR/VAPOR/pull/3758
+* Fix import data label upon creating a new session by @sgpearse in https://github.com/NCAR/VAPOR/pull/3759
+* Throw error message when given non-existant .vs3 file from command line by @sgpearse in https://github.com/NCAR/VAPOR/pull/3761
+* Make sha256.txt more readable by @sgpearse in https://github.com/NCAR/VAPOR/pull/3762
+* Manually add file suffix to image file name when QFileDialog does not… by @sgpearse in https://github.com/NCAR/VAPOR/pull/3764
+
+
+**Full Changelog**: https://github.com/NCAR/VAPOR/compare/v3.9.3...3.10.0
