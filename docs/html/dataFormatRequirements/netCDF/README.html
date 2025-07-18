@@ -610,23 +610,21 @@ document.write(`
     z-index: 1000;
   }
 
-  @media (prefers-color-scheme: dark) {
-    #floating-box {
-      border-color: #ccc;
-      color: #ccc;
-    }
+  html.theme-dark #floating-box {
+    border-color: #ccc;
+    color: #ccc;
+  }
 
-    #floating-box b {
-      color: #ccc;
-    }
+  html.theme-dark #floating-box b {
+    color: #ccc;
+  }
 
-    #floating-box button.btn-outline-primary {
-      border-color: #ccc;
-    }
+  html.theme-dark #floating-box button.btn-outline-primary {
+    border-color: #ccc;
+  }
 
-    #floating-box button.btn-outline-primary svg {
-      stroke: #66aaff;
-    }
+  html.theme-dark #floating-box button.btn-outline-primary svg {
+    stroke: #66aaff;
   }
 </style>
 
