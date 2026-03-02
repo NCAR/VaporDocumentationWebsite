@@ -50,13 +50,13 @@ ______________________________
 
 Once you've built a tar.bz2 image or downloaded one from another source, you can install it as follows.
 
-.. note:: If you downloaded your .tar.bz2 file from another source, you will need to create a new environment with access to the conda-forge channel, and the conda-build and python=3.9 packages.
+.. note:: If you downloaded your .tar.bz2 file from another source, you will need to create a new environment with access to the conda-forge channel, and the conda-build and python=3.10 packages.
 
    .. code-block:: console
 
       conda config --add channels conda-forge
       conda config --add channels ncar-vapor
-      conda create -n myEnvironment python=3.9 conda-build
+      conda create -n myEnvironment python=3.10 conda-build
       conda activate myEnvironment
 
 1) Within your conda environment, create a directory that will contain your installation.  Our team typically uses ~/channel.  Also create a subdirectory according to your operating system, shown below.
